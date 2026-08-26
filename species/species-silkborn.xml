@@ -3,7 +3,7 @@
 	<info>
 		<n>Silkborn</n>
 		<description>The Silkborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-silkborn.xml" url="" />
 		</update>
 	</info>
@@ -32,6 +32,7 @@
 			<stat name="innate speed:climb" value="innate speed" bonus="base" />
 
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_BEJEWELED_CARAPACE" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SPIDER_CLIMB" />
