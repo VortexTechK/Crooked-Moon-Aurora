@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>The Crooked Moon: Player Options</name>
+		<author>Author unknown</author>
+		<update version="0.0.1">
+			<file name="crooked-moon.index" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/crooked-moon.index" />
+		</update>
+	</info>
+	<files>
+		<file name="species-ashborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-ashborn.xml" />
+		<file name="species-azureborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-azureborn.xml" />
+		<file name="species-bogborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-bogborn.xml" />
+		<file name="species-curseborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-curseborn.xml" />
+		<file name="species-deepborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-deepborn.xml" />
+		<file name="species-gnarlborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-gnarlborn.xml" />
+		<file name="species-graveborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-graveborn.xml" />
+		<file name="species-harvestborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-harvestborn.xml" />
+		<file name="species-plagueborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-plagueborn.xml" />
+		<file name="species-relicborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-relicborn.xml" />
+		<file name="species-silkborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-silkborn.xml" />
+		<file name="species-stoneborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-stoneborn.xml" />
+		<file name="species-threadborn.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/species/species-threadborn.xml" />
+		<file name="barbarian-experiment.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/barbarian-experiment.xml" />
+		<file name="bard-whistles.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/bard-whistles.xml" />
+		<file name="cleric-harvest.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/cleric-harvest.xml" />
+		<file name="druid-oldways.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/druid-oldways.xml" />
+		<file name="druid-wicker.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/druid-wicker.xml" />
+		<file name="fighter-barrowguard.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/fighter-barrowguard.xml" />
+		<file name="monk-pestilenthaze.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/monk-pestilenthaze.xml" />
+		<file name="paladin-castigation.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/paladin-castigation.xml" />
+		<file name="ranger-grimharbinger.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/ranger-grimharbinger.xml" />
+		<file name="rogue-sinner.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/rogue-sinner.xml" />
+		<file name="sorcerer-crimson.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/sorcerer-crimson.xml" />
+		<file name="warlock-greatfool.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/warlock-greatfool.xml" />
+		<file name="warlock-hornedking.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/warlock-hornedking.xml" />
+		<file name="wizard-occultist.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/wizard-occultist.xml" />
+		<file name="wizard-philosopher.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/subclasses/wizard-philosopher.xml" />
+		<file name="background-amnesiac.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-amnesiac.xml" />
+		<file name="background-crimsonaspirant.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-crimsonaspirant.xml" />
+		<file name="background-crossroadsgambler.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-crossroadsgambler.xml" />
+		<file name="background-cultist.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-cultist.xml" />
+		<file name="background-druskenvalddweller.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-druskenvalddweller.xml" />
+		<file name="background-experiment.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-experiment.xml" />
+		<file name="background-ghostlightpassenger.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-ghostlightpassenger.xml" />
+		<file name="background-nightstalker.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-nightstalker.xml" />
+		<file name="background-reflectedwanderer.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-reflectedwanderer.xml" />
+		<file name="background-restwarden.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-restwarden.xml" />
+		<file name="background-reveler.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-reveler.xml" />
+		<file name="background-scholaroftheforbidden.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-scholaroftheforbidden.xml" />
+		<file name="background-wickerweaver.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/backgrounds/background-wickerweaver.xml" />
+		<file name="origin-feats.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/feats/origin-feats.xml" />
+		<file name="general-feats.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/feats/general-feats.xml" />
+		<file name="spells-a-d.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/spells/spells-a-d.xml" />
+		<file name="spells-e-m.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/spells/spells-e-m.xml" />
+		<file name="spells-s-v.xml" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/spells/spells-s-v.xml" />
+	</files>
+</index>
