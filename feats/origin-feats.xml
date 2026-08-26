@@ -3,7 +3,7 @@
 	<info>
 		<n>Origin Feats</n>
 		<description>The Origin Feats from The Crooked Moon: Player Options, tied to its Folk Horror backgrounds.</description>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="origin-feats.xml" url="" />
 		</update>
 	</info>
@@ -41,9 +41,7 @@
 		<description>
 			<p>You have scales, plates, or thick hide that grants you an AC of 13 + your Dexterity or Constitution modifier (choose the ability when you select this feat).</p>
 		</description>
-		<sheet alt="Altered">
-			<description>Your AC is {{natural-armor:ac}} while you aren't wearing armor.</description>
-		</sheet>
+		<sheet display="false" />
 		<rules>
 			<select type="Feat Feature" name="Natural Armor Ability (Altered)" supports="ID_TCM_FEAT_FEATURE_ALTERED_NATURAL_ARMOR_DEXTERITY|ID_TCM_FEAT_FEATURE_ALTERED_NATURAL_ARMOR_CONSTITUTION" />
 		</rules>
@@ -53,10 +51,13 @@
 		<description>
 			<p>Dexterity determines your Natural Armor's AC.</p>
 		</description>
-		<sheet display="false" />
+		<sheet alt="Altered">
+			<description>Your AC is {{ac:natural armor}} while you aren't wearing armor.</description>
+		</sheet>
 		<rules>
-			<stat name="natural-armor:ac" value="13" />
-			<stat name="natural-armor:ac" value="dexterity:modifier" />
+			<stat name="ac:natural armor" value="13" bonus="base" />
+			<stat name="ac:natural armor" value="dexterity:modifier" bonus="primary ability" />
+			<stat name="ac:calculation" value="ac:natural armor" bonus="calculation" equipped="[armor:none]" alt="Natural Armor (Altered)" />
 		</rules>
 	</element>
 	<element name="Constitution" type="Feat Feature" source="The Crooked Moon: Player Options" id="ID_TCM_FEAT_FEATURE_ALTERED_NATURAL_ARMOR_CONSTITUTION">
@@ -64,10 +65,13 @@
 		<description>
 			<p>Constitution determines your Natural Armor's AC.</p>
 		</description>
-		<sheet display="false" />
+		<sheet alt="Altered">
+			<description>Your AC is {{ac:natural armor}} while you aren't wearing armor.</description>
+		</sheet>
 		<rules>
-			<stat name="natural-armor:ac" value="13" />
-			<stat name="natural-armor:ac" value="constitution:modifier" />
+			<stat name="ac:natural armor" value="13" bonus="base" />
+			<stat name="ac:natural armor" value="constitution:modifier" bonus="primary ability" />
+			<stat name="ac:calculation" value="ac:natural armor" bonus="calculation" equipped="[armor:none]" alt="Natural Armor (Altered)" />
 		</rules>
 	</element>
 	<element name="Natural Weapons" type="Feat Feature" source="The Crooked Moon: Player Options" id="ID_TCM_FEAT_FEATURE_ALTERED_NATURAL_WEAPONS">
@@ -115,7 +119,7 @@
 			<p>Intelligence is your spellcasting ability for Charm Twister.</p>
 		</description>
 		<sheet alt="Old Blessing" usage="1/Long Rest">
-			<description>You can cast Bless once per Long Rest, targeting only creatures carrying a wicker charm you've made. Intelligence is your spellcasting ability for it.</description>
+			<description>You can cast Bless, targeting only creatures carrying a wicker charm you've made. Intelligence is your spellcasting ability for it.</description>
 		</sheet>
 		<rules>
 			<stat name="twisted-hex:dc" value="8" />
@@ -129,7 +133,7 @@
 			<p>Wisdom is your spellcasting ability for Charm Twister.</p>
 		</description>
 		<sheet alt="Old Blessing" usage="1/Long Rest">
-			<description>You can cast Bless once per Long Rest, targeting only creatures carrying a wicker charm you've made. Wisdom is your spellcasting ability for it.</description>
+			<description>You can cast Bless, targeting only creatures carrying a wicker charm you've made. Wisdom is your spellcasting ability for it.</description>
 		</sheet>
 		<rules>
 			<stat name="twisted-hex:dc" value="8" />
@@ -143,7 +147,7 @@
 			<p>Charisma is your spellcasting ability for Charm Twister.</p>
 		</description>
 		<sheet alt="Old Blessing" usage="1/Long Rest">
-			<description>You can cast Bless once per Long Rest, targeting only creatures carrying a wicker charm you've made. Charisma is your spellcasting ability for it.</description>
+			<description>You can cast Bless, targeting only creatures carrying a wicker charm you've made. Charisma is your spellcasting ability for it.</description>
 		</sheet>
 		<rules>
 			<stat name="twisted-hex:dc" value="8" />
@@ -156,7 +160,7 @@
 		<description>
 			<p>As a Magic action, you can weave spite into a wicker charm you touch. Choose an ability. When another creature is carrying the charm, or while this charm is within an area that the creature considers home, it has Disadvantage on ability checks and attack rolls using the chosen ability. When the creature fails one of these rolls, it can make a Charisma saving throw, destroying the charm on a success. You can only have one Twisted Hex charm at a time. If you make a new one, the previous one loses its magic.</p>
 		</description>
-		<sheet alt="Twisted Hex" action="Magic action">
+		<sheet alt="Twisted Hex" action="Action">
 			<description>Weave spite into a touched wicker charm, choosing an ability. Whoever carries the charm, or is home to it, has Disadvantage on ability checks and attack rolls using that ability. On a failed roll, the creature can make a DC {{twisted-hex:dc}} Charisma save to destroy the charm.</description>
 		</sheet>
 	</element>
@@ -334,7 +338,7 @@
 			<p class="indent"><strong>Bet Big.</strong> If you don't already have it, you gain Heroic Inspiration whenever you succeed on an ability check made against another creature, when you reduce a creature to 0 Hit Points, or when a creature fails a saving throw you forced it to make. If, in any of these cases, the creature has a CR of 0 or lacks a CR (such as another player character), you don't gain Heroic Inspiration.</p>
 			<p class="indent"><strong>Win Big.</strong> As a Bonus Action, you can expend your Heroic Inspiration to gain a number of Temporary Hit Points equal to your level.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>You gain Heroic Inspiration if you don't already have it whenever you succeed on a contested ability check, reduce a creature to 0 HP, or a creature fails a saving throw you forced (CR 0 or PC creatures excluded). As a Bonus Action, you can expend Heroic Inspiration to gain {{level}} Temporary Hit Points.</description>
 		</sheet>
 	</element>
@@ -347,7 +351,7 @@
 			<p class="indent"><strong>Ghostly Touch.</strong> When you damage a creature with the Incorporeal Movement trait, you can ignore the creature's damage Resistances, if any.</p>
 			<p class="indent"><strong>Spirit Sense.</strong> As a Bonus Action, you can sense any Undead within 60 feet of you, or any creatures in the Ethereal Plane that overlaps that area. You learn the distance and direction to any creatures you detect (or an Ethereal creature's equivalent position on your plane). Once you detect a creature with this benefit, you can't use it again until you finish a Short or Long Rest.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>When you damage a creature that has the Incorporeal Movement trait (the ability some ghostly or ethereal creatures have to pass through objects and other creatures), you can ignore its damage Resistances. As a Bonus Action once per Short or Long Rest, sense any Undead or Ethereal creatures within 60 feet, learning their distance and direction.</description>
 		</sheet>
 	</element>
@@ -360,7 +364,7 @@
 			<p class="indent"><strong>Divine Channel.</strong> You gain one use of the Channel Divinity feature from the Cleric class, and you can create the Turn Undead effect with it. If you already have Channel Divinity, you add this use to the feature from one class of your choice. Your save DC for this benefit is 8 plus your Wisdom modifier and Proficiency Bonus.</p>
 			<p class="indent"><strong>Last Rites.</strong> You can enact a 10-minute ritual to prepare the corpse of a Medium or smaller creature, expending at least 10 GP worth of incense, oils, linen wraps, or similar trappings. The prepared corpse can't become Undead.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>You gain one use of Channel Divinity, which can be used to create the Turn Undead effect. Its DC is {{grave-keeper:dc}}. You can also enact a 10-minute ritual (10+ GP of trappings) once per Long Rest to prepare a corpse so it can't become Undead.</description>
 		</sheet>
 		<rules>
@@ -379,7 +383,7 @@
 			<p class="indent"><strong>Dead Aim.</strong> As a Bonus Action, you can scrutinize a creature to spot its vulnerable points. The next time you deal damage to the creature before the start of your next turn, you ignore the creature's damage Resistances, if any.</p>
 			<p class="indent"><strong>Studied Quarry.</strong> You have Advantage on ability checks made to recall information about a creature.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>As a Bonus Action, you can scrutinize a creature; the next time you damage it before the start of your next turn, ignore its damage Resistances. You have Advantage on ability checks made to recall information about a creature.</description>
 		</sheet>
 	</element>
@@ -458,9 +462,8 @@
 			<p class="indent"><strong>Inscrutable.</strong> Creatures have Disadvantage on Wisdom (Insight) checks made against you.</p>
 			<p class="indent"><strong>Unremarkable.</strong> The loss of some part of yourself leaves you able to fade into the background. While you are within a group of at least two other creatures of your type and that there are no more than one size larger or smaller than you, you can take the Hide action from creatures outside that group by making a Charisma (Deception) check instead of Dexterity (Stealth), with no need for being behind cover or Heavily Obscured. If you are ever more than 5 feet from at least two other such creatures while hiding this way, you are revealed.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>Creatures have Disadvantage on Insight checks against you. While within a group of at least two similar creatures near your size, you can Hide from outsiders using Charisma (Deception) instead of Dexterity (Stealth), without needing cover or being Obscured. You're revealed if you ever move more than 5 feet from at least two such creatures while hiding this way.</description>
 		</sheet>
 	</element>
 </elements>
-
