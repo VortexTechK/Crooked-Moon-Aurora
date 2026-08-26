@@ -3,7 +3,7 @@
 	<info>
 		<n>Graveborn</n>
 		<description>The Graveborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-graveborn.xml" url="" />
 		</update>
 	</info>
@@ -31,6 +31,7 @@
 			<stat name="innate speed" value="30" bonus="base" />
 
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_DEVOUR_CORPSE" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_FROZEN_WASTE" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_INFUSED_DRAKKONITE" />
@@ -41,8 +42,8 @@
 		<description>
 			<p>You can eat spoiled and rotten food as if it were fresh. Additionally, if you spend 1 minute eating flesh from the corpse of a Small or larger creature that isn't a Construct, roll one of your Hit Point Dice without expending it (even if you have none remaining). You regain a number of Hit Points equal to the number rolled plus your Constitution modifier (minimum of 1 Hit Point). Once you regain Hit Points using this trait, you can't do so again until you finish a Short or Long Rest.</p>
 		</description>
-		<sheet usage="1/Short or Long Rest">
-			<description>You can eat spoiled food as if fresh. By spending 1 minute eating flesh from a Small+ corpse that isn't a Construct, you roll one of your Hit Point Dice without expending it and regain that many Hit Points plus {{constitution:modifier}} (minimum 1).</description>
+		<sheet>
+			<description>You can eat spoiled food as if fresh. By spending 1 minute eating flesh from a Small+ corpse that isn't a Construct, you roll one of your Hit Point Dice without expending it and regain that many Hit Points plus {{constitution:modifier}} (minimum 1). You can do this once per Short or Long Rest.</description>
 		</sheet>
 	</element>
 
