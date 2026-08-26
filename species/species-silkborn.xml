@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Silkborn</n>
+		<description>The Silkborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-silkborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Silkborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_SILKBORN">
+		<description>
+			<p>Silkborn are a spider-like species native to Nerukhet, typically emerging from silken cocoons amidst thick webbing that fills miles of tunnels throughout the subterranean province. They have a deep kinship and connection with the bejeweled arachnids and insects that have assisted them in building the grandest civilization in Druskenvald. This folk also channels the great gems that fill the caverns of the province with light and power, bringing them ever closer to the gods that spared their kind from an ancient calamity.</p>
+			<p class="indent">While this species has humanoid proportions, they have arachnid features—hardened carapace skin, numerous eyes, segmented limbs that grow from their backs, and mandibles that sprout from their mouths. They generally live for 250 years, but those at the higher echelons of their civilizations have been known to live nearly 800 years.</p>
+			<h5>SILKBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Humanoid</li>
+				<li><strong>Size:</strong> Medium (about 5–6 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet, Climb Speed equal to your Speed</li>
+			</ul>
+			<p>As a Silkborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Bejeweled Carapace.</em></strong> When you are hit with an attack roll, you can take a Reaction to add your Proficiency Bonus to your AC against that attack, potentially causing it to miss. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Silken Legacy.</em></strong> You know the Thaumaturgy cantrip. Starting at character level 3, you always have the Find Familiar spell (the familiar takes the form of a jeweled insect or arachnid) prepared, and starting at character level 5, you always have the Web spell prepared. You can cast each spell once without a spell slot or Material components. You regain the ability to cast them in that way when you finish a Long Rest. You can also cast either spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+			<p class="indent"><strong><em>Spider Climb.</em></strong> You can climb difficult surfaces, including along ceilings, without needing an ability check and while leaving your hands free.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Silkborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="innate speed" bonus="base" />
+
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_BEJEWELED_CARAPACE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SPIDER_CLIMB" />
+		</rules>
+	</element>
+
+	<element name="Bejeweled Carapace" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_BEJEWELED_CARAPACE">
+		<description>
+			<p>When you are hit with an attack roll, you can take a Reaction to add your Proficiency Bonus to your AC against that attack, potentially causing it to miss. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short or Long Rest">
+			<description>When you are hit with an attack roll, you can add {{proficiency}} to your AC against that attack, potentially causing it to miss.</description>
+		</sheet>
+	</element>
+
+	<element name="Silken Legacy" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY">
+		<description>
+			<p>You know the Thaumaturgy cantrip. Starting at character level 3, you always have the Find Familiar spell (the familiar takes the form of a jeweled insect or arachnid) prepared, and starting at character level 5, you always have the Web spell prepared. You can cast each spell once without a spell slot or Material components. You regain the ability to cast them in that way when you finish a Long Rest. You can also cast either spell using any spell slots you have of the appropriate level.</p>
+			<p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Silken Legacy)" supports="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_INTELLIGENCE|ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_WISDOM|ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Intelligence" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence is your spellcasting ability for the spells you cast with your Silken Legacy trait.</p>
+		</description>
+		<sheet alt="Silken Legacy">
+			<description>You know the Thaumaturgy cantrip. Intelligence is your spellcasting ability for it.</description>
+			<description level="3">You know the Thaumaturgy cantrip, and you can cast the Find Familiar spell once per Long Rest without Material components. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Thaumaturgy cantrip, and you can cast the Find Familiar and Web spells once each per Long Rest without Material components. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_FAMILIAR" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WEB" level="5" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom is your spellcasting ability for the spells you cast with your Silken Legacy trait.</p>
+		</description>
+		<sheet alt="Silken Legacy">
+			<description>You know the Thaumaturgy cantrip. Wisdom is your spellcasting ability for it.</description>
+			<description level="3">You know the Thaumaturgy cantrip, and you can cast the Find Familiar spell once per Long Rest without Material components. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Thaumaturgy cantrip, and you can cast the Find Familiar and Web spells once each per Long Rest without Material components. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_FAMILIAR" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WEB" level="5" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SILKEN_LEGACY_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma is your spellcasting ability for the spells you cast with your Silken Legacy trait.</p>
+		</description>
+		<sheet alt="Silken Legacy">
+			<description>You know the Thaumaturgy cantrip. Charisma is your spellcasting ability for it.</description>
+			<description level="3">You know the Thaumaturgy cantrip, and you can cast the Find Familiar spell once per Long Rest without Material components. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Thaumaturgy cantrip, and you can cast the Find Familiar and Web spells once each per Long Rest without Material components. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_FAMILIAR" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_WEB" level="5" />
+		</rules>
+	</element>
+
+	<element name="Spider Climb" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_SILKBORN_SPIDER_CLIMB">
+		<description>
+			<p>You can climb difficult surfaces, including along ceilings, without needing an ability check and while leaving your hands free.</p>
+		</description>
+		<sheet>
+			<description>You can climb difficult surfaces, including along ceilings, without needing an ability check and while leaving your hands free.</description>
+		</sheet>
+	</element>
+</elements>

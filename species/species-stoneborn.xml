@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Stoneborn</n>
+		<description>The Stoneborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-stoneborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Stoneborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_STONEBORN">
+		<description>
+			<p>Stoneborn are a gargoyle-like species native to Pholsense, usually meticulously carved by the lord of the province, Archbishop Danton Alexandre Renault. Blessed by the divine power known as the Silver Path, these people can call upon the godliness that suffuses their construction. In a domain of darkness, they have looked to the light of their god to build a civilization that attempts to uphold what is good and lawful at all costs.</p>
+			<p class="indent">Their stony skin matches the same hue and pattern as the stone they were carved from. While all of their kind have broad wings that carry their dense, heavy bodies, their biology can evoke a wide variety of creatures—including bats, fiends, dragons, birds, angels, dogs, and lizards—often combining features into a chimeric blend. They usually live for 300 years before crumbling into rubble.</p>
+			<h5>STONEBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Construct</li>
+				<li><strong>Size:</strong> Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species</li>
+				<li><strong>Speed:</strong> 30 feet, Fly Speed equal to half your Speed</li>
+			</ul>
+			<p>As a Stoneborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Argent Gleam.</em></strong> As a Bonus Action, you can channel a mote of the Silver Path's light with your choice of one of the following options.</p>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em">
+				<li><strong>Path's Grace.</strong> You cast the Bless spell, requiring no Material components.</li>
+				<li><strong>Zealous Charge.</strong> You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 Radiant damage.</li>
+			</ul>
+			<p class="indent">Once you use this trait's Bonus Action, you can't do so again until you finish a Long Rest.</p>
+			<p class="indent"><strong><em>Silver Bulwark.</em></strong> You can call upon the Silver Path to protect you. When you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to those three damage types until the start of your next turn. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Watchful Senses.</em></strong> You gain proficiency in the Insight, Perception, or Survival skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Stoneborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<select type="Racial Trait" name="Size (Stoneborn)" supports="ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_SMALL|ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:fly:misc" value="innate speed:half" bonus="base" />
+
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_STONEBORN_ARGENT_GLEAM" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_STONEBORN_SILVER_BULWARK" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_STONEBORN_WATCHFUL_SENSES" />
+		</rules>
+	</element>
+
+	<element name="Small" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_SMALL">
+		<compendium display="false" />
+		<description>
+			<p>Your size is Small (about 3–4 feet tall).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Size" id="ID_SIZE_SMALL" />
+		</rules>
+	</element>
+	<element name="Medium" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_MEDIUM">
+		<compendium display="false" />
+		<description>
+			<p>Your size is Medium (about 4–7 feet tall).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+		</rules>
+	</element>
+
+	<element name="Argent Gleam" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_STONEBORN_ARGENT_GLEAM">
+		<description>
+			<p>As a Bonus Action, you can channel a mote of the Silver Path's light with your choice of one of the following options:</p>
+			<p class="indent"><strong>Path's Grace.</strong> You cast the Bless spell, requiring no Material components.</p>
+			<p class="indent"><strong>Zealous Charge.</strong> You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 Radiant damage.</p>
+			<p class="indent">Once you use this trait's Bonus Action, you can't do so again until you finish a Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Long Rest">
+			<description>Choose one: cast Bless (no Material components), or take the Dash action and deal an extra 2d6 Radiant damage with your first attack roll before the end of your turn.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" />
+		</rules>
+	</element>
+
+	<element name="Silver Bulwark" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_STONEBORN_SILVER_BULWARK">
+		<description>
+			<p>You can call upon the Silver Path to protect you. When you take Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to gain Resistance to those three damage types until the start of your next turn. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short or Long Rest">
+			<description>When you take Bludgeoning, Piercing, or Slashing damage, you can gain Resistance to those three damage types until the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Watchful Senses" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_STONEBORN_WATCHFUL_SENSES">
+		<description>
+			<p>You gain proficiency in the Insight, Perception, or Survival skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Watchful Senses)" supports="ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Relicborn</n>
+		<description>The Relicborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-relicborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Relicborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_RELICBORN">
+		<description>
+			<p>Relicborn are a skeleton-like species native to Kalero, generally emerging from the numerous tombs and crypts that line the canyon walls of the province. They thrive in a culture of celebration and remembrance, which infuses the very essence of every member of the species. Dancing between the energy of a vivacious party and the serenity of peaceful reflection, this folk holds a deep appreciation for both the living and the dead.</p>
+			<p class="indent">They appear as skeletons decorated with a wide array of vibrant colors, patterns, and styles, and their bones are encased in a translucent, glowing substance that provides them with a similar mass and shape to other Humanoid species, allowing them to comfortably wear clothing and armor. Some relicborn can even grow hair from their skulls, which is often shaped into bombastic styles.</p>
+			<p class="indent">Relicborn typically live for 250 years before losing their form and collapsing into a pile of bones.</p>
+			<h5>RELICBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Undead</li>
+				<li><strong>Size:</strong> Medium (about 4–6 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet</li>
+			</ul>
+			<p>As a Relicborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Dance of Death.</em></strong> As a Bonus Action, you can make a DC 15 Charisma (Musical Instrument or Performance) check. If you succeed, the next attack roll you make before the end of your turn has Advantage. If you succeed on the check by 5 or more, you can roll one of your Hit Point Dice (without expending it) and gain Temporary Hit Points equal to the number rolled.</p>
+			<p class="indent"><strong><em>Eternal Party.</em></strong> You don't need to sleep, and you can finish a Long Rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</p>
+			<p class="indent"><strong><em>Moment of Remembrance.</em></strong> When another creature you can see within 30 feet of you fails a D20 Test, you can take a Reaction to let the target add 1d4 to the total, potentially causing it to succeed. Once this trait changes a failed roll into a success, you can't use it again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Soul of Revelry.</em></strong> You gain proficiency in the Performance skill or with one kind of Musical Instrument.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Relicborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_RELICBORN_DANCE_OF_DEATH" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_RELICBORN_ETERNAL_PARTY" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_RELICBORN_MOMENT_OF_REMEMBRANCE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_RELICBORN_SOUL_OF_REVELRY" />
+		</rules>
+	</element>
+
+	<element name="Dance of Death" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_RELICBORN_DANCE_OF_DEATH">
+		<description>
+			<p>As a Bonus Action, you can make a DC 15 Charisma (Musical Instrument or Performance) check. If you succeed, the next attack roll you make before the end of your turn has Advantage. If you succeed on the check by 5 or more, you can roll one of your Hit Point Dice (without expending it) and gain Temporary Hit Points equal to the number rolled.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>DC 15 Charisma (Musical Instrument or Performance) check. On a success, your next attack roll before the end of your turn has Advantage. On a success by 5+, roll a Hit Point Die (without expending it) and gain that many Temporary Hit Points.</description>
+		</sheet>
+	</element>
+
+	<element name="Eternal Party" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_RELICBORN_ETERNAL_PARTY">
+		<description>
+			<p>You don't need to sleep, and you can finish a Long Rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</p>
+		</description>
+		<sheet>
+			<description>You don't need to sleep, and you can finish a Long Rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</description>
+		</sheet>
+	</element>
+
+	<element name="Moment of Remembrance" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_RELICBORN_MOMENT_OF_REMEMBRANCE">
+		<description>
+			<p>When another creature you can see within 30 feet of you fails a D20 Test, you can take a Reaction to let the target add 1d4 to the total, potentially causing it to succeed. Once this trait changes a failed roll into a success, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short or Long Rest">
+			<description>When another creature you can see within 30 feet of you fails a D20 Test, you can let the target add 1d4 to the total, potentially causing it to succeed.</description>
+		</sheet>
+	</element>
+
+	<element name="Soul of Revelry" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_RELICBORN_SOUL_OF_REVELRY">
+		<description>
+			<p>You gain proficiency in the Performance skill or with one kind of Musical Instrument.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Proficiency (Soul of Revelry)" supports="ID_PROFICIENCY_SKILL_PERFORMANCE|Musical Instrument" />
+		</rules>
+	</element>
+</elements>

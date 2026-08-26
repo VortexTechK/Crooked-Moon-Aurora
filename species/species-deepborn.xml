@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Deepborn</n>
+		<description>The Deepborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-deepborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Deepborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_DEEPBORN">
+		<description>
+			<p>Deepborn are a fish-like species native to Olmarsh, typically rising up from the abyssal depths of the province's black sea—home to terrors beyond imagining known as the Hungry Ones. Immersed in a near constant eldritch presence that emerges from the deep and descends from beyond the stars, these folk manage their state of paranoia by embracing and harnessing the uncanny and cosmic.</p>
+			<p class="indent">While they are primarily piscine in their anatomy, they can possess features found in a wide variety of sea creatures, including cephalopods and crustaceans. They typically live for around 150 years, but certain members of occult orders have been known to live for 600 years.</p>
+			<h5>DEEPBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Aberration</li>
+				<li><strong>Size:</strong> Medium (about 5–7 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet, Swim Speed equal to your Speed</li>
+			</ul>
+			<p>As a Deepborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Eldritch Gibbering.</em></strong> Thanks to your eldritch connection to the Hungering Ones, you speak Deep Speech. As a Magic action, you can gibber in that language. Each creature of your choice in a 30-foot Emanation originating from you must succeed on a Wisdom saving throw (DC 8 plus your Proficiency Bonus and Intelligence, Wisdom, or Charisma modifier; choose the ability when you select this species) or roll a d6 and consult the table below. The effect lasts until the start of your next turn. Once any target fails its save against this trait, you can't use it again until you finish a Short or Long Rest.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Effect</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1–2</td><td>The target has Disadvantage on attack rolls.</td></tr>
+				<tr><td style="text-align:center">3–4</td><td>The target's Speed becomes 0.</td></tr>
+				<tr><td style="text-align:center">5–6</td><td>The target can't take Reactions.</td></tr>
+			</table>
+			<p class="indent"><strong><em>Endless Hunger.</em></strong> As a Bonus Action, you can embrace your connection to the Hungering Ones. Until the start of your next turn, you know the location of any creatures that aren't Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can't have Disadvantage. Once you use this trait, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Deepborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:swim" value="innate speed" bonus="base" />
+
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_AMPHIBIOUS" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ENDLESS_HUNGER" />
+		</rules>
+	</element>
+
+	<element name="Amphibious" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_AMPHIBIOUS">
+		<description>
+			<p>You can breathe air and water.</p>
+		</description>
+		<sheet>
+			<description>You can breathe air and water.</description>
+		</sheet>
+	</element>
+
+	<element name="Eldritch Gibbering" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING">
+		<description>
+			<p>Thanks to your eldritch connection to the Hungering Ones, you speak Deep Speech. As a Magic action, you can gibber in that language. Each creature of your choice in a 30-foot Emanation originating from you must succeed on a Wisdom saving throw (DC 8 plus your Proficiency Bonus and Intelligence, Wisdom, or Charisma modifier; choose the ability when you select this species) or roll a d6 and consult the table below. The effect lasts until the start of your next turn. Once any target fails its save against this trait, you can't use it again until you finish a Short or Long Rest.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Effect</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1–2</td><td>The target has Disadvantage on attack rolls.</td></tr>
+				<tr><td style="text-align:center">3–4</td><td>The target's Speed becomes 0.</td></tr>
+				<tr><td style="text-align:center">5–6</td><td>The target can't take Reactions.</td></tr>
+			</table>
+		</description>
+		<sheet action="Magic action" usage="1/Short or Long Rest">
+			<description>Each creature of your choice in a 30-foot Emanation from you must succeed on a Wisdom save (DC 8 + {{proficiency}} + your chosen ability modifier) or roll a d6: 1–2 Disadvantage on attack rolls; 3–4 Speed becomes 0; 5–6 can't take Reactions. Effect lasts until the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Endless Hunger" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ENDLESS_HUNGER">
+		<description>
+			<p>As a Bonus Action, you can embrace your connection to the Hungering Ones. Until the start of your next turn, you know the location of any creatures that aren't Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can't have Disadvantage. Once you use this trait, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Short or Long Rest">
+			<description>Until the start of your next turn, you know the location of any creatures that aren't Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can't have Disadvantage.</description>
+		</sheet>
+	</element>
+</elements>

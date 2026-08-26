@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Curseborn</n>
+		<description>The Curseborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-curseborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Curseborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_CURSEBORN">
+		<description>
+			<p>Curseborn are a werewolf-like species native to Edwardia, often emerging from the dense, cursed fog that rolls across the province. Sharing a strong connection to a malediction called the Grey, which demands balance at the threat of certain doom, they have managed to build a civilization of advancement and progress, countered by rampant strife, pollution, and hunger.</p>
+			<p class="indent">Covered head to toe with thick fur and bearing sharp teeth and claws, this lupine species evokes the hallmarks and appearance of wolves but with clearly humanoid physiology. If not brought to an early grave by the Grey, they typically live for up to 100 years, although technological advancement has led to certain individuals approaching 200 years old.</p>
+			<h5>CURSEBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Humanoid</li>
+				<li><strong>Size:</strong> Medium (about 5–6 feet tall)</li>
+				<li><strong>Speed:</strong> 35 feet</li>
+			</ul>
+			<p>As a Curseborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Cursed Claws.</em></strong> You have claws you can use to make Unarmed Strikes, which deal 1d6 Slashing damage on a hit. You can use Strength or Dexterity for attack and damage rolls with your claws. When you hit a creature with your claws, you can curse the target until the start of your next turn. While cursed, the target emits wisps of fog and has Disadvantage on D20 Tests. You can curse a creature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Grey Balance.</em></strong> When you fail a saving throw, you can take a Reaction to succeed instead. When you do, you have Disadvantage on D20 Tests until the end of your next turn. You can use this trait once, and you regain the ability to do so when you finish a Long Rest.</p>
+			<p class="indent"><strong><em>Lupine Sense.</em></strong> You have proficiency in the Investigation, Perception, or Survival skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Curseborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="35" bonus="base" />
+
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_CURSED_CLAWS" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_GREY_BALANCE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_LUPINE_SENSE" />
+		</rules>
+	</element>
+
+	<element name="Cursed Claws" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_CURSED_CLAWS">
+		<description>
+			<p>You have claws you can use to make Unarmed Strikes, which deal 1d6 Slashing damage on a hit. You can use Strength or Dexterity for attack and damage rolls with your claws.</p>
+			<p class="indent">When you hit a creature with your claws, you can curse the target until the start of your next turn. While cursed, the target emits wisps of fog and has Disadvantage on D20 Tests. You can curse a creature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>Your claws deal 1d6 Slashing damage on a hit as Unarmed Strikes. When you hit with them, you can curse the target until the start of your next turn, giving it Disadvantage on D20 Tests while it emits wisps of fog.</description>
+		</sheet>
+	</element>
+
+	<element name="Grey Balance" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_GREY_BALANCE">
+		<description>
+			<p>When you fail a saving throw, you can take a Reaction to succeed instead. When you do, you have Disadvantage on D20 Tests until the end of your next turn. You can use this trait once, and you regain the ability to do so when you finish a Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Long Rest">
+			<description>When you fail a saving throw, you can succeed instead. When you do, you have Disadvantage on D20 Tests until the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Lupine Sense" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_CURSEBORN_LUPINE_SENSE">
+		<description>
+			<p>You have proficiency in the Investigation, Perception, or Survival skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Lupine Sense)" supports="ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Gnarlborn</n>
+		<description>The Gnarlborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-gnarlborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Gnarlborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_GNARLBORN">
+		<description>
+			<p>Gnarlborn (NAR-ull-born) are a tree-like species native to Ardengloom, usually sprouting up from the soil of the twisted, dark forest. Their home is forever haunted by the souls of long-dead Fey, which inhabit the enormous, face-bearing trees known as Elderwoods. These folk commune with these beings to receive primordial wisdom.</p>
+			<p class="indent">Resembling gnarled trees with glowing faces hollowed into the bark, their individual patterns of branches, moss, and lichen can result in a wide diversity of appearances. Most gnarlborn live for over 500 years, but those with the strongest connection to the Elderwoods have been said to live to be thousands of years old.</p>
+			<h5>GNARLBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Plant</li>
+				<li><strong>Size:</strong> Medium (about 5–8 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet</li>
+			</ul>
+			<p>As a Gnarlborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Deep Roots.</em></strong> You have Advantage on ability checks and saving throws against being moved against your will or to avoid the Prone condition.</p>
+			<p class="indent"><strong><em>Elderwood Whispers.</em></strong> You can draw on the memory of the Elderwood spirits. When you finish a Long Rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a Long Rest.</p>
+			<p class="indent"><strong><em>Grasping Branches.</em></strong> As a Bonus Action, you can magically unleash the binding power of the dark wood. Choose a Large or smaller creature within 30 feet of yourself. The creature must make a Strength saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, the target has the Restrained condition for 1 minute as branches appear and ensnare it. On a successful save, its Speed is halved until the end of its next turn. A Restrained creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The branches vanish when the condition ends. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Root Sense.</em></strong> As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Towering Size.</em></strong> You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Gnarlborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_DEEP_ROOTS" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_ELDERWOOD_WHISPERS" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_GRASPING_BRANCHES" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_ROOT_SENSE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_TOWERING_SIZE" />
+		</rules>
+	</element>
+
+	<element name="Deep Roots" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_DEEP_ROOTS">
+		<description>
+			<p>You have Advantage on ability checks and saving throws against being moved against your will or to avoid the Prone condition.</p>
+		</description>
+		<sheet>
+			<description>You have Advantage on ability checks and saving throws against being moved against your will or to avoid the Prone condition.</description>
+		</sheet>
+	</element>
+
+	<element name="Elderwood Whispers" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_ELDERWOOD_WHISPERS">
+		<description>
+			<p>You can draw on the memory of the Elderwood spirits. When you finish a Long Rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a Long Rest.</p>
+		</description>
+		<sheet>
+			<description>When you finish a Long Rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a Long Rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Grasping Branches" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_GRASPING_BRANCHES">
+		<description>
+			<p>As a Bonus Action, you can magically unleash the binding power of the dark wood. Choose a Large or smaller creature within 30 feet of yourself. The creature must make a Strength saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, the target has the Restrained condition for 1 minute as branches appear and ensnare it. On a successful save, its Speed is halved until the end of its next turn. A Restrained creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The branches vanish when the condition ends.</p>
+			<p class="indent">Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Short or Long Rest">
+			<description>Choose a Large or smaller creature within 30 feet of yourself. DC {{grasping-branches:dc}} Strength save or have the Restrained condition for 1 minute (or Speed halved until the end of its next turn on a success).</description>
+		</sheet>
+		<rules>
+			<stat name="grasping-branches:dc" value="8" />
+			<stat name="grasping-branches:dc" value="constitution:modifier" />
+			<stat name="grasping-branches:dc" value="proficiency" />
+		</rules>
+	</element>
+
+	<element name="Root Sense" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_ROOT_SENSE">
+		<description>
+			<p>As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="1/Short or Long Rest">
+			<description>You gain Tremorsense with a range of 60 feet for 10 minutes.</description>
+		</sheet>
+	</element>
+
+	<element name="Towering Size" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_TOWERING_SIZE">
+		<description>
+			<p>You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.</p>
+		</description>
+		<sheet>
+			<description>You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.</description>
+		</sheet>
+	</element>
+</elements>

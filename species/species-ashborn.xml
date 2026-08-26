@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Ashborn</n>
+		<description>The Ashborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-ashborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Ashborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_ASHBORN">
+		<description>
+			<p>Ashborn are an imp-like species native to Chernabos, typically coalescing from the sulfuric ash of the province's hellfire and brimstone volcanoes. Infused with the fiendish power of the Hells, this folk has managed to survive and even prosper in the barrens and badlands of the province through guile, boldness, and industriousness. Said to be favored by fortune itself, ashborn count on luck to twist the balance in the most dire of situations.</p>
+			<p class="indent">Their short stature ranges from slight to stout, but this makes them no less dangerous, for each ashborn has a venomous tail resembling a scorpion's, always ready to strike. They sport horns and skin tones in varying shades of red and gray that reflect their devilish origin, and they typically live 100 years.</p>
+			<h5>ASHBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Fiend</li>
+				<li><strong>Size:</strong> Small (about 2–3 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet</li>
+			</ul>
+			<p>As an Ashborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Ashen Legacy.</em></strong> You know the Minor Illusion cantrip. Additionally, starting at character level 3 you always have the Charm Person spell prepared, and starting at character level 5 you always have the Invisibility spell prepared. You can cast them each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Fiendish Fortune.</em></strong> When you're hit by an attack roll that isn't a Critical Hit, you can take a Reaction to magically cause the attack to miss you, and a creature of your choice within 5 feet of you takes Force damage equal to your Proficiency Bonus. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Scorpion Sting.</em></strong> You have a tail stinger you can use to make Unarmed Strikes using your Strength or Dexterity (your choice) for attack and damage rolls. On a hit, you deal 1d4 Piercing damage, and you can deal an extra 1d6 Poison damage. You can deal this extra damage a number of times equal to your Proficiency Bonus. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. When you reach character level 10, this extra damage increases to 2d6.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Ashborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_ASHBORN_FIENDISH_FORTUNE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_ASHBORN_SCORPION_STING" />
+		</rules>
+	</element>
+
+	<element name="Ashen Legacy" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY">
+		<description>
+			<p>You know the Minor Illusion cantrip. Additionally, starting at character level 3 you always have the Charm Person spell prepared, and starting at character level 5 you always have the Invisibility spell prepared. You can cast them each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast them using any spell slots you have of the appropriate level.</p>
+			<p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Spellcasting Ability (Ashen Legacy)" supports="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_INTELLIGENCE|ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_WISDOM|ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Intelligence" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence is your spellcasting ability for the spells you cast with your Ashen Legacy trait.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+			<description>You know the Minor Illusion cantrip. Intelligence is your spellcasting ability for it.</description>
+			<description level="3">You know the Minor Illusion cantrip, and you can cast the Charm Person spell once per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Minor Illusion cantrip, and you can cast the Charm Person and Invisibility spells once each per Long Rest. Intelligence is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CHARM_PERSON" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom is your spellcasting ability for the spells you cast with your Ashen Legacy trait.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+			<description>You know the Minor Illusion cantrip. Wisdom is your spellcasting ability for it.</description>
+			<description level="3">You know the Minor Illusion cantrip, and you can cast the Charm Person spell once per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Minor Illusion cantrip, and you can cast the Charm Person and Invisibility spells once each per Long Rest. Wisdom is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CHARM_PERSON" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_ASHEN_LEGACY_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma is your spellcasting ability for the spells you cast with your Ashen Legacy trait.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+			<description>You know the Minor Illusion cantrip. Charisma is your spellcasting ability for it.</description>
+			<description level="3">You know the Minor Illusion cantrip, and you can cast the Charm Person spell once per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast this spell using any spell slots you have of the appropriate level.</description>
+			<description level="5">You know the Minor Illusion cantrip, and you can cast the Charm Person and Invisibility spells once each per Long Rest. Charisma is your spellcasting ability for the spells you cast with this trait. You can also cast either of those spells using any spell slots you have of the appropriate level.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CHARM_PERSON" level="3" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" level="5" />
+		</rules>
+	</element>
+
+	<element name="Fiendish Fortune" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_FIENDISH_FORTUNE">
+		<description>
+			<p>When you're hit by an attack roll that isn't a Critical Hit, you can take a Reaction to magically cause the attack to miss you, and a creature of your choice within 5 feet of you takes Force damage equal to your Proficiency Bonus. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet action="Reaction" usage="1/Short or Long Rest">
+			<description>When you're hit by an attack roll that isn't a Critical Hit, you can cause the attack to miss you, and a creature of your choice within 5 feet of you takes Force damage equal to {{proficiency}}.</description>
+		</sheet>
+	</element>
+
+	<element name="Scorpion Sting" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_ASHBORN_SCORPION_STING">
+		<description>
+			<p>You have a tail stinger you can use to make Unarmed Strikes using your Strength or Dexterity (your choice) for attack and damage rolls. On a hit, you deal 1d4 Piercing damage, and you can deal an extra 1d6 Poison damage. You can deal this extra damage a number of times equal to your Proficiency Bonus. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. When you reach character level 10, this extra damage increases to 2d6.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest (1/Short Rest)">
+			<description>Your tail stinger deals 1d4 Piercing damage on a hit with an Unarmed Strike, and you can deal an extra 1d6 Poison damage (2d6 at level 10) a number of times equal to {{proficiency}}.</description>
+		</sheet>
+	</element>
+</elements>

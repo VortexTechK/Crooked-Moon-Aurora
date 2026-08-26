@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Graveborn</n>
+		<description>The Graveborn species from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="species-graveborn.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Graveborn" type="Race" source="The Crooked Moon: Player Options" id="ID_TCM_RACE_GRAVEBORN">
+		<description>
+			<p>Graveborn are a ghoul-like species native to Syndramas, typically rising from one of the countless graves that mark the frozen battlefields of the province. They were first created in a kingdom-wide ritual that twisted countless humans into new Undead creatures that barely resembled who they once were. Graveborn now wage war endlessly and perpetuate a culture of martial prowess, relentlessness, and grave honor. These people are infused with the necrotic and draconic essence of the powerful Drakkonite metal found throughout the province, which has given them a strange taste for spoiled flesh of any variety.</p>
+			<p class="indent">Appearing as the corpses of twisted Humanoids, graveborn have powerful snouts and jaws with elongated teeth and tongues that assist in the devouring of flesh and bone. Their physiology is sturdy, as if magically designed to be perfected for war. If not killed in war, as befalls many of their kind, they can live up to 300 years before decaying away.</p>
+			<h5>GRAVEBORN TRAITS</h5>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Creature Type:</strong> Undead</li>
+				<li><strong>Size:</strong> Medium (about 4–6 feet tall)</li>
+				<li><strong>Speed:</strong> 30 feet</li>
+			</ul>
+			<p>As a Graveborn, you have these special traits.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You have Darkvision with a range of 60 feet.</p>
+			<p class="indent"><strong><em>Devour Corpse.</em></strong> You can eat spoiled and rotten food as if it were fresh. Additionally, if you spend 1 minute eating flesh from the corpse of a Small or larger creature that isn't a Construct, roll one of your Hit Point Dice without expending it (even if you have none remaining). You regain a number of Hit Points equal to the number rolled plus your Constitution modifier (minimum of 1 Hit Point). Once you regain Hit Points using this trait, you can't do so again until you finish a Short or Long Rest.</p>
+			<p class="indent"><strong><em>Frozen Waste.</em></strong> You have Resistance to Cold damage.</p>
+			<p class="indent"><strong><em>Infused Drakkonite.</em></strong> When you damage a creature, you can ignore any Resistances it has, and it takes extra Necrotic damage equal to your Proficiency Bonus. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Graveborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_DEVOUR_CORPSE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_FROZEN_WASTE" />
+			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_INFUSED_DRAKKONITE" />
+		</rules>
+	</element>
+
+	<element name="Devour Corpse" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_DEVOUR_CORPSE">
+		<description>
+			<p>You can eat spoiled and rotten food as if it were fresh. Additionally, if you spend 1 minute eating flesh from the corpse of a Small or larger creature that isn't a Construct, roll one of your Hit Point Dice without expending it (even if you have none remaining). You regain a number of Hit Points equal to the number rolled plus your Constitution modifier (minimum of 1 Hit Point). Once you regain Hit Points using this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet usage="1/Short or Long Rest">
+			<description>You can eat spoiled food as if fresh. By spending 1 minute eating flesh from a Small+ corpse that isn't a Construct, you roll one of your Hit Point Dice without expending it and regain that many Hit Points plus {{constitution:modifier}} (minimum 1).</description>
+		</sheet>
+	</element>
+
+	<element name="Frozen Waste" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_FROZEN_WASTE">
+		<description>
+			<p>You have Resistance to Cold damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+	</element>
+
+	<element name="Infused Drakkonite" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GRAVEBORN_INFUSED_DRAKKONITE">
+		<description>
+			<p>When you damage a creature, you can ignore any Resistances it has, and it takes extra Necrotic damage equal to your Proficiency Bonus. Once you use this trait, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet usage="1/Short or Long Rest">
+			<description>When you damage a creature, you can ignore any Resistances it has, and it takes extra Necrotic damage equal to {{proficiency}}.</description>
+		</sheet>
+	</element>
+</elements>
