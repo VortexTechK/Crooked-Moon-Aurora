@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Reveler</n>
+		<description>The Reveler background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-reveler.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Reveler" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_REVELER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Reveling Fool</li>
+				<li><strong>Skill Proficiencies:</strong> Performance, Stealth</li>
+				<li><strong>Language:</strong> Choose one (Abyssal recommended)</li>
+				<li><strong>Tool Proficiency:</strong> Choose one kind of Musical Instrument</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Musical Instrument (same as above), Ball Bearings, Costume (jovial character with a laughing mask), Hunting Trap, Manacles, 3 Torches (for juggling), Traveler's Clothes, 10 GP; or (B) 50 GP</li>
+			</ul>
+			<p>For a time, you traveled with the Lord of Fools' strange and unsettling revelry. Whether you are still welcome in that company, or you've struck off on your own, your time with the troupe revealed some of its nature to you—that the Lord of Fools serves some great entity who prizes humor and merriment, often at the expense of the mighty. But he is no mere jester. Beneath the mask of mockery and merriment is a mad creature who demands sacrifice.</p>
+			<h5 class="caption">BUILDING A REVELER</h5>
+			<p>The simultaneous beauty and uncomfortable truth of the revelers is that they can be anyone. Hidden by their masks and costumes, one's friends, family, servants, or lords could be capering about the ribbon-twined pole and leading impressionable folk away when the revel withdraws. How might a reveler behave differently in each guise?</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Reveler Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Posters depicting drawings of your reveler guise have started showing up in towns after the fool's revel leaves.</td></tr>
+				<tr><td style="text-align:center">2</td><td>Once you learned the truth of the revels—that some of the people who vanish ostensibly to join the revel are sacrificed—you seized the first chance to slip away.</td></tr>
+				<tr><td style="text-align:center">3</td><td>Recently, more people than usual have gone missing from towns in the revel's wake.</td></tr>
+				<tr><td style="text-align:center">4</td><td>Crows, owls, and other birds seem to cackle and laugh in your presence.</td></tr>
+				<tr><td style="text-align:center">5</td><td>You have grown suspicious that another reveler has a sinister motive concealed by their jester's guise.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You left the revel when you caught a glimpse of the wickedness lurking beneath the Lord of Fool's jovial veneer.</td></tr>
+			</table>
+			<p><strong>Reveler Trinkets.</strong> When you make your character, you can roll once on the Reveler Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A small wind-up bell that you can conceal in the palm of your hand with a button to activate it</td></tr>
+				<tr><td style="text-align:center">2</td><td>A dented metal spray bottle</td></tr>
+				<tr><td style="text-align:center">3</td><td>A string of colorful handkerchiefs tied together</td></tr>
+				<tr><td style="text-align:center">4</td><td>A tarnished silver bell that sometimes refuses to jingle</td></tr>
+				<tr><td style="text-align:center">5</td><td>A pair of boots or slippers that squeak comically with each step</td></tr>
+				<tr><td style="text-align:center">6</td><td>A short scepter or baton with a horn on the cap</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_REVELING_FOOL" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Reveling Fool Feat, Performance and Stealth Skills, a chosen Language, and a Musical Instrument</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_REVELING_FOOL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<select type="Language" name="Language (Reveler)" supports="Standard||Exotic" />
+			<select type="Proficiency" name="Musical Instrument Proficiency (Reveler)" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_BAGPIPES|ID_PROFICIENCY_TOOL_PROFICIENCY_DRUM|ID_PROFICIENCY_TOOL_PROFICIENCY_DULCIMER|ID_PROFICIENCY_TOOL_PROFICIENCY_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_HORN|ID_PROFICIENCY_TOOL_PROFICIENCY_LUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_LYRE|ID_PROFICIENCY_TOOL_PROFICIENCY_PAN_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_SHAWM|ID_PROFICIENCY_TOOL_PROFICIENCY_VIOL" />
+		</rules>
+	</element>
+</elements>

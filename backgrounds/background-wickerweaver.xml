@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Wicker Weaver</n>
+		<description>The Wicker Weaver background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-wickerweaver.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Wicker Weaver" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_WICKER_WEAVER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Charm Twister</li>
+				<li><strong>Skill Proficiencies:</strong> Insight, Nature</li>
+				<li><strong>Language:</strong> Sylvan</li>
+				<li><strong>Tool Proficiency:</strong> Weaver's Tools</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Quarterstaff, Weaver's Tools, Basket (with dry reeds ready to weave), Book (druidic lore), Iron Pot, Traveler's Clothes, 19 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You know the ancient rites kept alive by secretive druids and hedge practitioners in the shadowed groves of the primordial forests. Remedies and hexes woven into wicker charms can stave off misfortune and ward away evil. They could just as likely invite gloom and the ire of the old spirits.</p>
+			<h5 class="caption">BUILDING A WICKER WEAVER</h5>
+			<p>Compassionate characters driven by a deep connection to the land and a passion to protect it become wicker weavers. Druids of other circles might trade knowledge with the Circle of Wicker. Healers and guardians alike may seek out the Old Ways for remedies and protective charms to ward off evil. Not all who come to the wicker craft do so with noble intent—some, broken by spite and twisted by their pain, wield the power of the wicker into malicious revenge, lashing out with curses bound in twig and bone and inflicting the wrath of the forest upon those who wronged them.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Wicker Weaver Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>One of the charms you created ensured a baby was born healthy, and their family sends you small but heartfelt gifts.</td></tr>
+				<tr><td style="text-align:center">2</td><td>Your mentor who taught you the craft has become increasingly withdrawn and uncharacteristically agitated.</td></tr>
+				<tr><td style="text-align:center">3</td><td>An order of druids, the Circle of Wicker, taught you their ways. You aren't certain why.</td></tr>
+				<tr><td style="text-align:center">4</td><td>Someone offered you a shocking sum of coin to twist a wicker charm for them. You're tempted but unsettled by the unwarranted generosity.</td></tr>
+				<tr><td style="text-align:center">5</td><td>You traded a wicker charm for a child's toy that bound misfortune to its owner. You must keep it until you can sell it, it's stolen, or you lose it.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You wove a hex into a wicker charm to punish a criminal, and they nurse that grudge still.</td></tr>
+			</table>
+			<p><strong>Wicker Weaver Trinkets.</strong> When you make your character, you can roll once on the Wicker Weaver Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A crescent woven from wicker and laced with silver wire</td></tr>
+				<tr><td style="text-align:center">2</td><td>A glass bauble that was the first payment you received for your hedge wisdom</td></tr>
+				<tr><td style="text-align:center">3</td><td>A Tiny figure made of acorn caps from the oldest oak in the woods</td></tr>
+				<tr><td style="text-align:center">4</td><td>A rough-forged knife with an etched blade</td></tr>
+				<tr><td style="text-align:center">5</td><td>A snake skull in a wicker cage</td></tr>
+				<tr><td style="text-align:center">6</td><td>A battered stuffed animal missing one eye</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_CHARM_TWISTER" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Charm Twister Feat, Insight and Nature Skills, Sylvan, and Weaver's Tools</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_CHARM_TWISTER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS" />
+		</rules>
+	</element>
+</elements>

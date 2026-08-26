@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Night Stalker</n>
+		<description>The Night Stalker background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-nightstalker.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Night Stalker" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_NIGHT_STALKER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Hunter of Hunters</li>
+				<li><strong>Skill Proficiencies:</strong> Stealth, and one other of your choice from the following list: Arcana, History, Religion, Nature</li>
+				<li><strong>Tool Proficiency:</strong> Leatherworker's Tools</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Leatherworker's Tools, Book (one creature type), Hooded Lantern, Hunting Trap, Oil (3 flasks), Traveler's Clothes, 8 GP; or (B) 50 GP</li>
+			</ul>
+			<p>Once you were prey, stalked by a monster through the dark of night. Now, you are the hunter, and the things which you once feared will learn the true meaning of dread. You have become far deadlier, hungrier, and crueler than the monster that once hunted you. You are, yourself, the monster now—a fearsome creature once thought to slake its hunger on you or those close to you. You survived, and your would-be killer will have its own destruction in turn.</p>
+			<h5 class="caption">BUILDING A NIGHT STALKER</h5>
+			<p>Consider how you joined the hunt against the creatures of the night. Did you lose someone close to you or survive an attack? Perhaps you were raised in a family line of dedicated hunters. Rangers, Rogues, and Barbarians make fearsome night stalkers, as does any character with a passion to oppose these deadly creatures.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Night Stalker Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>You're hunting the creature that slew your loved ones.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You started your hunt with zeal but quickly find that you're losing your stomach for it.</td></tr>
+				<tr><td style="text-align:center">3</td><td>As you learn more about the creatures of the night, you discover that some of your initial thoughts about them were wrong.</td></tr>
+				<tr><td style="text-align:center">4</td><td>You failed to stand up to a creature and saved yourself instead of someone else. Now you try to make up for that shame.</td></tr>
+				<tr><td style="text-align:center">5</td><td>The monsters you hunt terrify you to your soul, and you lash out to deny your fear.</td></tr>
+				<tr><td style="text-align:center">6</td><td>Your fervent hunt is a cover for your desire to become something more than mortal.</td></tr>
+			</table>
+			<p><strong>Night Stalker Trinkets.</strong> When you make your character, you can roll once on the Night Stalker Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A necklace of yellowed fangs</td></tr>
+				<tr><td style="text-align:center">2</td><td>A series of letters showing a person's personality sharply eroding into incoherence and raving</td></tr>
+				<tr><td style="text-align:center">3</td><td>A knife made from a massive creature's claw</td></tr>
+				<tr><td style="text-align:center">4</td><td>A casting of a monstrous footprint</td></tr>
+				<tr><td style="text-align:center">5</td><td>A hide or pelt from a vicious beast</td></tr>
+				<tr><td style="text-align:center">6</td><td>A glass eye that normal animals shy away from</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_HUNTER_OF_HUNTERS" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Hunter of Hunters Feat, Stealth plus a chosen Skill, and Leatherworker's Tools</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_HUNTER_OF_HUNTERS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+			<select type="Proficiency" name="Skill Proficiency (Night Stalker)" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Crimson Aspirant</n>
+		<description>The Crimson Aspirant background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-crimsonaspirant.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Crimson Aspirant" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_CRIMSON_ASPIRANT">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Crimson Ritualist</li>
+				<li><strong>Skill Proficiencies:</strong> Arcana, Medicine</li>
+				<li><strong>Tool Proficiency:</strong> Herbalism Kit</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Herbalism Kit, Dagger, Fine Clothes, Healer's Kit, 3 Vials, 10 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You have delved into the forces that animate all life—even those that counterfeit life, such as Constructs and Undead. Many of these studies concentrate on the nature of blood and its power to sustain life and transmit vital essence, binding the soul to the flesh. You might have apprenticed under a sly-hearted mentor or a secret cabal focused on understanding or even manipulating life and death. You may have learned from a detailed treatise that you've put into practice, daring to become versed in the forbidden arts.</p>
+			<h5 class="caption">BUILDING A CRIMSON ASPIRANT</h5>
+			<p>Characters who value study and learning, as well as those with a capacity to heal the injuries and illnesses of others, readily become crimson aspirants. More physically inclined characters can be drawn to the teachings of blood to tap into their increased vital energies, as can those who are sickly or weak in hopes of overcoming that adversity.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Crimson Aspirant Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Sometimes when you bleed, you hear whispers from your fallen blood that tease with meaning.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You were trained by a remote monastery, but your mentor ushered you out one morning in a panic and sent you away.</td></tr>
+				<tr><td style="text-align:center">3</td><td>A plague carried in the blood defies cures, and you must find its origin.</td></tr>
+				<tr><td style="text-align:center">4</td><td>Your mentor, who inducted you into the secrets held within life and blood, vanished suddenly.</td></tr>
+				<tr><td style="text-align:center">5</td><td>Your studies reveal a spate of anemia cases, some ending in death, as the predations of blood-drinking monsters.</td></tr>
+				<tr><td style="text-align:center">6</td><td>A loved one, such as a paramour or sibling, has died, and your studies hint at a way to bring them back.</td></tr>
+			</table>
+			<p><strong>Crimson Aspirant Trinkets.</strong> When you make your character, you can roll once on the Crimson Aspirant Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A glass pendant with a single drop of blood suspended within</td></tr>
+				<tr><td style="text-align:center">2</td><td>A long scroll with an anatomical study and description of how life energy flows through the body</td></tr>
+				<tr><td style="text-align:center">3</td><td>A handkerchief with a blood drop pressed into the center</td></tr>
+				<tr><td style="text-align:center">4</td><td>A polished bloodstone for balancing vital energy</td></tr>
+				<tr><td style="text-align:center">5</td><td>A vial of blood that never coagulates or dries</td></tr>
+				<tr><td style="text-align:center">6</td><td>A small box of ashes said to be from a martyr who was falsely accused of vampirism and burned at the stake</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_CRIMSON_RITUALIST" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Crimson Ritualist Feat, Arcana and Medicine Skills, and Herbalism Kit</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_CRIMSON_RITUALIST" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+		</rules>
+	</element>
+</elements>

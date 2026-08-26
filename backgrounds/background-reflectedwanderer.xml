@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Reflected Wanderer</n>
+		<description>The Reflected Wanderer background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-reflectedwanderer.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Reflected Wanderer" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_REFLECTED_WANDERER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Unreflected</li>
+				<li><strong>Skill Proficiencies:</strong> Deception, Investigation</li>
+				<li><strong>Tool Proficiency:</strong> Disguise Kit</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Disguise Kit, Mirror, Traveler's Clothes, 16 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You were once whole, but part of you has been separated from your being and now also wanders the world. This aspect of you took your reflection and shadow with it, and it travels about as a mirage that looks identical to you. You know this other self is out there—you can feel it—but what it wants and why is lost on you. Sometimes you encounter a stranger that knows you—for good or ill—though you've never met them before, and you can't help but wonder if they met the other you.</p>
+			<h5 class="caption">BUILDING A REFLECTED WANDERER</h5>
+			<p>Any character can be a reflected wanderer. How was it that your being came to be divided? How much do you understand about your situation? Are you truly who you think you are, or are you, in reality, the very castoff reflection of your other self?</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Reflected Wanderer Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A close, long-term relationship went suddenly sour as if you wronged the other person.</td></tr>
+				<tr><td style="text-align:center">2</td><td>Your other self leaves you messages and signs as it travels, sometimes seeming fond and other times resentful.</td></tr>
+				<tr><td style="text-align:center">3</td><td>Animals are unsettled by you, becoming skittish and restless in your presence.</td></tr>
+				<tr><td style="text-align:center">4</td><td>You're wanted for several minor crimes you never committed, though eyewitnesses named you. Over time, more crimes of increasing severity occur.</td></tr>
+				<tr><td style="text-align:center">5</td><td>Someone you've been at odds with begins treating you with more respect and kindness.</td></tr>
+				<tr><td style="text-align:center">6</td><td>Mirrors sometimes crack when you touch them.</td></tr>
+			</table>
+			<p><strong>Reflected Wanderer Trinkets.</strong> When you make your character, you can roll once on the Reflected Wanderer Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A shattered hand mirror</td></tr>
+				<tr><td style="text-align:center">2</td><td>An invitation to a powerful person's home whom you've never met</td></tr>
+				<tr><td style="text-align:center">3</td><td>A locket with your silhouette painted in it on both sides, facing each other</td></tr>
+				<tr><td style="text-align:center">4</td><td>A short, derisive letter from yourself that you don't remember writing</td></tr>
+				<tr><td style="text-align:center">5</td><td>A brooch delivered to you that you didn't purchase</td></tr>
+				<tr><td style="text-align:center">6</td><td>A piece of chalk that writes in a different color than it appears to be</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_UNREFLECTED" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Unreflected Feat, Deception and Investigation Skills, and a Disguise Kit</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_UNREFLECTED" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+		</rules>
+	</element>
+</elements>

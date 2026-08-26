@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Cultist</n>
+		<description>The Cultist background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-cultist.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Cultist" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_CULTIST">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Cult Initiate</li>
+				<li><strong>Skill Proficiencies:</strong> Arcana, choose one (Cultist Affinity table skill recommended)</li>
+				<li><strong>Language:</strong> Choose one (Cultist Affinity table language recommended)</li>
+				<li><strong>Tool Proficiency:</strong> Calligrapher's Supplies</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Calligrapher's Supplies, Costume (cult garb), Holy Symbol (Amulet: cult insignia), Traveler's Clothes, 10 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You have been inducted into a secret society that venerates or pursues power from some otherworldly source. The cultists might serve as minions of an entity they worship, or they may seek to understand and claim its might for their own. Depending on the malevolence of the cult's patron or the malefic purposes they may serve, cultists could be a force of wickedness or a group of closely bonded and dedicated people who pursue a common, if esoteric, goal.</p>
+			<h5 class="caption">BUILDING A CULTIST</h5>
+			<p>Cultists are often lost souls—individuals severed from the fabric of society whose cult became a manipulative, surrogate family. Consider if your character agrees with the aims of the cult, if they fled the group, or if they remain for infiltration purposes.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Cultist Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>You learned that the cult that took you in manipulated you throughout your life.</td></tr>
+				<tr><td style="text-align:center">2</td><td>A member of your cult betrayed and killed your leader and mentor.</td></tr>
+				<tr><td style="text-align:center">3</td><td>Your cult's activities aroused the ire and superstition of locals, deserved or not.</td></tr>
+				<tr><td style="text-align:center">4</td><td>You followed a loved one into joining the cult, trying to find out what happened to them.</td></tr>
+				<tr><td style="text-align:center">5</td><td>You met someone who forced you to see the cult you always venerated in a different light.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You joined the cult to save yourself from an incurable illness or other certain doom.</td></tr>
+			</table>
+			<h5 class="caption">CULT VENERATION</h5>
+			<p>Cults propitiate beings of otherworldly power in hopes of sharing in that potency. Choose what type of cult you joined, such as the following.</p>
+			<p class="indent"><strong>Aberration.</strong> Alien creatures with inscrutable mindsets and motivations. Many originate from outside the known multiverse.</p>
+			<p class="indent"><strong>Celestial.</strong> Beings of the Upper Planes, and paragons of order or benevolence. Many can be overbearing and uncompromising.</p>
+			<p class="indent"><strong>Fiend (Demon).</strong> Creatures of utter evil and destruction that want to see all worlds and planes burn.</p>
+			<p class="indent"><strong>Fiend (Devil).</strong> Beings of cunning wickedness who prize structure and obedience. They seek to subjugate others and condemn souls.</p>
+			<p class="indent"><strong>Fey.</strong> Capricious beings often associated with nature and emotional extremes. They can be beautiful, terrible, intoxicating, and horrific.</p>
+			<table>
+				<thead>
+					<tr><td>Cult Patron</td><td class="left">Skill</td><td class="left">Language</td></tr>
+				</thead>
+				<tr><td>Aberration</td><td class="left">Perception</td><td class="left">Deep Speech</td></tr>
+				<tr><td>Celestial</td><td class="left">Religion</td><td class="left">Celestial</td></tr>
+				<tr><td>Fiend (Demon)</td><td class="left">Religion</td><td class="left">Abyssal</td></tr>
+				<tr><td>Fiend (Devil)</td><td class="left">Religion</td><td class="left">Infernal</td></tr>
+				<tr><td>Fey</td><td class="left">Nature</td><td class="left">Sylvan</td></tr>
+			</table>
+			<p><strong>Cultist Trinkets.</strong> When you make your character, you can roll once on the Cultist Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A sealed scroll of esoteric knowledge</td></tr>
+				<tr><td style="text-align:center">2</td><td>A steel ball bearing etched over its entire surface with your cult's sacred text</td></tr>
+				<tr><td style="text-align:center">3</td><td>A crystal that feels strange to the touch</td></tr>
+				<tr><td style="text-align:center">4</td><td>A ritual knife stained with blood, sap, or oils</td></tr>
+				<tr><td style="text-align:center">5</td><td>A set of copper tattoo needles</td></tr>
+				<tr><td style="text-align:center">6</td><td>An embroidered cloth half mask</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_CULT_INITIATE" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Cult Initiate Feat, Arcana plus a chosen Skill, a chosen Language, and Calligrapher's Supplies</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_CULT_INITIATE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<select type="Proficiency" name="Skill Proficiency (Cultist)" supports="ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE" />
+			<select type="Language" name="Language (Cultist)" supports="Standard||Exotic" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Amnesiac</n>
+		<description>The Amnesiac background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-amnesiac.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Amnesiac" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_AMNESIAC">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Memory Starved</li>
+				<li><strong>Skill Proficiencies:</strong> Choose two (see Scattered Memories)</li>
+				<li><strong>Tool Proficiency:</strong> Choose one (see Scattered Memories)</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Book (personal notes), Ink, Ink Pen, Traveler's Clothes, 11 GP; or (B) 50 GP</li>
+			</ul>
+			<p>Some portion of your past has been swallowed by nothingness. The missing time could be a short interval—mere days or weeks gone from your memory—or you might have only vague hints at best of who you are and where you are from. Flashes of déjà vu are common, taunting you with recollection, but they almost always slip away, as ungraspable as the mists of Druskenvald. An injury, some traumatic experience, or the magical workings of a spell or curse could be the culprit behind your amnesia.</p>
+			<h5 class="caption">SCATTERED MEMORIES</h5>
+			<p>You don't choose skill proficiencies or a tool proficiency when you select this background, and you don't determine the two languages that are part of your origin—these are parts of your past that you are missing. Instead, you can pick one of those proficiencies or the languages during play at any time. The knowledge might return in a spontaneous flash, even as you make a roll that relies on the proficiency, or slowly emerge as you struggle to solve a problem. Once you choose one of these features, you can't choose another one until you gain a level.</p>
+			<p class="indent">The GM might rule that you can choose a new recalled feature early if something reminds you of your past, such as finding a piece of evidence from your missing memories or experiencing an event similar to one you have forgotten. Of particular value is an event relating to one of the story threads or trinkets presented below.</p>
+			<h5 class="caption">BUILDING AN AMNESIAC</h5>
+			<p>Any character can face misfortune or a choice that steals their memory. Consider how your character came to lose their memory. Was it lost through injury or illness, or did something more sinister steal it with a toxin or curse? You might decide to leave this choice up to the GM, letting you as a player discover the cause alongside your character.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> This background presents a paradox when considering threads to weave through a campaign, since the character may not remember them. Work with the GM to create some leading events or people that can serve as constants to trace a path through the void of the character's past, especially if the GM can insert existing nonplayer characters into the thread to strengthen these connections. The Amnesiac Story Threads table suggests events and people who can be the start of these threads.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>You have recurring dreams of someone you might recognize on your adventures.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You absent-mindedly doodle the same design or symbol over and over.</td></tr>
+				<tr><td style="text-align:center">3</td><td>A friend has been traveling the provinces of Druskenvald with a caravan, searching for any hint of your past as they do.</td></tr>
+				<tr><td style="text-align:center">4</td><td>A rhyme or song you've never heard before comes to mind when your thoughts wander.</td></tr>
+				<tr><td style="text-align:center">5</td><td>Rainbow colors, such as those on a soap bubble or oil slick, fill you with unexplained terror.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You have a fragmented recollection of traveling to a remote place in the mountains.</td></tr>
+			</table>
+			<p><strong>Amnesiac Trinkets.</strong> When you make your character, you can roll once on the Amnesiac Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Half of a tarnished silver ring with a partial inscription in a language you don't understand</td></tr>
+				<tr><td style="text-align:center">2</td><td>A music box that plays a sad tune you recognize but can't identify</td></tr>
+				<tr><td style="text-align:center">3</td><td>A short note addressed to you signed with a name you don't recognize</td></tr>
+				<tr><td style="text-align:center">4</td><td>A thin silk scarf with a fading scent that stirs familiarity</td></tr>
+				<tr><td style="text-align:center">5</td><td>A toy horse with unfamiliar initials inked on it</td></tr>
+				<tr><td style="text-align:center">6</td><td>A locket whose portrait is burnt and unrecognizable</td></tr>
+			</table>
+			<div class="reference">
+				<div element="ID_TCM_FEAT_MEMORY_STARVED" />
+			</div>
+		</description>
+		<setters>
+			<set name="short">Memory Starved Feat, choose two Skills and a Tool Proficiency</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_TCM_FEAT_MEMORY_STARVED" />
+			<select type="Proficiency" name="Skill Proficiency (Amnesiac)" supports="Skill" number="2" />
+			<select type="Proficiency" name="Tool Proficiency (Amnesiac)" supports="Tool||Kit||Gaming Set||Musical Instrument||Vehicle" />
+		</rules>
+	</element>
+</elements>

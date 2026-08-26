@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Druskenvald Dweller</n>
+		<description>The Druskenvald Dweller background from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="background-druskenvalddweller.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Druskenvald Dweller" type="Background" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_DRUSKENVALD_DWELLER">
+		<description>
+			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
+				<li><strong>Feat:</strong> Choose one Origin feat</li>
+				<li><strong>Skill Proficiencies:</strong> Survival, choose one (Province Affinity table skill recommended)</li>
+				<li><strong>Tool Proficiency:</strong> Choose one (Province Affinity table tool recommended)</li>
+				<li><strong>Equipment:</strong> Choose A or B: (A) Artisan's Tools (same as above), Map (Druskenvald's provinces), Traveler's Clothes, 10 GP; or (B) 50 GP</li>
+			</ul>
+			<p>You hail from one of the thirteen baneful provinces of Druskenvald. You might be a member of the unique species known to originate from those diverse biomes, or you may be of a different heritage altogether. The skills and culture of your home (summarized below) shape your knowledge and early experiences.</p>
+			<table>
+				<thead>
+					<tr><td>Province</td><td class="left">Skill</td><td class="left">Tool</td></tr>
+				</thead>
+				<tr><td>Ardengloom</td><td class="left">History</td><td class="left">Herbalism Kit</td></tr>
+				<tr><td>Astramar</td><td class="left">Arcana</td><td class="left">Navigator's Tools</td></tr>
+				<tr><td>Bubonia</td><td class="left">Medicine</td><td class="left">Poisoner's Kit</td></tr>
+				<tr><td>Chernabos</td><td class="left">Deception</td><td class="left">Calligrapher's Supplies</td></tr>
+				<tr><td>Edwardia</td><td class="left">Investigation</td><td class="left">Tinker's Tools</td></tr>
+				<tr><td>Enoch</td><td class="left">Nature</td><td class="left">Leatherworker's Tools</td></tr>
+				<tr><td>Kalero</td><td class="left">Performance</td><td class="left">Musical Instrument</td></tr>
+				<tr><td>Olmarsh</td><td class="left">Arcana</td><td class="left">Cartographer's Supplies</td></tr>
+				<tr><td>Nerukhet</td><td class="left">Persuasion</td><td class="left">Weaver's Tools</td></tr>
+				<tr><td>Pholsense</td><td class="left">Religion</td><td class="left">Mason's Tools</td></tr>
+				<tr><td>Picco</td><td class="left">Performance</td><td class="left">Woodworker's Tools</td></tr>
+				<tr><td>Syndramas</td><td class="left">Athletics</td><td class="left">Cook's Utensils</td></tr>
+				<tr><td>Zulrogg</td><td class="left">Survival</td><td class="left">Herbalism Kit</td></tr>
+			</table>
+			<h5 class="caption">BUILDING A DRUSKENVALD DWELLER</h5>
+			<p>Any sort of character can be a Druskenvald dweller. When you make your character, decide if you belong to the species associated with your home province, or if you are of another kind who was raised outside the home of most of your species. This decision itself may determine truths about your character to be experienced throughout your journeys in Druskenvald.</p>
+			<p class="indent"><strong>Suggested Story Threads.</strong> The Druskenvald Dweller Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Thread</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>You were left on a church doorstep as an infant. The only clue to your origin is the torn cloak used as a blanket.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You fled your home province after being accused of a crime, whether justly or not.</td></tr>
+				<tr><td style="text-align:center">3</td><td>After hearing stories of other provinces, you struck out to see more of Druskenvald.</td></tr>
+				<tr><td style="text-align:center">4</td><td>Members of a trade caravan stole something or harmed someone dear to you.</td></tr>
+				<tr><td style="text-align:center">5</td><td>You made a desperate pact with an ashborn and now seek to nullify the contract.</td></tr>
+				<tr><td style="text-align:center">6</td><td>A vicious bogborn bounty hunter trails you.</td></tr>
+			</table>
+			<p><strong>Druskenvald Dweller Trinkets.</strong> When you make your character, you can roll once on the Druskenvald Dweller Trinkets table instead of on the normal starting Trinkets table.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Trinket</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A brass needle with a dangling bit of broken thread</td></tr>
+				<tr><td style="text-align:center">2</td><td>A dull, rusty sickle with a bone handle</td></tr>
+				<tr><td style="text-align:center">3</td><td>A star chart etched onto a crystal plate</td></tr>
+				<tr><td style="text-align:center">4</td><td>A wicker doll with bloodstained bead eyes</td></tr>
+				<tr><td style="text-align:center">5</td><td>A length of chain that sometimes rattles when left unattended</td></tr>
+				<tr><td style="text-align:center">6</td><td>A mummified hand preserved in bog peat</td></tr>
+			</table>
+		</description>
+		<setters>
+			<set name="short">Choice of Origin feat, Survival plus a chosen Skill, and a chosen Tool</set>
+		</setters>
+		<rules>
+			<select type="Feat" name="Origin Feat (Druskenvald Dweller)" supports="Origin" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<select type="Proficiency" name="Skill Proficiency (Druskenvald Dweller)" supports="ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<select type="Proficiency" name="Tool Proficiency (Druskenvald Dweller)" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT|ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT|ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS|Musical Instrument|ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS" />
+		</rules>
+	</element>
+</elements>
