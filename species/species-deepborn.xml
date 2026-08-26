@@ -3,7 +3,7 @@
 	<info>
 		<n>Deepborn</n>
 		<description>The Deepborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-deepborn.xml" url="" />
 		</update>
 	</info>
@@ -40,6 +40,8 @@
 			<stat name="innate speed:swim" value="innate speed" bonus="base" />
 
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
+			<grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_AMPHIBIOUS" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ENDLESS_HUNGER" />
@@ -67,9 +69,53 @@
 				<tr><td style="text-align:center">5–6</td><td>The target can't take Reactions.</td></tr>
 			</table>
 		</description>
-		<sheet action="Magic action" usage="1/Short or Long Rest">
-			<description>Each creature of your choice in a 30-foot Emanation from you must succeed on a Wisdom save (DC 8 + {{proficiency}} + your chosen ability modifier) or roll a d6: 1–2 Disadvantage on attack rolls; 3–4 Speed becomes 0; 5–6 can't take Reactions. Effect lasts until the start of your next turn.</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Racial Trait" name="Ability (Eldritch Gibbering)" supports="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_INTELLIGENCE|ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_WISDOM|ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_CHARISMA" />
+		</rules>
+	</element>
+
+	<element name="Intelligence" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Intelligence determines your Eldritch Gibbering save DC.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Magic Action" usage="1/Short or Long Rest">
+			<description>Each creature of your choice in a 30-foot Emanation from you must succeed on a Wisdom save (DC {{eldritch-gibbering:dc}}) or roll a d6: 1–2 Disadvantage on attack rolls; 3–4 Speed becomes 0; 5–6 can't take Reactions. Effect lasts until the start of your next turn.</description>
 		</sheet>
+		<rules>
+			<stat name="eldritch-gibbering:dc" value="8" />
+			<stat name="eldritch-gibbering:dc" value="proficiency" />
+			<stat name="eldritch-gibbering:dc" value="intelligence:modifier" />
+		</rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Wisdom determines your Eldritch Gibbering save DC.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Magic Action" usage="1/Short or Long Rest">
+			<description>Each creature of your choice in a 30-foot Emanation from you must succeed on a Wisdom save (DC {{eldritch-gibbering:dc}}) or roll a d6: 1–2 Disadvantage on attack rolls; 3–4 Speed becomes 0; 5–6 can't take Reactions. Effect lasts until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="eldritch-gibbering:dc" value="8" />
+			<stat name="eldritch-gibbering:dc" value="proficiency" />
+			<stat name="eldritch-gibbering:dc" value="wisdom:modifier" />
+		</rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ELDRITCH_GIBBERING_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Charisma determines your Eldritch Gibbering save DC.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Magic Action" usage="1/Short or Long Rest">
+			<description>Each creature of your choice in a 30-foot Emanation from you must succeed on a Wisdom save (DC {{eldritch-gibbering:dc}}) or roll a d6: 1–2 Disadvantage on attack rolls; 3–4 Speed becomes 0; 5–6 can't take Reactions. Effect lasts until the start of your next turn.</description>
+		</sheet>
+		<rules>
+			<stat name="eldritch-gibbering:dc" value="8" />
+			<stat name="eldritch-gibbering:dc" value="proficiency" />
+			<stat name="eldritch-gibbering:dc" value="charisma:modifier" />
+		</rules>
 	</element>
 
 	<element name="Endless Hunger" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_DEEPBORN_ENDLESS_HUNGER">
