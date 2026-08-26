@@ -3,7 +3,7 @@
 	<info>
 		<n>General Feats</n>
 		<description>General Feats from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="general-feats.xml" url="" />
 		</update>
 	</info>
@@ -20,7 +20,7 @@
 			<p class="indent"><strong>Enduring Vitality.</strong> If an effect would kill you outright without Death Saving Throws or would reduce you directly to 0 Hit Points without dealing damage, you are instead reduced to a number of Hit Points equal to your level. You can't use this benefit again until you finish a Long Rest.</p>
 		</description>
 		<sheet usage="1/Long Rest">
-			<description>You add {{death saves:misc}} to Death Saving Throws. If an effect would kill you outright or reduce you directly to 0 Hit Points without damage, you're instead reduced to {{level}} Hit Points (once per Long Rest).</description>
+			<description>You add {{death saves:misc}} to Death Saving Throws. If an effect would kill you outright or reduce you directly to 0 Hit Points without damage, you're instead reduced to {{level}} Hit Points.</description>
 		</sheet>
 		<rules>
 			<select type="Ability Score Improvement" name="Ability Score Increase (Death Defier)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CONSTITUTION" />
@@ -40,7 +40,7 @@
 			<p class="indent"><strong>Swift Invocation.</strong> You can use an action to cast a spell that has a casting time of 1 minute. Once you use this benefit, you can't do so again until you finish a Long Rest.</p>
 		</description>
 		<sheet usage="1/Long Rest">
-			<description>You can use an action to cast a spell that has a casting time of 1 minute, once per Long Rest.</description>
+			<description>You can use an action to cast a spell that has a casting time of 1 minute.</description>
 		</sheet>
 		<rules>
 			<select type="Ability Score Improvement" name="Ability Score Increase (Swift Witchcraft)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_INTELLIGENCE|ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_WISDOM|ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CHARISMA" />
