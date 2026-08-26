@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>General Feats</n>
+		<description>General Feats from The Crooked Moon: Player Options.</description>
+		<update version="0.0.1">
+			<file name="general-feats.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Death Defier" type="Feat" source="The Crooked Moon: Player Options" id="ID_TCM_FEAT_DEATH_DEFIER">
+		<supports>General</supports>
+		<requirements>[character:4]</requirements>
+		<prerequisite>Level 4+</prerequisite>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+)</p>
+			<p>When the hand of death reaches for your soul, you have found a way to reject its call. You gain the following benefits.</p>
+			<p class="indent"><strong>Ability Score Increase.</strong> Increase your Constitution score by 1, to a maximum of 20.</p>
+			<p class="indent"><strong>Cling to Life.</strong> You add your Constitution modifier (minimum of 1) to Death Saving Throws.</p>
+			<p class="indent"><strong>Enduring Vitality.</strong> If an effect would kill you outright without Death Saving Throws or would reduce you directly to 0 Hit Points without dealing damage, you are instead reduced to a number of Hit Points equal to your level. You can't use this benefit again until you finish a Long Rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You add {{death saves:misc}} to Death Saving Throws. If an effect would kill you outright or reduce you directly to 0 Hit Points without damage, you're instead reduced to {{level}} Hit Points (once per Long Rest).</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Death Defier)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CONSTITUTION" />
+			<stat name="death saves:misc" value="constitution:modifier" bonus="base" />
+			<stat name="death saves:misc" value="1" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Swift Witchcraft" type="Feat" source="The Crooked Moon: Player Options" id="ID_TCM_FEAT_SWIFT_WITCHCRAFT">
+		<supports>General</supports>
+		<requirements>[character:4],(ID_INTERNAL_GRANTS_SPELLCASTING_FEATURE||ID_INTERNAL_GRANTS_PACT_MAGIC_FEATURE)</requirements>
+		<prerequisite>Level 4+, Spellcasting or Pact Magic Feature</prerequisite>
+		<description>
+			<p class="flavor">General Feat (Prerequisite: Level 4+, Spellcasting or Pact Magic Feature)</p>
+			<p>You have honed your skills in the rituals of witchcraft and can quickly weave your magic in times of need. You gain the following benefits.</p>
+			<p class="indent"><strong>Ability Score Increase.</strong> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+			<p class="indent"><strong>Swift Invocation.</strong> You can use an action to cast a spell that has a casting time of 1 minute. Once you use this benefit, you can't do so again until you finish a Long Rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can use an action to cast a spell that has a casting time of 1 minute, once per Long Rest.</description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Swift Witchcraft)" supports="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_INTELLIGENCE|ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_WISDOM|ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CHARISMA" />
+		</rules>
+	</element>
+</elements>
