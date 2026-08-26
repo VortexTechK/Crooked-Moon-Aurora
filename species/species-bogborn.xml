@@ -3,7 +3,7 @@
 	<info>
 		<n>Bogborn</n>
 		<description>The Bogborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-bogborn.xml" url="" />
 		</update>
 	</info>
@@ -32,6 +32,7 @@
 			<stat name="innate speed" value="30" bonus="base" />
 
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_BOGBORN_BOG_BULK" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_BOGBORN_GUIDING_BOND" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_BOGBORN_KEEN_SENSES" />
@@ -76,3 +77,4 @@
 		</sheet>
 	</element>
 </elements>
+
