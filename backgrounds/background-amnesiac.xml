@@ -3,7 +3,7 @@
 	<info>
 		<n>Amnesiac</n>
 		<description>The Amnesiac background from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="background-amnesiac.xml" url="" />
 		</update>
 	</info>
@@ -51,12 +51,15 @@
 			</div>
 		</description>
 		<setters>
-			<set name="short">Memory Starved Feat, choose two Skills and a Tool Proficiency</set>
+			<set name="short">Memory Starved Feat; recall one Skill, Tool, or Language proficiency per level through level 5 (see Scattered Memories)</set>
 		</setters>
 		<rules>
 			<grant type="Feat" id="ID_TCM_FEAT_MEMORY_STARVED" />
-			<select type="Proficiency" name="Skill Proficiency (Amnesiac)" supports="Skill" number="2" />
-			<select type="Proficiency" name="Tool Proficiency (Amnesiac)" supports="Tool||Kit||Gaming Set||Musical Instrument||Vehicle" />
+			<select type="Proficiency" name="Recalled Skill (Scattered Memories)" supports="Skill" level="1" />
+			<select type="Proficiency" name="Recalled Skill (Scattered Memories)" supports="Skill" level="2" />
+			<select type="Proficiency" name="Recalled Tool Proficiency (Scattered Memories)" supports="Tool||Kit||Gaming Set||Musical Instrument||Vehicle" level="3" />
+			<select type="Language" name="Recalled Language (Scattered Memories)" supports="Standard||Exotic" level="4" />
+			<select type="Language" name="Recalled Language (Scattered Memories)" supports="Standard||Exotic" level="5" />
 		</rules>
 	</element>
 </elements>
