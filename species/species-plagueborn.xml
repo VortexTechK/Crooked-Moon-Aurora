@@ -3,7 +3,7 @@
 	<info>
 		<n>Plagueborn</n>
 		<description>The Plagueborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-plagueborn.xml" url="" />
 		</update>
 	</info>
@@ -32,6 +32,7 @@
 			<stat name="innate speed:climb" value="innate speed" bonus="base" />
 
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_PLAGUEBORN_BORN_IN_FILTH" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_PLAGUEBORN_INFECTED_CUNNING" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_PLAGUEBORN_PLAGUE_BEARER" />
@@ -85,7 +86,7 @@
 			<p class="indent">Once you use this trait, you can't do so again until you finish a Long Rest.</p>
 		</description>
 		<sheet usage="1/Long Rest">
-			<description>When you hit a creature with an attack roll, DC {{plague-bearer:dc}} Constitution save or become afflicted with your plague for 1 minute (Disadvantage on attack rolls and ability checks; 1d4 Poison damage at the start of each of its turns).</description>
+			<description>When you hit a creature with an attack roll, DC {{plague-bearer:dc}} Constitution save or become afflicted with your plague for 1 minute (Disadvantage on attack rolls and ability checks; 1d4 Poison damage at the start of each of its turns). The target repeats the save at the end of each of its turns, ending the plague on itself on a success.</description>
 		</sheet>
 		<rules>
 			<stat name="plague-bearer:dc" value="8" />
