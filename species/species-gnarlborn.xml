@@ -3,7 +3,7 @@
 	<info>
 		<n>Gnarlborn</n>
 		<description>The Gnarlborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-gnarlborn.xml" url="" />
 		</update>
 	</info>
@@ -52,9 +52,10 @@
 		<description>
 			<p>You can draw on the memory of the Elderwood spirits. When you finish a Long Rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a Long Rest.</p>
 		</description>
-		<sheet>
-			<description>When you finish a Long Rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a Long Rest.</description>
-		</sheet>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Skill or Tool Proficiency (Elderwood Whispers)" supports="Skill||Tool||Kit||Gaming Set||Musical Instrument||Vehicle" />
+		</rules>
 	</element>
 
 	<element name="Grasping Branches" type="Racial Trait" source="The Crooked Moon: Player Options" id="ID_TCM_RACIAL_TRAIT_GNARLBORN_GRASPING_BRANCHES">
