@@ -3,7 +3,7 @@
 	<info>
 		<n>Druskenvald Dweller</n>
 		<description>The Druskenvald Dweller background from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="background-druskenvalddweller.xml" url="" />
 		</update>
 	</info>
@@ -12,8 +12,8 @@
 		<description>
 			<ul class="unstyled" style="text-indent:-1em; margin-left:1em; margin-bottom:5px">
 				<li><strong>Feat:</strong> Choose one Origin feat</li>
-				<li><strong>Skill Proficiencies:</strong> Survival, choose one (Province Affinity table skill recommended)</li>
-				<li><strong>Tool Proficiency:</strong> Choose one (Province Affinity table tool recommended)</li>
+				<li><strong>Skill Proficiency:</strong> Survival, plus one more from your chosen home province</li>
+				<li><strong>Tool Proficiency:</strong> One from your chosen home province</li>
 				<li><strong>Equipment:</strong> Choose A or B: (A) Artisan's Tools (same as above), Map (Druskenvald's provinces), Traveler's Clothes, 10 GP; or (B) 50 GP</li>
 			</ul>
 			<p>You hail from one of the thirteen baneful provinces of Druskenvald. You might be a member of the unique species known to originate from those diverse biomes, or you may be of a different heritage altogether. The skills and culture of your home (summarized below) shape your knowledge and early experiences.</p>
@@ -31,7 +31,7 @@
 				<tr><td>Olmarsh</td><td class="left">Arcana</td><td class="left">Cartographer's Supplies</td></tr>
 				<tr><td>Nerukhet</td><td class="left">Persuasion</td><td class="left">Weaver's Tools</td></tr>
 				<tr><td>Pholsense</td><td class="left">Religion</td><td class="left">Mason's Tools</td></tr>
-				<tr><td>Picco</td><td class="left">Performance</td><td class="left">Woodworker's Tools</td></tr>
+				<tr><td>Picco</td><td class="left">Performance</td><td class="left">Woodcarver's Tools</td></tr>
 				<tr><td>Syndramas</td><td class="left">Athletics</td><td class="left">Cook's Utensils</td></tr>
 				<tr><td>Zulrogg</td><td class="left">Survival</td><td class="left">Herbalism Kit</td></tr>
 			</table>
@@ -63,13 +63,156 @@
 			</table>
 		</description>
 		<setters>
-			<set name="short">Choice of Origin feat, Survival plus a chosen Skill, and a chosen Tool</set>
+			<set name="short">Choice of Origin feat, Survival, and a home province (Ardengloom through Zulrogg) granting a matched Skill and Tool</set>
 		</setters>
 		<rules>
 			<select type="Feat" name="Origin Feat (Druskenvald Dweller)" supports="Origin" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
-			<select type="Proficiency" name="Skill Proficiency (Druskenvald Dweller)" supports="ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_ATHLETICS" />
-			<select type="Proficiency" name="Tool Proficiency (Druskenvald Dweller)" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT|ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT|ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS|Musical Instrument|ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS" />
+			<select type="Background Feature" name="Home Province (Druskenvald Dweller)" supports="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ARDENGLOOM|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ASTRAMAR|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_BUBONIA|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_CHERNABOS|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_EDWARDIA|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ENOCH|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_KALERO|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_OLMARSH|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_NERUKHET|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_PHOLSENSE|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_PICCO|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_SYNDRAMAS|ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ZULROGG" />
+		</rules>
+	</element>
+
+	<element name="Ardengloom" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ARDENGLOOM">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Ardengloom, granting proficiency with the History skill and Herbalism Kit.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+		</rules>
+	</element>
+	<element name="Astramar" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ASTRAMAR">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Astramar, granting proficiency with the Arcana skill and Navigator's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Bubonia" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_BUBONIA">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Bubonia, granting proficiency with the Medicine skill and Poisoner's Kit.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+		</rules>
+	</element>
+	<element name="Chernabos" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_CHERNABOS">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Chernabos, granting proficiency with the Deception skill and Calligrapher's Supplies.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+		</rules>
+	</element>
+	<element name="Edwardia" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_EDWARDIA">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Edwardia, granting proficiency with the Investigation skill and Tinker's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Enoch" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ENOCH">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Enoch, granting proficiency with the Nature skill and Leatherworker's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Kalero" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_KALERO">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Kalero, granting proficiency with the Performance skill and one kind of Musical Instrument.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<select type="Proficiency" name="Musical Instrument Proficiency (Kalero)" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_BAGPIPES|ID_PROFICIENCY_TOOL_PROFICIENCY_DRUM|ID_PROFICIENCY_TOOL_PROFICIENCY_DULCIMER|ID_PROFICIENCY_TOOL_PROFICIENCY_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_HORN|ID_PROFICIENCY_TOOL_PROFICIENCY_LUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_LYRE|ID_PROFICIENCY_TOOL_PROFICIENCY_PAN_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_SHAWM|ID_PROFICIENCY_TOOL_PROFICIENCY_VIOL" />
+		</rules>
+	</element>
+	<element name="Olmarsh" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_OLMARSH">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Olmarsh, granting proficiency with the Arcana skill and Cartographer's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Nerukhet" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_NERUKHET">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Nerukhet, granting proficiency with the Persuasion skill and Weaver's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Pholsense" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_PHOLSENSE">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Pholsense, granting proficiency with the Religion skill and Mason's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Picco" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_PICCO">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Picco, granting proficiency with the Performance skill and Woodcarver's Tools.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Syndramas" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_SYNDRAMAS">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Syndramas, granting proficiency with the Athletics skill and Cook's Utensils.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS" />
+		</rules>
+	</element>
+	<element name="Zulrogg" type="Background Feature" source="The Crooked Moon: Player Options" id="ID_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_ZULROGG">
+		<compendium display="false" />
+		<description>
+			<p>You hail from Zulrogg, granting proficiency with the Survival skill and Herbalism Kit.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
 		</rules>
 	</element>
 </elements>
+
