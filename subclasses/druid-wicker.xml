@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="druid-wicker.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Circle of Wicker" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_CIRCLE_OF_WICKER">
+		<supports>Druid Subclass</supports>
+		<description>
+			<p class="flavor">Craft Effigies of Sacrifice and Protection</p>
+			<p>Cunning in their ancient art, Druids of the Circle of Wicker fashion twig dolls and effigies, binding their magic into these crude forms. These creations often resemble animals, rune shapes, natural symbols, or people. Protective tokens and promises of retribution against trespassers are these Druids' stock in trade. You can weave the magic of the land through your wicker creations as boons to your friends and banes to your foes.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_BEWITCHED_EFFIGY" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_TOKEN" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_RISING" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_SOULBOUND_POPPET" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_WICKER_ZENITH" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_BEWITCHED_EFFIGY" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_TOKEN" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_RISING" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SOULBOUND_POPPET" level="10" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_ZENITH" level="14" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Bewitched Effigy" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_BEWITCHED_EFFIGY">
+		<description>
+			<p>Your primal magic can manifest as a wicker effigy and radiate out from it. As a Bonus Action, you can expend a use of your Wild Shape to create a wicker effigy in an unoccupied space you can see within 30 feet of yourself. The effigy is a Small object (AC 15; HP equal to five times your Druid level; Vulnerability to Fire damage; Immunity to Poison and Psychic damage). The effigy vanishes after 1 minute, when reduced to 0 Hit Points, or when you use this feature again. It radiates one of the following auras (chosen when you create the effigy) in a 30-foot Emanation that is filled with Dim Light.</p>
+			<p class="indent"><strong><em>Sacrifice.</em></strong> When a creature in the aura takes damage, you can take a Reaction to deal Fire damage to the creature equal to 1d8 plus your Wisdom modifier.</p>
+			<p class="indent"><strong><em>Soothe.</em></strong> When you create the effigy, and as a Bonus Action on subsequent turns while the effigy remains, one creature that you can see within the aura regains 1d6 Hit Points. You can use this effigy to restore Hit Points a number of times equal to twice your spellcasting ability modifier.</p>
+			<p class="indent"><strong><em>Ward.</em></strong> You and your allies within the aura gain a +1 bonus to AC.</p>
+		</description>
+		<sheet alt="Bewitched Effigy" action="Bonus Action" usage="Wild Shape">
+			<description>Create a Small wicker effigy (AC 15; HP {{level:druid}} x 5) within 30 feet, radiating a 30-ft. aura with one of: Sacrifice (Reaction Fire damage to creatures the aura damages), Soothe (heal 1d6 HP as a Bonus Action), or Ward (+1 AC to you and allies in the aura).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Circle of Wicker Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SPELLS">
+		<description>
+			<p>When you reach a Druid level specified in the Circle of Wicker Spells table, you thereafter always have the listed spells prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Druid Level</td><td>Prepared Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Bane, Bless, Summer Winds*, Zone of Truth</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Bestow Curse, Tiny Hut</i></td></tr>
+				<tr><td style="text-align:center">7</td><td><i>Death Ward, Sanctum of the Shepherd*</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Hold Monster, Lucky Charm*</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 3: Wicker Token" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_TOKEN">
+		<description>
+			<p>You can weave wicker tokens that carry a touch of your magic. When you finish a Long Rest, you can create a number of tokens equal to your Proficiency Bonus. The tokens are Tiny objects (AC 5; HP 1; Immunity to Poison and Psychic damage). The tokens vanish when you finish your next Long Rest.</p>
+			<p class="indent">You can cast spells with a range of touch on a creature carrying one of your tokens while the two of you are on the same plane of existence.</p>
+		</description>
+		<sheet alt="Wicker Token" usage="{{proficiency}}/Long Rest">
+			<description>You can create {{proficiency}} wicker tokens when you finish a Long Rest. You can cast touch-range spells on a creature carrying one of your tokens from anywhere on the same plane of existence.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Wicker Rising" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_RISING">
+		<description>
+			<p>The energy you channel through your wicker effigy grows stronger, empowering its benefits.</p>
+			<p class="indent"><strong><em>Sacrifice.</em></strong> The Fire damage increases to 2d8 plus your Wisdom modifier.</p>
+			<p class="indent"><strong><em>Soothe.</em></strong> The healing of your effigy increases to 1d8, and when you target a creature with the effigy, you can expend 5 Hit Points from the effigy to remove one of the following conditions on the target: Charmed, Frightened, Paralyzed, Poisoned, Stunned.</p>
+			<p class="indent"><strong><em>Ward.</em></strong> Choose a damage type other than Force. You and your allies in the aura have Resistance to the chosen type.</p>
+		</description>
+		<sheet alt="Wicker Rising">
+			<description>Your effigy auras grow stronger: Sacrifice deals 2d8 + Wisdom modifier; Soothe heals 1d8 and can spend 5 HP to remove a condition; Ward grants Resistance to a chosen damage type (not Force).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Soulbound Poppet" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SOULBOUND_POPPET">
+		<description>
+			<p>As a Magic action, you can expend a use of your Wild Shape and choose a creature you can see within 60 feet of yourself to create a wicker doll that vaguely resembles the target. The doll is a Tiny object (AC 10; HP 10; Vulnerability to Fire damage; Immunity to Poison and Psychic damage). The doll vanishes after 1 minute or when it is reduced to 0 Hit Points. While the doll exists, the target has Disadvantage on attack rolls against a creature carrying the doll, and when a creature carrying the doll damages the target for the first time on a turn, the target takes an extra 2d10 Necrotic damage.</p>
+		</description>
+		<sheet alt="Soulbound Poppet" action="Magic action" usage="Wild Shape">
+			<description>Create a Tiny wicker doll resembling a creature within 60 feet (AC 10; HP 10) for 1 minute. The target has Disadvantage on attacks against whoever carries the doll, and takes an extra 2d10 Necrotic damage the first time that carrier damages it each turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Wicker Zenith" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_ZENITH">
+		<description>
+			<p>Your wicker effigies reach the pinnacle of their power. At the start of your turn, you can change your effigy's aura to a different one. Additionally, all the auras grow stronger in the following ways.</p>
+			<p class="indent"><strong><em>Sacrifice.</em></strong> The Fire damage increases to 3d8 plus your Wisdom modifier.</p>
+			<p class="indent"><strong><em>Soothe.</em></strong> When you or your allies start a turn in the aura, the Charmed or Frightened condition (target's choice) ends on it.</p>
+			<p class="indent"><strong><em>Ward.</em></strong> Choose an ability. You and each of your allies within the aura have Advantage on saving throws made with the chosen ability.</p>
+			<h5>WICKER EFFIGIES</h5>
+			<p>The effigies, charms, and tokens you weave can take a variety of shapes, each intending a ritualistic effect. Use the Wicker Effigies table for inspiration when determining your wicker token's appearance.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d12</td><td>Effigy</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Antlered bowman to ensure a successful hunt</td></tr>
+				<tr><td style="text-align:center">2</td><td>Bird-headed scarecrow to protect crops from pests and blight</td></tr>
+				<tr><td style="text-align:center">3</td><td>Apple-adorned fertility goddess for a bountiful harvest</td></tr>
+				<tr><td style="text-align:center">4</td><td>Unsettling stick figures to ward off interlopers from hidden dwellings</td></tr>
+				<tr><td style="text-align:center">5</td><td>Goat with curved horns to ensure a safe winter</td></tr>
+				<tr><td style="text-align:center">6</td><td>Wolf's head to protect against dangers of the night</td></tr>
+				<tr><td style="text-align:center">7</td><td>Crescent moon with a crone's face to amplify magic rituals</td></tr>
+				<tr><td style="text-align:center">8</td><td>Fearsome tusked mask to grant ferocity in battle</td></tr>
+				<tr><td style="text-align:center">9</td><td>Spiraled sunburst with a grin to herald a long, warm summer</td></tr>
+				<tr><td style="text-align:center">10</td><td>Three-sided pyramid with laddered edges to mark the site of a sacrifice</td></tr>
+				<tr><td style="text-align:center">11</td><td>Club-wielding troll to guard roads, bridges, and other passageways</td></tr>
+				<tr><td style="text-align:center">12</td><td>Intricate ring that represents the cycle of the year to guarantee life, death, and rebirth</td></tr>
+			</table>
+		</description>
+		<sheet alt="Wicker Zenith">
+			<description>At the start of your turn you can change your effigy's aura. Auras grow stronger: Sacrifice deals 3d8 + Wisdom modifier; Soothe ends Charmed or Frightened on those who start a turn in the aura; Ward grants Advantage on a chosen ability's saves.</description>
+		</sheet>
+	</element>
+</elements>

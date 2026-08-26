@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="monk-pestilenthaze.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Warrior of the Pestilent Haze" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_WARRIOR_OF_THE_PESTILENT_HAZE">
+		<supports>Monk Subclass</supports>
+		<description>
+			<p class="flavor">Spread Virulent Plague with a Touch</p>
+			<p>Warriors of the Pestilent Haze draw plague into their very beings, folding it into their energy and becoming one with the disease. Monks who follow this tradition wander, often following or even preceding waves of pestilence. Some walk with caution, their touch measured, unleashing sickness only where dense populations must be culled. Others revel in the miasma spreading as far and fast as possible.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CONTAGIOUS_DISCIPLINE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_GIFT_OF_PESTILENCE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_POTENT_PLAGUE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_TOLLING_CENSER" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_MIASMIC_CONTAGION" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_EPIDEMIC" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CONTAGIOUS_DISCIPLINE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_GIFT_OF_PESTILENCE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_POTENT_PLAGUE" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_TOLLING_CENSER" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_MIASMIC_CONTAGION" level="11" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_EPIDEMIC" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Contagious Discipline" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CONTAGIOUS_DISCIPLINE">
+		<description>
+			<p>You have brewed and concentrated disease within yourself and can now push manifestations of it outward. You gain the following benefits.</p>
+			<p class="indent"><strong><em>Claws of Pestilence.</em></strong> Your nails grow into a set of vermin-like claws. You can deal Slashing damage when you hit with an Unarmed Strike instead of Bludgeoning damage. When you hit a creature with an attack granted by your Flurry of Blows, you deal extra Necrotic damage equal to one roll of your Martial Arts die.</p>
+			<p class="indent"><strong><em>Miasmic Plague.</em></strong> When you hit a creature with an Unarmed Strike, you can expend 1 Focus Point to force the creature to succeed on a Constitution saving throw or be cursed for 1 minute. While cursed, the creature has the Poisoned condition, and it takes extra Necrotic damage from your Unarmed Strikes equal to one roll of your Martial Arts die. A creature can take this damage only once per turn. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</p>
+			<p class="indent">If you forego the extra damage granted by Claws of Pestilence, you can use Miasmic Plague without paying its Focus Point cost.</p>
+		</description>
+		<sheet alt="Contagious Discipline" display="false" />
+	</element>
+
+	<element name="Claws of Pestilence" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CLAWS_OF_PESTILENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your Unarmed Strikes deal Slashing damage, and Flurry of Blows attacks deal extra Necrotic damage.</p>
+		</description>
+		<sheet alt="Claws of Pestilence">
+			<description>Your Unarmed Strikes deal Slashing damage. Attacks granted by Flurry of Blows deal extra Necrotic damage equal to one roll of your Martial Arts die.</description>
+		</sheet>
+	</element>
+
+	<element name="Miasmic Plague" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_MIASMIC_PLAGUE">
+		<compendium display="false" />
+		<description>
+			<p>When you hit with an Unarmed Strike, you can expend a Focus Point to curse the target.</p>
+		</description>
+		<sheet alt="Miasmic Plague" usage="1 Focus Point">
+			<description>When you hit a creature with an Unarmed Strike, expend 1 Focus Point (or forego your Claws of Pestilence extra damage) to force a Constitution save or curse the target for 1 minute with the Poisoned condition and extra Necrotic damage from your Unarmed Strikes.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Gift of Pestilence" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_GIFT_OF_PESTILENCE">
+		<description>
+			<p>Through your observation and meditation, you are attuned to the nature of pestilence and the creatures believed to carry it. You gain the following benefits.</p>
+			<p class="indent"><strong><em>Inoculation.</em></strong> You have Advantage on saving throws to avoid or end the Poisoned condition or magical contagions, and you have Resistance to Poison and Necrotic damage.</p>
+			<p class="indent"><strong><em>Vermin Kinship.</em></strong> Through chittering sounds and hand gestures, you can communicate simple concepts to vermin, such as rats, pigeons, and insects, and you gain the ability to decipher their noises and motions. Vermin lack the intelligence to convey or understand sophisticated concepts, but Friendly vermin could relay what they have seen or heard in the recent past.</p>
+			<p class="indent">Additionally, you can cast Animal Messenger using Wisdom as the spellcasting ability targeting a Tiny Beast that is considered vermin and thought to spread plague and disease. Once you cast the spell in this way, you can't do so again until you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Gift of Pestilence" usage="1/Long Rest">
+			<description>You have Advantage on saves against the Poisoned condition or magical contagions, and Resistance to Poison and Necrotic damage. You can communicate with vermin, and you can cast Animal Messenger targeting a vermin once per Long Rest.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_MESSENGER" />
+		</rules>
+	</element>
+
+	<element name="Level 6: Potent Plague" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_POTENT_PLAGUE">
+		<description>
+			<p>The strain of your plague becomes more virulent and deadly. When you deal Necrotic or Poison damage, you ignore the target's Resistance to those damage types, if any.</p>
+		</description>
+		<sheet alt="Potent Plague">
+			<description>When you deal Necrotic or Poison damage, you ignore the target's Resistance to those damage types, if any.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Tolling Censer" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_TOLLING_CENSER">
+		<description>
+			<p>You can unleash a cloud of miasma upon your enemies. As a Magic action, you can expend 2 Focus Points to unleash a cloud of miasma in a 20-foot Emanation originating from you. Each creature of your choice in that area must make a Constitution saving throw. On a failed save, a creature takes Necrotic damage equal to two rolls of your Martial Arts die and is cursed by your Miasmic Plague. On a successful save, it takes half as much damage only.</p>
+		</description>
+		<sheet alt="Tolling Censer" action="Magic action" usage="2 Focus Points">
+			<description>Unleash a cloud of miasma in a 20-foot Emanation. Each creature you choose makes a Constitution save, taking Necrotic damage (two rolls of your Martial Arts die) and being cursed by Miasmic Plague on a failure, or half damage on a success.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 11: Miasmic Contagion" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_MIASMIC_CONTAGION">
+		<description>
+			<p>The strength of your Miasmic Plague has increased, granting you the following benefits.</p>
+			<p class="indent"><strong><em>Choking Miasma.</em></strong> Constitution saving throws against your Miasmic Plague have Disadvantage.</p>
+			<p class="indent"><strong><em>Scurrying Spread.</em></strong> When you expend 1 Focus Point to use your Step of the Wind, until the end of the turn, when you enter a space within 5 feet of any creature of your choice, it must succeed on a Constitution saving throw or be cursed by your Miasmic Plague. A creature makes this save only once per turn.</p>
+		</description>
+		<sheet alt="Miasmic Contagion">
+			<description>Constitution saves against your Miasmic Plague have Disadvantage. When you expend a Focus Point on Step of the Wind, creatures you move within 5 feet of must save or be cursed by Miasmic Plague (once per turn each).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 17: Epidemic" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_EPIDEMIC">
+		<description>
+			<p>Your plague has reached the height of its potency and its symptoms rapidly afflict your foes. Your Miasmic Plague ignores a target's Immunity to the Poisoned condition. Additionally, when you deal Necrotic damage to a target cursed by your Miasmic Plague, it takes extra Necrotic damage equal to one roll of your Martial Arts die.</p>
+			<h5>MIASMIC PLAGUE MANIFESTATIONS</h5>
+			<p>Your Miasmic Plague is a unique magical contagion that can take many forms that you weave through your deep connection to the affliction. The Plague Manifestations table offers suggestions for what magical form your signature disease takes as it spreads, as well as its hallmark symptoms.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d10</td><td>Manifestation</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Bloodbreath. Bruise-colored miasma, the edges of which form into slithering tentacles—painful bruises and a hoarse, bloody cough</td></tr>
+				<tr><td style="text-align:center">2</td><td>Drone Spew. Swarm of monstrous, mutated flies that buzz with a horrifying drone—bleeding ears and intense vomiting</td></tr>
+				<tr><td style="text-align:center">3</td><td>Festergut. Viscous, gray sewer water that leaves a film on surfaces—intense stomach pain, dehydration, and blood loss</td></tr>
+				<tr><td style="text-align:center">4</td><td>Gutterpox. Globs of toxic, greenish sludge that oozes erratically to the touch—swollen, green papules and oppressive mucus buildup</td></tr>
+				<tr><td style="text-align:center">5</td><td>Knell Fever. Hot wind that prickles the skin and howls with the sound of a tolling bell—heat blisters and feverish hallucinations</td></tr>
+				<tr><td style="text-align:center">6</td><td>Rotface. Numerous spiked, fungal spores that float through the air—rapid rotting of flesh, especially around the eyes and mouth</td></tr>
+				<tr><td style="text-align:center">7</td><td>The Unclean. Undulating mass of pallid flesh, teeth, and tongues—grotesque, mutated growths such as new tentacle-like appendages and gnashing mouths</td></tr>
+				<tr><td style="text-align:center">8</td><td>Toadscale. Infected rains filled with venomous, spectral toads—hardened, itchy patches of scaly skin that turn vibrantly colorful and fits of agonized croaking</td></tr>
+				<tr><td style="text-align:center">9</td><td>Verminplague. Scurrying mass of ravenous, spectral plague rats that gnaw and scratch victims—painful boils and pustules and an incessant, squeaking cough</td></tr>
+				<tr><td style="text-align:center">10</td><td>Yellow Death. Billowing, skull-shaped clouds of foul-smelling fumes with a sickly yellow hue—debilitating fatigue, muscle aches, and sunken, sallow skin</td></tr>
+			</table>
+		</description>
+		<sheet alt="Epidemic">
+			<description>Your Miasmic Plague ignores Immunity to the Poisoned condition. When you deal Necrotic damage to a target cursed by your Miasmic Plague, it takes extra Necrotic damage equal to one roll of your Martial Arts die.</description>
+		</sheet>
+	</element>
+</elements>

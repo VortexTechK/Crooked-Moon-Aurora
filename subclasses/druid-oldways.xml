@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="druid-oldways.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Circle of the Old Ways" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_CIRCLE_OF_THE_OLD_WAYS">
+		<supports>Druid Subclass</supports>
+		<description>
+			<p class="flavor">Become One with the Ancient Forest</p>
+			<p>Favoring the heart of the darkest forests, Druids of the Circle of the Old Ways commune with ancient, forgotten entities that lurk within, calling forth truly primeval power to serve as defenders of the oldest and wildest of places.</p>
+			<p class="indent">They harness the power of the Elderwood trees, which are home to the souls of long-dead feyfolk and share their primordial wisdom and might when called upon.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_BOUGH_AND_BRANCH" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_WOOD_WOSE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_OAK_AND_THORN" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_DEEPWOOD_ELDER" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_ANCIENT_PROTECTOR" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_BOUGH_AND_BRANCH" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_WOOD_WOSE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_OAK_AND_THORN" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_DEEPWOOD_ELDER" level="10" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_ANCIENT_PROTECTOR" level="14" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Circle of the Old Ways Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_SPELLS">
+		<description>
+			<p>When you reach a Druid level specified in the Circle of the Old Ways Spells table, you thereafter always have the listed spells prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Druid Level</td><td>Prepared Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Ancestral Guidance*, Barkskin, Shield of Faith, Shillelagh, Spike Growth</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Magic Circle, Plant Growth</i></td></tr>
+				<tr><td style="text-align:center">7</td><td><i>Freedom of Movement, Private Sanctum</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Awaken, Tree Stride</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 3: Bough and Branch" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_BOUGH_AND_BRANCH">
+		<description>
+			<p>Even the humblest of your weapons channels the might of the old forest. When you cast Shillelagh, you can cause a Shield made of gnarled wood to grow into your free hand if you have one (no action required to don it), and it vanishes when the spell ends. You can't be forced to drop the affected weapon or Shield unless you have the Incapacitated condition.</p>
+			<p class="indent">Additionally, for the duration of the spell, you ignore Somatic components of your Druid spells, and the weapon enhanced by the spell becomes a Druidic Focus for you.</p>
+		</description>
+		<sheet alt="Bough and Branch">
+			<description>When you cast Shillelagh, a Shield of gnarled wood grows into your free hand and vanishes when the spell ends. For the duration, you ignore Somatic components of your Druid spells, and the enhanced weapon becomes a Druidic Focus.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Wood Wose" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_WOOD_WOSE">
+		<description>
+			<p>As a Bonus Action, or as part of casting Shillelagh, you can expend a use of your Wild Shape to suffuse yourself with the power of the primordial woods, gaining the following benefits.</p>
+			<p class="indent"><strong><em>Bark Bulwark.</em></strong> While you aren't wearing armor, your base Armor Class is 10 plus your Dexterity and Wisdom modifiers.</p>
+			<p class="indent"><strong><em>Elderwood Sap.</em></strong> When you hit a creature with an attack roll using the weapon enhanced by Shillelagh, the target is coated in Elderwood sap until the start of your next turn. While coated, the target has Disadvantage on attack rolls against targets other than you.</p>
+			<p class="indent"><strong><em>Oaken Resolve.</em></strong> You have Advantage on Strength and Constitution saving throws.</p>
+			<p class="indent">This effect lasts for 10 minutes. It ends early if you dismiss it (no action required), have the Incapacitated condition, or die.</p>
+		</description>
+		<sheet alt="Wood Wose" action="Bonus Action" usage="Wild Shape">
+			<description>You gain Bark Bulwark (AC 10 + Dex + Wis while unarmored), Elderwood Sap (targets you hit with your Shillelagh weapon are coated, giving them Disadvantage on attacks against others), and Oaken Resolve (Advantage on Str/Con saves) for 10 minutes.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Oak and Thorn" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_OAK_AND_THORN">
+		<description>
+			<p>The wrath of the Elderwoods drives you and punishes your foes. When you activate your Wood Wose, you gain the following additional benefits for the duration.</p>
+			<p class="indent"><strong><em>Oakenfist.</em></strong> You can attack twice instead of once whenever you take the Attack action on your turn.</p>
+			<p class="indent"><strong><em>Gnarled Thorns.</em></strong> Once on each of your turns when you hit a creature with a melee attack roll using a weapon, the target takes an extra 1d6 Piercing damage.</p>
+		</description>
+		<sheet alt="Oak and Thorn">
+			<description>While your Wood Wose is active, you can attack twice when you take the Attack action, and once per turn a melee weapon hit deals an extra 1d6 Piercing damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Deepwood Elder" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_DEEPWOOD_ELDER">
+		<description>
+			<p>Your connection to the Elderwood grows stronger. When you activate your Wood Wose, you now gain additional benefits for the duration.</p>
+			<p class="indent"><strong><em>Primeval Wrath.</em></strong> Once per turn, when you hit a creature with a melee attack, you can force the target to succeed on a Strength saving throw against your spell save DC or have the Prone condition.</p>
+			<p class="indent"><strong><em>Bramblebark.</em></strong> When a creature within 5 feet of you hits you with a melee attack, the attacker takes 1d8 Piercing damage. A creature takes this damage only once per turn.</p>
+			<p class="indent"><strong><em>Rampant Growth.</em></strong> When you activate Wood Wose and at the start of each of your subsequent turns, you gain a number of Temporary Hit Points equal to your Wisdom modifier plus your Proficiency Bonus.</p>
+		</description>
+		<sheet alt="Deepwood Elder">
+			<description>While your Wood Wose is active: once per turn, force a melee target to save or fall Prone; attackers within 5 feet who hit you take 1d8 Piercing damage; and you gain Temp HP equal to {{wisdom:modifier}} plus {{proficiency}} at the start of each turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Ancient Protector" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_ANCIENT_PROTECTOR">
+		<description>
+			<p>When you awaken your connection to the Elderwood, you now become an incarnation of its ancient might. When you activate your Wood Wose, you now gain additional benefits for the duration.</p>
+			<p class="indent"><strong><em>Old Growth.</em></strong> Your size increases to Large (along with anything you're wearing or carrying) if there is space to accommodate your growth, and your reach increases by 5 feet.</p>
+			<p class="indent"><strong><em>Mighty Trunk.</em></strong> You gain Resistance to Bludgeoning and Piercing damage.</p>
+			<p class="indent"><strong><em>Vengeance of the Elders.</em></strong> When a creature that is covered in Elderwood Sap and is within your reach makes an attack roll, you can take a Reaction to make a melee attack against that creature.</p>
+			<h5>OLD WAYS SACRED SITES</h5>
+			<p>The Old Ways Sacred Sites table offers examples to choose or use as inspiration to create places steeped in the Old Ways where your circle might congregate or where you may commune with primeval powers.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Sacred Site</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Ring of standing stones atop a remote hilltop, each one marked with runes and symbols representing animal spirits</td></tr>
+				<tr><td style="text-align:center">2</td><td>Perpetually frozen river at the bottom of a deep ravine with a plethora of oversized and seemingly intelligent fish beneath the ice</td></tr>
+				<tr><td style="text-align:center">3</td><td>Hidden cave buried beneath a scorched dune, revealed by the shifting sands for a single night four times a year</td></tr>
+				<tr><td style="text-align:center">4</td><td>Turbulent tidepool by the coast with bottomless waters filled with glowing flora, fauna, and crystalline outcroppings</td></tr>
+				<tr><td style="text-align:center">5</td><td>Circle of ancient trees with ghost-white bark and blood-red leaves, each one bearing the face of a long-dead druid</td></tr>
+				<tr><td style="text-align:center">6</td><td>Massive barrow in the deep woods which contains the spirits of countless fey folk and the old gods of the natural world</td></tr>
+			</table>
+		</description>
+		<sheet alt="Ancient Protector">
+			<description>While your Wood Wose is active, you grow to Large size (reach +5 ft.), gain Resistance to Bludgeoning and Piercing damage, and can make a Reaction melee attack against a creature covered in Elderwood Sap when it attacks within your reach.</description>
+		</sheet>
+	</element>
+</elements>

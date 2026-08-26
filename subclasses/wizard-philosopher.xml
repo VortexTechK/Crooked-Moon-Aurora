@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="wizard-philosopher.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Philosopher" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_PHILOSOPHER">
+		<supports>Wizard Subclass</supports>
+		<description>
+			<p class="flavor">Reshape Reality Through Pure Thought</p>
+			<p>To some Wizards, magic is more than a tool—it is a lens through which to view and question existence itself. Philosophers pursue arcane study as a means of interrogating the nature of reality, truth, causality, and the self. Through rigorous meditation and academic rigor, these Wizards learn to bend the fundamental logic of the world to match their own understanding of it.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY" level="10" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH" level="14" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Guiding Tenet" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET">
+		<description>
+			<p>You have adopted a school of philosophical thought that guides your understanding of magic and the world. Choose a tenet below; you gain its benefit. Whenever you finish a Long Rest, you can meditate on your studies and change your chosen tenet.</p>
+			<p class="indent"><strong><em>Determinism.</em></strong> You believe all things are inevitable, bound along a single course. When you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the d20 as a 10.</p>
+			<p class="indent"><strong><em>Empiricism.</em></strong> You believe true understanding comes only from careful observation. You gain proficiency in the Investigation or Perception skill (your choice), and you gain Expertise in it if you're already proficient.</p>
+			<p class="indent"><strong><em>Skepticism.</em></strong> You believe certainty is an illusion and that everything should be questioned. You have Advantage on saving throws against being Charmed or Frightened, and against spells and effects that would read your thoughts or alter your memory.</p>
+		</description>
+		<sheet alt="Guiding Tenet" display="false" />
+	</element>
+
+	<element name="Level 3: Rationalize" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE">
+		<description>
+			<p>You can use logic and reason to argue with reality itself, forcing it to conform, if only for a moment, to your own understanding. When you fail a saving throw, you can take a Reaction to expend a spell slot and add a number equal to the slot's level to the saving throw, potentially causing it to succeed.</p>
+			<p class="indent">Alternatively, when you miss with an attack roll or a spell that requires a saving throw and the target is at least partially successful (such as by taking half damage), you can expend a spell slot to gain the same benefit as if the attack roll hit or the target failed the save.</p>
+			<p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Rationalize" action="Reaction" usage="{{proficiency}}/Long Rest">
+			<description>When you fail a saving throw, expend a spell slot to add the slot's level to the total, potentially succeeding. Alternatively, when you miss an attack or a target partially succeeds against your spell, expend a spell slot to make it a hit or full failure instead.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Sound Argument" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT">
+		<description>
+			<p>Your mastery of logic sharpens the edge of your convictions. The benefit of your chosen tenet improves.</p>
+			<p class="indent"><strong><em>Determinism.</em></strong> You can now treat a roll of 12 or lower on the d20 as a 13.</p>
+			<p class="indent"><strong><em>Empiricism.</em></strong> You gain proficiency in the Investigation or Perception skill (whichever you didn't choose before), and you gain Expertise in one skill of your choice with which you're already proficient.</p>
+			<p class="indent"><strong><em>Skepticism.</em></strong> When you succeed on a saving throw against being Charmed or Frightened, or against an effect that would read your thoughts or alter your memory, the effect's source (if you're aware of it) has Disadvantage on the next attack roll or ability check it makes against you before the end of its next turn.</p>
+		</description>
+		<sheet alt="Sound Argument">
+			<description>Your chosen tenet's benefit improves: Determinism treats rolls of 12 or lower as 13; Empiricism grants proficiency in your other option and Expertise in a skill you know; Skepticism imposes Disadvantage on a foe whose effect you resisted.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Unified Theory" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY">
+		<description>
+			<p>You have unlocked a piece of the underlying structure of reality. You always have the Contingency spell prepared, and you can cast it without expending a spell slot once. You regain the ability to cast it in that way when you finish a Long Rest.</p>
+			<p class="indent">Additionally, whenever you cast a spell of level 1 or higher using your Rationalize feature to guarantee a hit or a failed save, you can choose to make the spell's effect last until the end of your next turn longer than it normally would, with no additional cost.</p>
+		</description>
+		<sheet alt="Unified Theory" usage="1/Long Rest">
+			<description>You always have Contingency prepared and can cast it without a spell slot once per Long Rest. When you use Rationalize to guarantee a hit or failed save, you can extend the spell's effect until the end of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Absolute Truth" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH">
+		<description>
+			<p>You have grasped a truth so fundamental that reality itself yields to your will. The benefit of your chosen tenet reaches its pinnacle.</p>
+			<p class="indent"><strong><em>Determinism.</em></strong> You can now treat a roll of 15 or lower on the d20 as a 16. Additionally, once per turn when you or a creature you can see within 60 feet of you rolls a d20, you can take a Reaction to force a reroll, and the new roll must be used.</p>
+			<p class="indent"><strong><em>Empiricism.</em></strong> You gain Expertise in a second skill of your choice with which you're proficient. Additionally, once per turn when you make an ability check, you can treat a roll of 9 or lower on the d20 as a 10.</p>
+			<p class="indent"><strong><em>Skepticism.</em></strong> You have Immunity to being Charmed or Frightened, and to effects that would read your thoughts or alter your memory without your consent.</p>
+		</description>
+		<sheet alt="Absolute Truth">
+			<description>Your chosen tenet's benefit reaches its peak: Determinism treats rolls of 15 or lower as 16 and can force a reroll once per turn; Empiricism grants a second Expertise and treats low ability check rolls as 10; Skepticism grants Immunity to Charmed, Frightened, and unwanted mind-reading or memory alteration.</description>
+		</sheet>
+	</element>
+</elements>

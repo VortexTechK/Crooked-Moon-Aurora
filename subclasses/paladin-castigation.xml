@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="paladin-castigation.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Oath of Castigation" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_OATH_OF_CASTIGATION">
+		<supports>Paladin Subclass</supports>
+		<description>
+			<p class="flavor">Seek Out and Burn Wickedness to Ash</p>
+			<p>Evil and wickedness are widespread and long-lived, but not infinite. Paladins who swear the Oath of Castigation root evil out to burn it away utterly, giving light to all that is innocent and good. Whether bound by the laws of mortals, their deity, or their own personal code, they relentlessly hunt down evil where it thrives. Paladins of this oath know evil cannot hide in any festering place once it burns.</p>
+			<p class="indent">These paladins share the following tenets:</p>
+			<ul>
+				<li>Burn away all doubt in pursuit of duty.</li>
+				<li>Purge the wicked and corrupt; spare the innocent.</li>
+				<li>Sin is forgiven through suffering equal to the pain it inflicted.</li>
+			</ul>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_CASTIGATE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_INCITE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_KINDLING_AURA" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FERVENT_INQUISITOR" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FIRE_AND_BRIMSTONE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_CASTIGATE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_INCITE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_KINDLING_AURA" level="7" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FERVENT_INQUISITOR" level="15" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FIRE_AND_BRIMSTONE" level="20" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Castigate" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_CASTIGATE">
+		<description>
+			<p>As a Magic action, you can expend one use of your Channel Divinity to clap those you would bring to justice in fiery shackles. Choose a number of creatures up to your Charisma modifier (minimum of 1 creature) you can see within 30 feet of yourself. Each creature must succeed on a Strength saving throw or be wrapped in fiery shackles and have its Speed reduced to 0. As a Bonus Action, you can cause the shackles to flare. Each creature bound by the shackles takes 2d6 Fire damage. A shackled creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>
+		</description>
+		<sheet alt="Castigate" action="Magic action" usage="Channel Divinity">
+			<description>Choose up to {{charisma:modifier}} (min. 1) creatures within 30 feet. Strength save or they're bound in fiery shackles with Speed 0 for 1 minute. As a Bonus Action, cause the shackles to flare for 2d6 Fire damage to each bound creature.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Incite" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_INCITE">
+		<description>
+			<p>As a Magic action, you can expend one use of your Channel Divinity to better seek out wickedness and corruption. For the next 10 minutes, you have Advantage on Intelligence (Investigation) and Wisdom (Insight) checks.</p>
+			<p class="indent">During that time, you can take a Bonus Action to choose a creature you can see within 10 feet of you. The target must succeed on a Charisma saving throw or have the Frightened condition for 1 minute. While the target is Frightened in this way, it can't speak a deliberate lie. The condition ends early if the target takes damage or if you use this Bonus Action again.</p>
+		</description>
+		<sheet alt="Incite" action="Magic action" usage="Channel Divinity">
+			<description>For 10 minutes, you have Advantage on Intelligence (Investigation) and Wisdom (Insight) checks. As a Bonus Action, target a creature within 10 feet; Charisma save or it's Frightened for 1 minute and can't speak a deliberate lie.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Oath of Castigation Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_SPELLS">
+		<description>
+			<p>The magic of your oath ensures you always have certain spells ready; when you reach a Paladin level specified in the Oath of Castigation Spells table, you thereafter always have the listed spells prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Paladin Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Divine Favor, Inflict Wounds</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Chain of Conviction*, Hold Person</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Counterspell, Speak with Dead</i></td></tr>
+				<tr><td style="text-align:center">13</td><td><i>Consuming Pyre*, Locate Creature</i></td></tr>
+				<tr><td style="text-align:center">17</td><td><i>Flame Strike, Hold Monster</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+			<h5>WICKED NEMESES</h5>
+			<p>The Wicked Nemeses table offers examples of malefactors, villains, and other evil beings that you have rooted out and purged in the past, or perhaps one you're still hunting. Facing these nemeses may have put you on the path of purging wickedness wherever it lurks.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d12</td><td>Nemesis</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A rotting vampire noble who spreads a deadly plague through the command of countless vermin</td></tr>
+				<tr><td style="text-align:center">2</td><td>A brutal contract killer who sells their services to various cults and shadowy organizations</td></tr>
+				<tr><td style="text-align:center">3</td><td>A charismatic cult leader who lords over a remote island, making seasonal sacrifices of mortals to ensure a bountiful harvest each year</td></tr>
+				<tr><td style="text-align:center">4</td><td>An immensely intelligent flesh golem that killed its creator to pursue its own sinister work with strange science and gruesome experiments</td></tr>
+				<tr><td style="text-align:center">5</td><td>A bitterly envious hag of the woods who corrupts the youth of small villages and manipulates them to commit horrific atrocities</td></tr>
+				<tr><td style="text-align:center">6</td><td>A proud and vain heretic who gathers zealous followers after a bloody schism to initiate a brutal crusade in the name of their twisted beliefs</td></tr>
+				<tr><td style="text-align:center">7</td><td>A once-renowned hunter now cursed with lycanthropy who has gone on bloody rampages</td></tr>
+				<tr><td style="text-align:center">8</td><td>A relentless necromancer who scours ancient ruins for forbidden magic to free their otherworldly master from an eldritch prison</td></tr>
+				<tr><td style="text-align:center">9</td><td>A strange amphibious creature that emerges from the depths to kidnap innocents and drag them below the water's surface for unknown purposes</td></tr>
+				<tr><td style="text-align:center">10</td><td>A brilliant doctor who has perfected a serum that transforms them into a hulking brute to commit a string of murders throughout a city</td></tr>
+				<tr><td style="text-align:center">11</td><td>A bloodthirsty revenant who was once a dark knight and now musters other Undead riders to bring about death and decay</td></tr>
+				<tr><td style="text-align:center">12</td><td>A tortured artist bearing a mask of comedy and tragedy who strives for their masterpiece through the mutilation of their victims' corpses</td></tr>
+			</table>
+		</description>
+		<sheet alt="Oath of Castigation Spells" display="false" />
+	</element>
+
+	<element name="Level 7: Kindling Aura" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_KINDLING_AURA">
+		<description>
+			<p>You and your allies within your Aura of Protection ignore creatures' Resistance to Fire and Radiant damage, and when an affected creature hits with a weapon attack, it can deal Fire damage instead of the weapon's normal damage type.</p>
+			<p class="indent">In addition, you and affected creatures in the aura can add your Charisma modifier (minimum of +1) to Intelligence (Investigation) and Wisdom (Insight) checks.</p>
+		</description>
+		<sheet alt="Kindling Aura">
+			<description>You and allies in your Aura of Protection ignore creatures' Resistance to Fire and Radiant damage, and can deal Fire damage instead of a weapon's normal type. You and they also add {{charisma:modifier}} (min +1) to Investigation and Insight checks.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 15: Fervent Inquisitor" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FERVENT_INQUISITOR">
+		<description>
+			<p>Whenever a creature damages you or one of your allies within 30 feet of you that you can see, you can take a Reaction to gain Advantage on your next attack roll against the creature that dealt the damage.</p>
+			<p class="indent">Additionally, whenever you deal Fire or Radiant damage to a Bloodied creature, you become aware of any lies the creature has willingly and knowingly spoken to you in the past 24 hours.</p>
+		</description>
+		<sheet alt="Fervent Inquisitor" action="Reaction">
+			<description>When a creature damages you or a visible ally within 30 feet, gain Advantage on your next attack roll against it. When you deal Fire or Radiant damage to a Bloodied creature, you learn of lies it has knowingly told you in the past 24 hours.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 20: Fire and Brimstone" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_FIRE_AND_BRIMSTONE">
+		<description>
+			<p>As a Bonus Action, you embody cleansing flame and gain the benefits below for 10 minutes or until you end them (no action required). Once you use this feature, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 5 spell slot (no action required).</p>
+			<p class="indent"><strong><em>Blazing Ardor.</em></strong> You gain Immunity to Fire damage.</p>
+			<p class="indent"><strong><em>Relentless Judgment.</em></strong> Lashes of divine flame increase your reach by 10 feet, and your melee attacks ignore Half and Three-Quarters Cover.</p>
+			<p class="indent"><strong><em>Punish the Wicked.</em></strong> When you hit a creature with an Opportunity Attack, or when a Hostile creature ends its turn within your reach, it must succeed on a Charisma saving throw or have the Prone condition and its Speed is reduced to 0 until the start of its next turn.</p>
+		</description>
+		<sheet alt="Fire and Brimstone" action="Bonus Action" usage="1/Long Rest">
+			<description>For 10 minutes, you gain Immunity to Fire damage, your reach increases by 10 feet and melee attacks ignore Half/Three-Quarters Cover, and Hostile creatures you hit with an Opportunity Attack (or that end their turn in your reach) must save or fall Prone with Speed 0.</description>
+		</sheet>
+	</element>
+</elements>

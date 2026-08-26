@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="ranger-grimharbinger.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Grim Harbinger" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_GRIM_HARBINGER">
+		<supports>Ranger Subclass</supports>
+		<description>
+			<p class="flavor">Seal Fate as an Omen of Doom</p>
+			<p>Grim harbingers wander places touched by death, serving as both a watcher of the dead and the herald of doom for those whose lives are running out. At their side is a guardian spirit and omen of death known as a grim, a constant companion that aids in performing their shared, grave duty.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_OMEN_OF_DOOM" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_HARBINGER_OF_DOOM" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_GRAVE_BOND" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SEALED_FATE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_OMEN_OF_DOOM" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_HARBINGER_OF_DOOM" level="7" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_GRAVE_BOND" level="11" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SEALED_FATE" level="15" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Grim Harbinger Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SPELLS">
+		<description>
+			<p>When you reach a Ranger level specified in the Grim Harbinger Spells table, you thereafter always have the listed spell prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Ranger Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Bane</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Hold Person</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Fear</i></td></tr>
+				<tr><td style="text-align:center">13</td><td><i>Intrusive Despair*</i></td></tr>
+				<tr><td style="text-align:center">17</td><td><i>Dream</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 3: Omen of Doom" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_OMEN_OF_DOOM">
+		<description>
+			<p>As a Bonus Action, you target a creature you can see within 90 feet of you and magically seal its doom for 1 hour. Once per turn when you hit the doomed target with an attack, it takes an extra 1d6 Necrotic damage.</p>
+			<p class="indent">In addition, a ghostly creature called the Grim appears in an unoccupied space within 30 feet of the target. Grims most often appear as black, spectral hounds, but you can choose an appearance appropriate to its stat block.</p>
+			<p class="indent">The grim is Friendly to you and your allies, and it obeys your commands. It vanishes if you die, when the doomed creature dies, when it is reduced to 0 Hit Points, or when you use this feature again.</p>
+			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Short or Long Rest. You can also expend a spell slot to restore an expended use (no action required).</p>
+			<p class="indent"><strong><em>The Grim in Combat.</em></strong> In combat, the grim acts during your turn. It can move and use its Reaction on its own, but the only action it takes is the Dodge action unless you take a Bonus Action to command it to take an action in its stat block or some other action. You can also command it as part of the Bonus Action you take to use Omen of Doom, or you can sacrifice one of your attacks when you take the Attack action to command the grim to take the Ominous Rend action. If you have the Incapacitated condition, the grim acts on its own and is not limited to the Dodge action.</p>
+			<h5>GRIM</h5>
+			<p style="margin-bottom:5px"><em>Medium Undead, Neutral</em></p>
+			<ul class="unstyled">
+				<li><strong>AC</strong> 13 plus your Wisdom modifier</li>
+				<li><strong>HP</strong> 5 plus five times your Ranger level (the grim has a number of Hit Dice [d8s] equal to your Ranger level)</li>
+				<li><strong>Speed</strong> 40 ft.</li>
+			</ul>
+			<table style="text-align:center;margin-top:2px;margin-bottom:10px">
+				<tr style="font-size:8px"><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td></tr>
+				<tr><td><b>STR</b></td><td>16</td><td>+3</td><td>+3</td><td><b>DEX</b></td><td>16</td><td>+3</td><td>+3</td><td><b>CON</b></td><td>14</td><td>+2</td><td>+2</td></tr>
+				<tr><td><b>INT</b></td><td>14</td><td>+2</td><td>+2</td><td><b>WIS</b></td><td>10</td><td>+0</td><td>+0</td><td><b>CHA</b></td><td>10</td><td>+0</td><td>+0</td></tr>
+			</table>
+			<ul class="unstyled">
+				<li><strong>Immunities</strong> Necrotic; Frightened, Grappled, Petrified, Poisoned, Prone, Restrained</li>
+				<li><strong>Senses</strong> Darkvision 60 ft., Passive Perception 10</li>
+				<li><strong>Languages</strong> Understands the languages you know</li>
+				<li><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</li>
+			</ul>
+			<h4 style="margin-top:5px">Traits</h4>
+			<ul class="unstyled">
+				<li><strong><em>Incorporeal Movement.</em></strong> The grim can move through other creatures and objects as if they were Difficult Terrain. The grim takes 1d10 Force damage if it ends its turn inside an object.</li>
+				<li><strong><em>Shared Fate.</em></strong> Add your Proficiency Bonus to any ability check or saving throw the grim makes.</li>
+			</ul>
+			<h4 style="margin-top:5px">Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Ominous Rend.</strong> Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d6 + 3 plus your Wisdom modifier Necrotic damage, and if the target is a creature, it has the Frightened condition until the start of your next turn.</li>
+			</ul>
+			<h4 style="margin-top:5px">Reactions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Baleful Howl.</strong> Trigger:</em> A creature moves out of the grim's reach. <em>Response—Wisdom Saving Throw:</em> Your spell save DC, the triggering creature. <em>Failure:</em> The target's Speed is 0 until the end of the turn.</li>
+			</ul>
+		</description>
+		<sheet alt="Omen of Doom" action="Bonus Action" usage="{{omen-of-doom:uses}}/Short or Long Rest">
+			<description>Target a creature within 90 feet; it's doomed for 1 hour (once per turn, your hits on it deal extra 1d6 Necrotic damage). A Grim (Medium Undead companion) appears within 30 feet of the target and fights alongside you.</description>
+		</sheet>
+		<rules>
+			<stat name="omen-of-doom:uses" value="wisdom:modifier" bonus="base" />
+			<stat name="omen-of-doom:uses" value="1" bonus="base" />
+			<grant type="Companion" id="ID_TCM_COMPANION_GRIM" />
+		</rules>
+	</element>
+
+	<element name="Grim" type="Companion" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_GRIM">
+		<compendium display="false" />
+		<setters>
+			<set name="size">Medium</set>
+			<set name="type">Undead</set>
+			<set name="alignment">Neutral</set>
+			<set name="ac">13 + your Wisdom modifier</set>
+			<set name="hp">5 + five times your Ranger level (the grim has a number of Hit Dice [d8s] equal to your Ranger level)</set>
+			<set name="speed">40 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">16</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">14</set>
+			<set name="wisdom">10</set>
+			<set name="charisma">10</set>
+			<set name="senses">Darkvision 60 ft.; Passive Perception 10</set>
+			<set name="languages">Understands the languages you know</set>
+			<set name="challenge">—</set>
+			<set name="traits">ID_TCM_COMPANION_TRAIT_GRIM_INCORPOREAL_MOVEMENT|ID_TCM_COMPANION_TRAIT_GRIM_SHARED_FATE</set>
+			<set name="actions">ID_TCM_COMPANION_ACTION_GRIM_OMINOUS_REND</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="13" bonus="base" />
+			<stat name="companion:ac" value="wisdom:modifier" bonus="ability" />
+			<stat name="companion:hp:max" value="5" bonus="base" />
+			<stat name="companion:hp:max" value="level:ranger" />
+			<stat name="companion:hp:max" value="level:ranger" />
+			<stat name="companion:hp:max" value="level:ranger" />
+			<stat name="companion:hp:max" value="level:ranger" />
+			<stat name="companion:hp:max" value="level:ranger" />
+			<stat name="companion:speed" value="40" bonus="base" />
+			<stat name="companion:proficiency" value="proficiency" bonus="base" />
+			<stat name="companion:proficiency" value="-2" bonus="base companion PB removal" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+			<grant type="Companion Trait" id="ID_TCM_COMPANION_TRAIT_GRIM_INCORPOREAL_MOVEMENT" />
+			<grant type="Companion Trait" id="ID_TCM_COMPANION_TRAIT_GRIM_SHARED_FATE" />
+		</rules>
+	</element>
+
+	<element name="Incorporeal Movement" type="Companion Trait" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_TRAIT_GRIM_INCORPOREAL_MOVEMENT">
+		<description>
+			<p>The grim can move through other creatures and objects as if they were Difficult Terrain. The grim takes 1d10 Force damage if it ends its turn inside an object.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Shared Fate" type="Companion Trait" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_TRAIT_GRIM_SHARED_FATE">
+		<description>
+			<p>Add your Proficiency Bonus to any ability check or saving throw the grim makes.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="companion:acrobatics:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:animal handling:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:arcana:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:athletics:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:deception:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:history:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:insight:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:intimidation:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:investigation:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:medicine:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:nature:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:perception:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:performance:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:persuasion:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:religion:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:sleight of hand:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:stealth:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:survival:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:intelligence:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:wisdom:save:proficiency" value="companion:proficiency" bonus="base" />
+			<stat name="companion:charisma:save:proficiency" value="companion:proficiency" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Ominous Rend" type="Companion Action" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_ACTION_GRIM_OMINOUS_REND">
+		<description>
+			<p><i>Melee Attack Roll:</i> Bonus equals your spell attack modifier, reach 5 ft. <i>Hit:</i> 1d6 + 3 plus your Wisdom modifier Necrotic damage, and if the target is a creature, it has the Frightened condition until the start of your next turn.</p>
+		</description>
+		<sheet>
+			<description>Melee Attack Roll: Your spell attack modifier to hit, reach 5 ft. Hit: 1d6 + 3 + {{wisdom:modifier}} Necrotic damage, and if the target is a creature, it has the Frightened condition until the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Baleful Howl" type="Companion Action" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_ACTION_GRIM_BALEFUL_HOWL">
+		<compendium display="false" />
+		<description>
+			<p><i>Trigger:</i> A creature moves out of the grim's reach. <i>Response—Wisdom Saving Throw:</i> Your spell save DC, the triggering creature. <i>Failure:</i> The target's Speed is 0 until the end of the turn.</p>
+		</description>
+		<sheet>
+			<description>Trigger: A creature moves out of the grim's reach. Response—Wisdom Saving Throw: Your spell save DC, the triggering creature. Failure: The target's Speed is 0 until the end of the turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 7: Harbinger of Doom" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_HARBINGER_OF_DOOM">
+		<description>
+			<p>Your control over doom grows stronger, granting the following benefits.</p>
+			<p class="indent"><strong><em>Graveyard Hunter.</em></strong> The Grim's Ominous Rend action deals an extra 1d6 Necrotic damage on a hit.</p>
+			<p class="indent"><strong><em>Mortal Reminder.</em></strong> When you deal damage to a creature doomed by your Omen of Doom, you can change the damage type to Necrotic.</p>
+			<p class="indent"><strong><em>Mounting Dread.</em></strong> Necrotic damage dealt by you or the grim ignores Resistance.</p>
+		</description>
+		<sheet alt="Harbinger of Doom">
+			<description>The Grim's Ominous Rend deals an extra 1d6 Necrotic damage. You can change damage you deal to a doomed creature into Necrotic damage. Necrotic damage dealt by you or the grim ignores Resistance.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 11: Grave Bond" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_GRAVE_BOND">
+		<description>
+			<p>You draw deeper strength from the grave. You gain the following benefits.</p>
+			<p class="indent"><strong><em>Ghastly Hound.</em></strong> The grim gains Resistance to Bludgeoning, Piercing, and Slashing damage.</p>
+			<p class="indent"><strong><em>Grave Fortitude.</em></strong> You gain Resistance to Necrotic damage.</p>
+			<p class="indent"><strong><em>Inescapable Fate.</em></strong> When the target of your Omen of Doom succeeds on a saving throw, you can take a Reaction to force it to reroll the save with Disadvantage and use the new roll. Once you cause a save to fail with this benefit, you can't use it again until the current Omen of Doom ends.</p>
+		</description>
+		<sheet alt="Grave Bond" action="Reaction">
+			<description>Your grim gains Resistance to Bludgeoning, Piercing, and Slashing damage, and you gain Resistance to Necrotic damage. When the target of your Omen of Doom succeeds on a save, you can force it to reroll with Disadvantage (once per Omen of Doom).</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+
+	<element name="Level 15: Sealed Fate" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SEALED_FATE">
+		<description>
+			<p>The strength of your Omen of Doom reaches its peak, granting the following benefits while it is active.</p>
+			<p class="indent"><strong><em>Jaws of Doom.</em></strong> The Grim's Ominous Rend action deals an extra 1d6 Necrotic damage (for a total of 2d6 extra damage).</p>
+			<p class="indent"><strong><em>Marked for Death.</em></strong> When you use Omen of Doom, you can force the target to make a Charisma saving throw against your spell save DC. On a failed save, until the current Omen of Doom ends, the target has Vulnerability to damage dealt by the grim and to the extra damage you deal with Omen of Doom. Once you use this benefit, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 4+ spell slot (no action required).</p>
+		</description>
+		<sheet alt="Sealed Fate" usage="1/Long Rest">
+			<description>While Omen of Doom is active, the Grim's Ominous Rend deals a total of 2d6 extra Necrotic damage. When you use Omen of Doom, you can force a Charisma save (once per Long Rest); on a failure, the target has Vulnerability to damage from the grim and your Omen of Doom bonus damage.</description>
+		</sheet>
+	</element>
+</elements>

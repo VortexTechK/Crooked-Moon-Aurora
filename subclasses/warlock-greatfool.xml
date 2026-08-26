@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="warlock-greatfool.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Great Fool Patron" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_GREAT_FOOL_PATRON">
+		<supports>Warlock Subclass</supports>
+		<description>
+			<p class="flavor">Laugh in the Face of Danger with Foolish Antics</p>
+			<p>What horrors and sorrows can't be remedied by maniacal laughter? Warlocks that have made a pact with the Great Fool draw their enigmatic power from a powerful, otherworldly being of jolly revelry, whose twisted sense of humor is lost on mortal understanding. They are a mocking mirror to bring low the arrogant and mighty, though the Great Fool's ultimate designs are often nonsensical and incomprehensible.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_KILLING_JOKE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_JESTERS_JAPES" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_MOCKING_BANTER" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SEND_IN_THE_CLOWNS" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_KILLING_JOKE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_JESTERS_JAPES" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_MOCKING_BANTER" level="10" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SEND_IN_THE_CLOWNS" level="14" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Great Fool Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SPELLS">
+		<description>
+			<p>The magic of your patron ensures you always have certain spells ready; when you reach a Warlock level specified in the Great Fool Spells table, you thereafter always have the listed spells prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Warlock Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Disguise Self, Hideous Laughter, Rope Trick, Spiritual Weapon, Vicious Mockery</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Blink, Stinking Cloud</i></td></tr>
+				<tr><td style="text-align:center">7</td><td><i>Phantasmal Killer, Puppet Master*</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Arcane Hand, Mislead</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 3: Killing Joke" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_KILLING_JOKE">
+		<description>
+			<p>You see the humor in everything—especially in the end of things. When a creature you can see within 60 feet of you takes damage or fails a saving throw, you can take a Reaction to cast Vicious Mockery on that creature. You can use this Reaction a number of times equal to your Charisma modifier (minimum of once). You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.</p>
+		</description>
+		<sheet alt="Killing Joke" action="Reaction" usage="{{charisma:modifier}}/Long Rest (1/Short Rest)">
+			<description>When a creature you can see within 60 feet takes damage or fails a saving throw, you can cast Vicious Mockery on it.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Jester's Japes" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_JESTERS_JAPES">
+		<description>
+			<p>By calling down an aspect of the Great Fool, you can curse your foes. As a Magic action, you target a creature you can see within 60 feet of you and force it to succeed on a Charisma saving throw against your spell save DC or suffer one of the following curses (your choice).</p>
+			<p class="indent"><strong><em>Flower Spurt.</em></strong> You spray a strange liquid at the creature's eyes, giving it the Blinded condition.</p>
+			<p class="indent"><strong><em>Clown Shoes.</em></strong> The creature's feet or similar appendages grow to awkwardly exaggerated proportions. The creature's Speed is halved, and it has Disadvantage on ability checks and saving throws that rely on Dexterity.</p>
+			<p class="indent"><strong><em>Honk Honk.</em></strong> The creature emits sounds, such as honks, chimes, or squeaks, that are audible out to 100 feet with every movement, no matter how slight. The creature can't benefit from the Invisible condition.</p>
+			<p class="indent"><strong><em>Jolly Arms.</em></strong> Any weapon or Unarmed Strike the creature attacks with, including natural weapons such as fangs and claws, takes on a comical appearance as if it were made of wood, stuffed cloth, or balloons. The target deals half damage with weapon attacks and Unarmed Strikes.</p>
+			<p class="indent">The curse lasts for 1 minute. The creature repeats the saving throw at the end of each of its turns, ending the curse on a success.</p>
+			<p class="indent">Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Jester's Japes" action="Magic action" usage="1/Short or Long Rest">
+			<description>Target a creature within 60 feet; Charisma save against your spell save DC or suffer a curse of your choice (Blinded, halved Speed with Disadvantage on Dexterity, can't be Invisible, or half damage with weapons) for 1 minute.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 10: Mocking Banter" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_MOCKING_BANTER">
+		<description>
+			<p>Your witty and insulting japes become biting to the point of needling your foes' very psyche. When a creature damages you, you can take a Reaction to force the creature to make a Wisdom saving throw against your spell save DC. On a failed save, the creature takes Psychic damage equal to the triggering damage you took, or half as much damage on a successful one.</p>
+			<p class="indent">Once you use this Reaction, you can't use it again until you finish a Short or Long Rest.</p>
+		</description>
+		<sheet alt="Mocking Banter" action="Reaction" usage="1/Short or Long Rest">
+			<description>When a creature damages you, force it to make a Wisdom save against your spell save DC or take Psychic damage equal to the triggering damage (half on a success).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 14: Send in the Clowns" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_SEND_IN_THE_CLOWNS">
+		<description>
+			<p>You can call upon the laughing, jeering spirits of the followers of the Great Fool to strike down your foes. As a Magic action, you summon three ghostly fools. The fools are translucent and intangible, and they resemble clowns, jesters, or similar entertainers. Make up to three melee spell attacks against creatures within 60 feet of you. On a hit, a target takes 2d10 Psychic damage and has the Frightened condition until the end of its next turn, or the Prone condition (your choice). You can use your action on subsequent turns to repeat the attacks.</p>
+			<p class="indent">The fools remain for 1 minute or until you have the Incapacitated condition or you die. Once you use this feature, you can't do so again until you finish a Long Rest.</p>
+			<h5>FOOLISH PERSONAS</h5>
+			<p>Many Warlocks of the Great Fool adopt a signature aesthetic and performance style that best represents their folly. The Foolish Personas table offers archetypes of fools with suggestions for corresponding outfits and routines.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Persona</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>The Harlequin. An elegant outfit of diamond motley with a painted mask—performs dances, gives eloquent speeches, and plays tricks</td></tr>
+				<tr><td style="text-align:center">2</td><td>The Jester. A two-toned, checkered motley outfit with cap and bells—favors feats of acrobatics, tumbling, and juggling</td></tr>
+				<tr><td style="text-align:center">3</td><td>The Joker. A vibrant, colorful suit with wild hair and bowler hat—favors silly jokes, slapstick comedy, and clumsy self-deprecation</td></tr>
+				<tr><td style="text-align:center">4</td><td>The Mime. A striped, black-and-white shirt with a flat cap and red suspenders—pantomimes comical scenarios without speaking</td></tr>
+				<tr><td style="text-align:center">5</td><td>The Sad Clown. A monochromatic, one-piece outfit with pointed hat and puffball buttons—utilizes melodramatic melancholy and song</td></tr>
+				<tr><td style="text-align:center">6</td><td>The Tramp. A patch-covered coat, tattered scarf, scuffed shoes, and cigar—leverages sardonic wit, insults, and mocking observations</td></tr>
+			</table>
+		</description>
+		<sheet alt="Send in the Clowns" action="Magic action" usage="1/Long Rest">
+			<description>Summon three ghostly fools for 1 minute. Make up to three melee spell attacks against creatures within 60 feet; on a hit, deal 2d10 Psychic damage and impose Frightened or Prone (your choice).</description>
+		</sheet>
+	</element>
+</elements>

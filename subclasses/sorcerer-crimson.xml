@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="sorcerer-crimson.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Crimson Sorcery" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_CRIMSON_SORCERY">
+		<supports>Sorcerer Subclass</supports>
+		<description>
+			<p class="flavor">Control the Vital Power of Your Lifeblood</p>
+			<p>Crimson Sorcerers harness the ancient magic of blood and life essence. They twist and guide the flow of this quintessential energy as a hunger grows deep within them. They manipulate their power to infuse the vitality of others, or they can rip it away and steal it for themselves.</p>
+			<p class="indent">Crimson sorcery can be acquired in a variety of ways. Some with this power were born with it. Others were infused with it through a dark ritual or grim event. There are those who discover it through lost secrets. Consult the Crimson Origins table for a possible origin of your power.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_BLOOD_WELL" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SPELLS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_POOL_OF_BLOOD" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SCARLET_VIGOR" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_VITAL_SIPHONING" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SANGUINE_FEAST" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_BLOOD_WELL" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_POOL_OF_BLOOD" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SCARLET_VIGOR" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_VITAL_SIPHONING" level="14" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SANGUINE_FEAST" level="18" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Blood Well" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_BLOOD_WELL">
+		<description>
+			<p>You hold a reserve of vital energy called your Blood Well, which you can use to empower your magic and fuel other powers from this subclass. When you deal damage or restore Hit Points to a creature, you can expend your Blood Well to add 1d8 to the total for one target.</p>
+			<p class="indent">You regain your expended Blood Well when you finish a Long Rest or when a creature takes 10 or more Necrotic damage from you at one time.</p>
+		</description>
+		<sheet alt="Blood Well" usage="1/Long Rest">
+			<description>When you deal damage or restore Hit Points to a creature, you can expend your Blood Well to add 1d8 to the total. You regain it on a Long Rest or when a creature takes 10+ Necrotic damage from you at once.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Crimson Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SPELLS">
+		<description>
+			<p>When you reach a Sorcerer level specified in the Crimson Spells table, you thereafter always have the listed spells prepared.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">Sorcerer Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td style="text-align:center">3</td><td><i>Aid, Blood Bolt*, Cure Wounds, Inflict Wounds, Blood Sacrifice*</i></td></tr>
+				<tr><td style="text-align:center">5</td><td><i>Crimson Harvest*, Vampiric Touch</i></td></tr>
+				<tr><td style="text-align:center">7</td><td><i>Death Ward, Sacrificial Siphon*</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Field of Reaping*, Mass Cure Wounds</i></td></tr>
+			</table>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+			<h5>CRIMSON ORIGINS</h5>
+			<p>There are a variety of ways you might have received the ability to harness your Crimson Sorcery to manipulate vitality and life essence. The Crimson Origins table offers suggestions of where your power comes from.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d6</td><td>Origin</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>One of your parents was a vampire. Though you aren't one yourself, you inherited their hunger, and it drives your magic.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You studied blood rites at a monastery that infused your own blood with power.</td></tr>
+				<tr><td style="text-align:center">3</td><td>You survived a vampire's bite, though it left you forever changed and awakened your sorcery.</td></tr>
+				<tr><td style="text-align:center">4</td><td>Your family suffers under a generational curse that has reared its head with you, driving you to drain vital energy.</td></tr>
+				<tr><td style="text-align:center">5</td><td>You studied the secrets of life and death, perhaps to save yourself or a loved one. In so doing, you unlocked the crimson power in your blood.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You died, and a cunning entity offered you a second chance at life. You accepted and awoke with crimson sorcery coursing through your veins.</td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+	</element>
+
+	<element name="Level 6: Pool of Blood" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_POOL_OF_BLOOD">
+		<description>
+			<p>As a Bonus Action, you can expend your Blood Well to magically dissolve into a pool of blood, along with everything you're wearing or carrying, for 1 hour. The transformation ends early if you drop to 0 Hit Points or if you choose to end it (no action required).</p>
+			<p class="indent">While you are a pool of blood, you use your game statistics with the following changes.</p>
+			<ul>
+				<li>Your Speed becomes 10 feet.</li>
+				<li>You gain Climb and Swim Speeds equal to your Speed, and you can climb difficult surfaces, including along ceilings, without needing to make an ability check.</li>
+				<li>You have Resistance to Bludgeoning, Piercing, and Slashing damage.</li>
+				<li>You have Immunity to the Prone condition.</li>
+				<li>You have Advantage on Strength, Dexterity, and Constitution saving throws.</li>
+				<li>You can pass through small holes, narrow openings, and even mere cracks.</li>
+				<li>You can enter and occupy the space of another creature.</li>
+				<li>You can't drop, use, or otherwise interact with anything you were carrying or holding.</li>
+				<li>You can't talk, manipulate objects, attack, or cast spells.</li>
+			</ul>
+		</description>
+		<sheet alt="Pool of Blood" action="Bonus Action" usage="Blood Well">
+			<description>Expend your Blood Well to dissolve into a pool of blood for 1 hour (or until 0 HP or you end it): Speed 10 ft. with Climb/Swim equal to Speed; Resistance to Bludgeoning, Piercing, Slashing; Immune to Prone; Advantage on Str/Dex/Con saves; can squeeze through cracks and occupy another creature's space; can't act, attack, or cast spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 6: Scarlet Vigor" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SCARLET_VIGOR">
+		<description>
+			<p>You have Resistance to Necrotic damage. In addition, when you finish a Short Rest, you can expend your Blood Well to reduce your Exhaustion level, if any, by 1.</p>
+		</description>
+		<sheet alt="Scarlet Vigor" display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+
+	<element name="Level 14: Vital Siphoning" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_VITAL_SIPHONING">
+		<description>
+			<p>You can feed on your own life essence to fuel your magic. As a Bonus Action, you can expend a Hit Point Die and choose one of the following benefits.</p>
+			<p class="indent"><strong><em>Blood Boil.</em></strong> You regain the use of your Blood Well.</p>
+			<p class="indent"><strong><em>Crimson Pulse.</em></strong> Expend your Blood Well to make the next Metamagic option you use this turn cost no Sorcery Points.</p>
+		</description>
+		<sheet alt="Vital Siphoning" action="Bonus Action">
+			<description>Expend a Hit Point Die and choose: Blood Boil (regain your Blood Well) or Crimson Pulse (expend your Blood Well to make your next Metamagic this turn cost no Sorcery Points).</description>
+		</sheet>
+	</element>
+
+	<element name="Level 18: Sanguine Feast" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_SANGUINE_FEAST">
+		<description>
+			<p>Your hunger for vital essence is unquenchable. As a Magic action, you can unleash tendrils of blood that lash any creatures of your choice within 30 feet of you. A target must make a Constitution saving throw, taking 5d8 Necrotic damage on a failed save, or half as much damage on a successful one. If your Blood Well is already expended when you use this action, the targets have Disadvantage on the saving throw. If at least one creature takes damage from Sanguine Feast, you regain a number of Hit Points equal to the damage roll.</p>
+			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest, unless you spend 5 Sorcery Points to use it again.</p>
+			<p class="indent"><i>Variant: Bloodless Crimson Sorcerers.</i> If you're playing a character from a species that lacks blood in the traditional sense, you can still take the Crimson Sorcery subclass. The essence of Crimson Sorcery is lifeforce, or animating energy that approximates life.</p>
+		</description>
+		<sheet alt="Sanguine Feast" action="Magic action" usage="1/Long Rest (5 Sorcery Points)">
+			<description>Creatures of your choice within 30 feet make a Constitution save (Disadvantage if your Blood Well is expended), taking 5d8 Necrotic damage on a failure or half on a success. You regain HP equal to the damage dealt if at least one creature is hit.</description>
+		</sheet>
+	</element>
+</elements>

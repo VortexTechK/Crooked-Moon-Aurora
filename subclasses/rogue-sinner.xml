@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="rogue-sinner.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Sinner" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_SINNER">
+		<supports>Rogue Subclass</supports>
+		<description>
+			<p class="flavor">Deal in Vice to Jinx Foes and Bend Luck</p>
+			<p>Vice clings to Sinners like a second skin—cheating, drunkenness, and games of chance are their bread and blood. A scoundrel by nature, sin calls their name, and when whispers of malefic powers reach their ears, they listen. Those powers offer more than temptation; they grant the tools to deceive, steal, and even kill with a precision these rogues never dreamed of.</p>
+			<p class="indent">Perhaps it begins with a meeting in a seedy saloon, a ritual under desert skies, or a cursed temple found deep in the jungle. No matter the road, the end is always the same: Jinxcraft. Through hexes, curses, and foul magic, Sinners cast aside judgment and righteousness. The laws of man and gods are nothing to them. Only the cold comfort of the path of sin remains.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_SINNER_HEX_SLINGER" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_SINNER_GET_JINXED" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_SINNER_BORROWED_LUCK" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_SINNER_PICK_YOUR_POISON" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_SINNER_THE_OTHER_SIDE" />
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_HEX_SLINGER" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_GET_JINXED" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_BORROWED_LUCK" level="9" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_PICK_YOUR_POISON" level="13" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_THE_OTHER_SIDE" level="17" />
+		</rules>
+	</element>
+
+	<element name="Level 3: Hex Slinger" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_HEX_SLINGER">
+		<description>
+			<p>When you deal damage to a creature with your Sneak Attack, you can unleash the power of your Jinxcraft. When you roll your Sneak Attack dice, designate two of the dice before the roll (such as rolling them separately or using different colored dice). The total rolled on these dice determines the effect of your Jinxcraft as noted on the Hex Slinger Jinxes table. You can use this feature a number of times equal to your Charisma modifier (minimum of 1), and you regain all expended uses when you finish a Short Rest.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">2d6</td><td>Jinx</td></tr>
+				</thead>
+				<tr><td style="text-align:center">2</td><td>Snake Eyes. On the target's next turn, it can only do one of the following: move or take an action or a Bonus Action. If it targets you or your allies with an attack on that turn, it takes 2d6 Psychic damage.</td></tr>
+				<tr><td style="text-align:center">3–4</td><td>The Nightmare. The target has the Frightened condition until the end of its next turn, and it must immediately take a Reaction to move as far as it can away from you, up to its Speed.</td></tr>
+				<tr><td style="text-align:center">5–6</td><td>Whiskey Bottle. The target drops anything it's holding. Until the end of its next turn, when the target picks up an item, it must succeed on a DC 15 Dexterity saving throw or drop the item immediately.</td></tr>
+				<tr><td style="text-align:center">7</td><td>Cheap Shot. Until the end of its next turn, the target's Speed is halved, and for that duration, attack rolls against it have Advantage.</td></tr>
+				<tr><td style="text-align:center">8–9</td><td>Withered Arm. Until the end of its next turn, the target has Disadvantage on D20 Tests that rely on Strength.</td></tr>
+				<tr><td style="text-align:center">10–11</td><td>Bad Luck. Until the end of its next turn, when the target makes an attack roll or a saving throw, it subtracts 1d6 from the total.</td></tr>
+				<tr><td style="text-align:center">12</td><td>Dead Man. If the next attack roll you make before the end of your next turn misses, it hits instead. If that first attack roll hits, the attack is automatically a Critical Hit. If you roll a 20 on the d20, roll the attack's damage dice three times instead of twice.</td></tr>
+			</table>
+		</description>
+		<sheet alt="Hex Slinger" usage="{{charisma:modifier}}/Short Rest">
+			<description>When you deal Sneak Attack damage, designate two of the dice: their total determines a Jinxcraft effect (from Snake Eyes to Dead Man) inflicted on the target.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 3: Get Jinxed" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_GET_JINXED">
+		<description>
+			<p>You have learned the secret art of Jinxcrafting—drawing magical power from the dark deeds and deals of sin. You gain the following benefits.</p>
+			<p class="indent"><strong><em>Cards and Bones.</em></strong> You gain proficiency with two Gaming Sets of your choice (playing cards and dice recommended).</p>
+			<p class="indent"><strong><em>Jinx Weapon.</em></strong> As a 1-hour ritual using a Gaming Set, you magically create a jinx weapon that channels your Jinxcraft. This weapon takes the form of a Pistol or a Gaming Set (which uses Pistol game statistics). For you, the jinx weapon ignores the Loading property and creates its own ammunition that deals Force damage. In Gaming Set form, you throw cards, dice, or other Gaming Set pieces, or you use them to unleash bolts of hex magic. Alternatively, you can imbue Jinxcraft into a Simple or Martial weapon you have proficiency with, turning it into your jinx weapon. The infused jinx weapon deals Force damage instead of its normal type. If you create a second jinx weapon, the first vanishes or its Jinxcraft ends.</p>
+			<p class="indent"><strong><em>Parlor Trick.</em></strong> You learn one of the following cantrips of your choice: Dancing Lights, Mage Hand, Minor Illusion, Mysterious Presence*, or Prestidigitation. Charisma is your spellcasting ability for it.</p>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+			<h5>JINX WEAPON FORMS</h5>
+			<p>Sinners wield their Jinxcraft through a wide variety of jinxed items that serve as magical weapons. The Jinx Weapon Forms table offers suggestions for how your jinx weapon might appear.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d4</td><td>Weapon Form</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A wooden, glyph-covered talisman carved into the shape of a pistol that fires magenta blasts</td></tr>
+				<tr><td style="text-align:center">2</td><td>A pair of bone dice that shoot ghastly green bursts of jinxcraft from their pips</td></tr>
+				<tr><td style="text-align:center">3</td><td>Enchanted playing cards that can be thrown with explosive magical power</td></tr>
+				<tr><td style="text-align:center">4</td><td>A lucky coin that launches toward foes when flipped and always returns</td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Proficiency" name="Gaming Set Proficiency (Get Jinxed)" supports="ID_PROFICIENCY_GAMING_SET_PROFICIENCY_PLAYING_CARD_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_DICE_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_DRAGONCHESS_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_THREE_DRAGON_ANTE_SET" number="2" />
+			<select type="Spell" name="Cantrip (Parlor Trick)" supports="ID_WOTC_PHB24_SPELL_DANCING_LIGHTS|ID_WOTC_PHB24_SPELL_MAGE_HAND|ID_WOTC_PHB24_SPELL_MINOR_ILLUSION|ID_WOTC_PHB24_SPELL_PRESTIDIGITATION" />
+		</rules>
+	</element>
+
+	<element name="Level 9: Borrowed Luck" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_BORROWED_LUCK">
+		<description>
+			<p>When you use Hex Slinger, you siphon away a sliver of the target's luck. You gain Heroic Inspiration if you don't already have it. If you do have it, you can expend your Heroic Inspiration instead of expending a use of Hex Slinger.</p>
+		</description>
+		<sheet alt="Borrowed Luck">
+			<description>When you use Hex Slinger, you gain Heroic Inspiration if you don't have it, or can expend Heroic Inspiration instead of a use of Hex Slinger if you do.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 13: Pick Your Poison" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_PICK_YOUR_POISON">
+		<description>
+			<p>When you use Hex Slinger, you can roll the designated Sneak Attack dice twice and choose which total to use. If the roll you choose is the same number on both dice, the target takes Psychic damage equal to half your level. If the roll you choose is a 2 or a 12, you don't expend that use of Hex Slinger.</p>
+		</description>
+		<sheet alt="Pick Your Poison">
+			<description>When you use Hex Slinger, roll the designated dice twice and choose the total. Doubles deal extra Psychic damage equal to {{level:rogue:half}}; a 2 or 12 doesn't expend the use.</description>
+		</sheet>
+	</element>
+
+	<element name="Level 17: The Other Side" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_THE_OTHER_SIDE">
+		<description>
+			<p>You can call on your otherworldly friends in low places to change the odds of anything you do in your favor. You gain the following benefits.</p>
+			<p class="indent"><strong><em>Crossroads Devilry.</em></strong> When you miss with an attack roll or fail a saving throw, you can expend and roll any number of your Sneak Attack dice (choose the number before you roll) and add the total rolled to the attack or save, potentially turning a miss into a hit or failure into success. Expended dice return after you next use your Sneak Attack.</p>
+			<p class="indent"><strong><em>Lady Luck's Smiling.</em></strong> When a creature hits you with an attack roll, you can expend and roll any number of your Sneak Attack dice (choose the number before you roll) and add the total rolled to your AC against that attack, potentially causing the attack to miss. Expended dice return after you next use your Sneak Attack.</p>
+		</description>
+		<sheet alt="The Other Side">
+			<description>When you miss an attack or fail a save, or when you're hit by an attack, you can expend and roll Sneak Attack dice to add to the roll or your AC, potentially turning it around. Expended dice return after you next use Sneak Attack.</description>
+		</sheet>
+	</element>
+</elements>
