@@ -53,8 +53,8 @@
 			<p>As a Bonus Action, you can touch the ground and choose a creature also touching the ground within 30 feet of yourself. That creature can expend and roll one Hit Point Die, and it regains a number of Hit Points equal to the number rolled plus your Proficiency Bonus.</p>
 			<p class="indent">You can use this trait a number of times equal to your Proficiency Bonus. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest.</p>
 		</description>
-		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest (1/Short Rest)">
-			<description>Touch the ground and choose a creature also touching the ground within 30 feet of yourself. That creature can expend and roll one Hit Point Die and regain that many Hit Points plus {{proficiency}}. You regain one use when you finish a Short Rest, and all uses when you finish a Long Rest.</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>Touch the ground and choose a creature also touching the ground within 30 feet of yourself. That creature can expend and roll one Hit Point Die and regain that many Hit Points plus {{proficiency}}. You regain one use when you finish a Short Rest.</description>
 		</sheet>
 	</element>
 
