@@ -3,7 +3,7 @@
 	<info>
 		<n>Wicker Weaver</n>
 		<description>The Wicker Weaver background from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="background-wickerweaver.xml" url="" />
 		</update>
 	</info>
@@ -55,7 +55,9 @@
 			<grant type="Feat" id="ID_TCM_FEAT_CHARM_TWISTER" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+			<grant type="Language" id="ID_LANGUAGE_SYLVAN" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS" />
 		</rules>
 	</element>
 </elements>
+
