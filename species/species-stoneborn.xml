@@ -3,7 +3,7 @@
 	<info>
 		<n>Stoneborn</n>
 		<description>The Stoneborn species from The Crooked Moon: Player Options.</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="species-stoneborn.xml" url="" />
 		</update>
 	</info>
@@ -33,7 +33,7 @@
 			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Stoneborn)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
 			<select type="Racial Trait" name="Size (Stoneborn)" supports="ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_SMALL|ID_TCM_RACIAL_TRAIT_STONEBORN_SIZE_MEDIUM" />
 			<stat name="innate speed" value="30" bonus="base" />
-			<stat name="innate speed:fly:misc" value="innate speed:half" bonus="base" />
+			<stat name="innate speed:fly" value="15" bonus="base" />
 
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_STONEBORN_ARGENT_GLEAM" />
 			<grant type="Racial Trait" id="ID_TCM_RACIAL_TRAIT_STONEBORN_SILVER_BULWARK" />
