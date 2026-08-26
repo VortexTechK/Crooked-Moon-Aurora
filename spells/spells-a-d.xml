@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Spells (A-D)</n>
+		<description>New spells from The Crooked Moon: Player Options, part 1 (Ancestral Guidance through Dissolution, including Buried Alive).</description>
+		<update version="0.0.1">
+			<file name="spells-a-d.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Ancestral Guidance" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_ANCESTRAL_GUIDANCE">
+		<supports>Cleric, Druid, Ranger, Sorcerer</supports>
+		<description>
+			<p>You invoke the wisdom of your ancestors to gain insight into your trials. When you cast the spell, and at the start of each of your turns for the duration, you gain Heroic Inspiration if you don't already have it.</p>
+		</description>
+		<setters>
+			<set name="keywords">inspiration, buff</set>
+			<set name="level">1</set>
+			<set name="school">Divination</set>
+			<set name="time">Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Blood Bolt" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_BLOOD_BOLT">
+		<supports>Sorcerer, Warlock, Wizard, Damaging Spell, Ranged, Spell Attack</supports>
+		<description>
+			<p>You hurl a twisting bolt of blood at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d6 Necrotic damage, and you gain a number of Temporary Hit Points equal to your Proficiency Bonus.</p>
+			<p class="indent"><b><i>Cantrip Upgrade.</i></b> The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6).</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, damage, temporary hit points, upgrade</set>
+			<set name="level">0</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Blood Sacrifice" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_BLOOD_SACRIFICE">
+		<supports>Sorcerer, Warlock, Wizard, Damaging Spell</supports>
+		<description>
+			<p>You sacrifice a portion of your life force to enhance your magical power. When you cast this spell, you take 1d6 Necrotic damage, which can't be reduced or prevented in any way. For the duration, when you cast a spell that deals damage, one target of the spell (your choice) takes an extra 1d6 damage of the same type as the spell's normal damage type (your choice if there are multiple).</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage you take and the extra damage your spells deal both increase by 1d6 for each spell slot level above 2.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, damage, self-harm, buff, upcasting, higher-level spell slot</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Bonus Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a drop of your own blood</set>
+			<set name="duration">1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Buried Alive" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_BURIED_ALIVE">
+		<supports>Druid, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You send your enemies to their graves even if they aren't dead yet. A creature that you can see within range that is standing on the ground must make a Strength saving throw. On a failed save, the ground opens and swallows the target, burying it up to 10 feet deep. While buried, the target has Total Cover, has the Restrained and Blinded conditions, and can't breathe. On a successful save, the target has the Prone condition, and its Speed is 0 until the end of its next turn.</p>
+			<p class="indent">A buried creature can dig out of the grave by using its action to make a DC 15 Strength (Athletics) check. On a success, it digs 5 feet closer to the surface. If it succeeds by 5 or more, it reaches the surface. When the creature reaches the surface, it exits the ground with the Prone condition.</p>
+			<p class="indent">The target automatically succeeds on its saving throw if it's standing on any thickness of stone or metal, or at least 2 inches of wood.</p>
+		</description>
+		<setters>
+			<set name="keywords">strength, save, restrained, blinded, total cover, escape</set>
+			<set name="level">4</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of grave dirt</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Call of the Wild" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CALL_OF_THE_WILD">
+		<supports>Bard, Druid, Ranger, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You unleash a primal howl that calls lesser creatures to your command. Each Beast in a 100-foot Emanation originating from you when you cast the spell must make a Wisdom saving throw. On a failed save, a target has the Charmed condition, it can understand your commands, and it follows them on its next turn to the best of its ability. On your subsequent turns, you can take a Magic action to issue a new command. On a successful save, a target has the Charmed condition until the start of your next turn, but you have no additional ability to command it. The howl is audible within 300 feet.</p>
+		</description>
+		<setters>
+			<set name="keywords">emanation, wisdom, save, charmed, control, beast</set>
+			<set name="level">4</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a bit of animal fur or hide</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Captivate Undead" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CAPTIVATE_UNDEAD">
+		<supports>Bard, Cleric, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You usurp the negative energy animating an Undead creature that you can see within range, attempting to take control of it. The target must make a Charisma saving throw. On a failed save, for the duration, the target has the Charmed condition (ignoring any Immunity to that condition), and it is Friendly toward you. On a successful save, the target has Disadvantage on the next attack roll it makes against you before the start of your next turn. If you or any of your allies damage the target or force it to make a saving throw, the spell ends.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> You can target one additional creature for each spell slot level above 1.</p>
+		</description>
+		<setters>
+			<set name="keywords">charisma, save, charmed, control, undead, upcasting, higher-level spell slot</set>
+			<set name="level">1</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pinch of bone dust</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+		</setters>
+	</element>
+
+	<element name="Chain of Conviction" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CHAIN_OF_CONVICTION">
+		<supports>Paladin, Warlock, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You hurl a spectral, barbed chain at a creature that you can see within range. The target makes a Strength saving throw. On a failed save, the target takes 2d6 Force damage, is pulled up to 30 feet toward you, and is bound by the chain. While bound by the chain, the creature is tethered to you and can't move or teleport to a space more than 30 feet away from you, and you have Advantage on attack rolls made against the creature. On a successful save, the target takes half as much damage only. The bound target repeats the save at the end of each of its turns, ending the spell on itself on a success. If you are ever more than 30 feet away from the target, the spell ends.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d6 for each spell slot level above 2.</p>
+		</description>
+		<setters>
+			<set name="keywords">force, damage, strength, save, restrained, tether, upcasting, higher-level spell slot</set>
+			<set name="level">2</set>
+			<set name="school">Conjuration</set>
+			<set name="time">Bonus Action</set>
+			<set name="range">30 feet</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Chorus of the Lost" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CHORUS_OF_THE_LOST">
+		<supports>Bard, Cleric, Sorcerer, Warlock, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You summon the eerie song and wailing of lost souls from a point you can see within range. Each creature in a 15-foot-radius Sphere centered there must make a Wisdom saving throw. On a failed save, the target takes 2d6 Psychic damage, and it has the Frightened condition for the duration. On a successful save, it takes half as much damage, and it has the Frightened condition until the end of its next turn. A Frightened target repeats the save at the end of each of its turns, ending the spell on itself on a success.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d6 for each spell slot level above 2.</p>
+		</description>
+		<setters>
+			<set name="keywords">sphere, psychic, damage, wisdom, save, frightened, upcasting, higher-level spell slot</set>
+			<set name="level">2</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a silver bell worth 10+ GP</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Consuming Pyre" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CONSUMING_PYRE">
+		<supports>Druid, Paladin, Warlock, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You cause a creature that you can see within range to burst into consuming, relentless flames. The target must make a Dexterity saving throw. On a failed save, the target takes 2d8 Fire damage and 2d8 Necrotic or Radiant damage (choose when you cast the spell), and the radiant flames linger. On a successful save, it takes half as much damage only.</p>
+			<p class="indent">While the flames linger, the creature takes the damage again at the start of each of its turns. The target, or another creature within reach of the target, can take an action to allow the target to repeat the saving throw, ending the spell on a success.</p>
+			<p class="indent">A creature killed by the damage from this spell is reduced to ash, along with any nonmagical equipment it is wearing or carrying.</p>
+		</description>
+		<setters>
+			<set name="keywords">fire, necrotic, radiant, damage, dexterity, save, burning, linger</set>
+			<set name="level">4</set>
+			<set name="school">Evocation</set>
+			<set name="time">Action</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Creeping Rot" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CREEPING_ROT">
+		<supports>Druid, Ranger, Sorcerer, Warlock, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You send tendrils of black and gray rot toward a target that you can see within range. Three tendrils then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or a nonmagical plant that isn't a creature, such as a tree or shrub. In either case, each can be targeted by only one of the tendrils.</p>
+			<p class="indent">A target that is a creature must make a Constitution saving throw. On a failed save, it takes 3d8 Necrotic damage and has the Poisoned condition for the duration. On a successful save, it takes half as much damage only. A creature Poisoned in this way takes 1d8 Necrotic damage at the start of each of its turns. A Poisoned creature repeats the save at the end of each of its turns, ending the spell on itself on a success.</p>
+			<p class="indent">A Plant creature automatically fails the initial save, and a nonmagical plant that isn't a creature simply withers and dies.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> One additional tendril leaps from the first target to another target for each spell slot level above 3.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, damage, constitution, save, poisoned, plant, upcasting, higher-level spell slot</set>
+			<set name="level">3</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Crimson Harvest" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CRIMSON_HARVEST">
+		<supports>Sorcerer, Warlock, Wizard, Damaging Spell, Healing Spell, Spell Saving Throw</supports>
+		<description>
+			<p>A wave of blood sweeps out from you in a 15-foot Emanation. Each creature of your choice in the wave must make a Dexterity saving throw, taking 3d10 Necrotic damage on a failed save, or half as much damage on a successful one.</p>
+			<p class="indent">If you damage at least one Small or larger creature, one creature of your choice that you can see within the Emanation regains a number of Hit Points equal to half the damage roll.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d10 for each spell slot level above 3.</p>
+		</description>
+		<setters>
+			<set name="keywords">emanation, necrotic, damage, dexterity, save, healing, upcasting, higher-level spell slot</set>
+			<set name="level">3</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a vial of blood</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Crooked Ward" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CROOKED_WARD">
+		<supports>Druid, Ranger, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You touch an immobile surface and mark a symbol that causes agony in twisted creatures. An Invisible, 30-foot-radius Sphere springs out from the point you touch. Each Aberration, Fey, Fiend, Monstrosity, or Undead in the Sphere has Disadvantage on ability checks and attack rolls. When an affected creature enters the Sphere for the first time on a turn or starts its turn there, it must succeed on a Wisdom saving throw or have the Frightened condition until the start of its next turn.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> You can maintain Concentration on this spell for longer if you cast it using a spell slot of level 4 (up to 1 hour) or 5 (up to 8 hours). If you use a level 6+ spell slot, the spell doesn't require Concentration, and the duration becomes 24 hours.</p>
+		</description>
+		<setters>
+			<set name="keywords">sphere, ward, wisdom, save, frightened, upcasting, higher-level spell slot</set>
+			<set name="level">3</set>
+			<set name="school">Abjuration</set>
+			<set name="time">Action</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a five-pointed wicker star</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+		</setters>
+	</element>
+
+	<element name="Culling Sickle" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CULLING_SICKLE">
+		<supports>Druid, Sorcerer, Warlock, Wizard, Damaging Spell, Ranged, Spell Attack</supports>
+		<description>
+			<p>You create a ghostly sickle that lasts for the duration and can strike out at your foes. The sickle appears hovering in your space and moves with you. When you cast this spell and as a Bonus Action on each of your turns, you can direct it to fly at and strike a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 2d8 Necrotic damage, and you gain Temporary Hit Points equal to half the damage dealt. After the sickle hits or misses, it returns to hover in your space.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d8 for each spell slot level above 3.</p>
+		</description>
+		<setters>
+			<set name="keywords">necrotic, damage, ranged spell attack, temporary hit points, upcasting, higher-level spell slot</set>
+			<set name="level">3</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Bonus Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Cursed Cacophony" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_CURSED_CACOPHONY">
+		<supports>Bard, Sorcerer, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You focus on a creature that you are familiar with that is on the same plane of existence as you. The target must succeed on a Wisdom saving throw or be cursed for the duration. Once a target fails its saving throw against this spell, you can't target it with a ritual casting of the spell for 24 hours.</p>
+			<p class="indent">While cursed, the target hears haunting, discordant music and has Disadvantage on D20 Tests. The first time the target fails a D20 Test during a turn, it repeats the save against this spell with neither Advantage nor Disadvantage, ending the spell early on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse, wisdom, save, disadvantage, ritual</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action or Ritual</set>
+			<set name="isRitual">true</set>
+			<set name="range">Special</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a sheet of music</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+		</setters>
+	</element>
+
+	<element name="Devil's Due" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_DEVILS_DUE">
+		<supports>Sorcerer, Warlock, Wizard, Healing Spell</supports>
+		<description>
+			<p>You absorb a measure of a creature's suffering and escaping vital essence. Expend and roll one Hit Point Die. You regain a number of Hit Points equal to the number rolled plus your spellcasting ability modifier.</p>
+			<p class="indent">If the creature took damage from a Critical Hit, double the number of Hit Points you regain.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> You can expend one additional Hit Point Die for each spell slot level above 1.</p>
+		</description>
+		<setters>
+			<set name="keywords">healing, reaction, hit point dice, upcasting, higher-level spell slot</set>
+			<set name="level">1</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Reaction, which you take when another creature within range takes damage</set>
+			<set name="range">30 feet</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a glob of pitch</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Dissolution" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_DISSOLUTION">
+		<supports>Wizard, Damaging Spell, Melee, Spell Attack</supports>
+		<description>
+			<p>You touch a creature or nonmagical object and break the target's substance down into its most fundamental components. Make a melee spell attack. On a hit, the target takes 1d8 Force damage, and its AC is reduced by 1 against the next attack roll made against it before the end of your next turn.</p>
+			<p class="indent"><b><i>Cantrip Upgrade.</i></b> The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).</p>
+		</description>
+		<setters>
+			<set name="keywords">force, damage, melee spell attack, ac reduction, upgrade</set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Action</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+</elements>

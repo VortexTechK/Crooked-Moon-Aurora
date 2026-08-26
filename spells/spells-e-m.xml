@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<n>Spells (E-M)</n>
+		<description>New spells from The Crooked Moon: Player Options, part 2 (Eye Burn through Mysterious Presence).</description>
+		<update version="0.0.1">
+			<file name="spells-e-m.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Eye Burn" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_EYE_BURN">
+		<supports>Druid, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You sting the eyes of a creature attacking you. The target must make a Constitution saving throw (a creature with Blindsight or Immunity to the Blinded condition succeeds automatically). On a failed save, the target has the Blinded condition until the end of the turn. On a successful save, it must subtract 1d4 from the triggering attack roll. The target automatically succeeds on its saves against your subsequent casting of this spell for 24 hours.</p>
+		</description>
+		<setters>
+			<set name="keywords">constitution, save, blinded, reaction</set>
+			<set name="level">0</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Reaction, which you take when a creature you can see within range targets you with an attack</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a smear of camphor</set>
+			<set name="duration">1 round</set>
+		</setters>
+	</element>
+
+	<element name="Field of Reaping" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_FIELD_OF_REAPING">
+		<supports>Cleric, Druid, Warlock, Damaging Spell, Healing Spell</supports>
+		<description>
+			<p>You create a shadowy field that reaps escaping life force in a 30-foot Cube originating from a point within range. A creature Hostile to you in the field when it appears, or when it enters the field for the first time on a turn or ends its turn there, is cursed until the end of its next turn. While cursed, the first time the creature takes damage during a turn, it takes an extra 1d6 Necrotic damage, and a creature of your choice within the field that isn't cursed by it regains a number of Hit Points equal to the Necrotic damage taken.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d6 for each spell slot level above 5.</p>
+		</description>
+		<setters>
+			<set name="keywords">cube, necrotic, damage, curse, healing, upcasting, higher-level spell slot</set>
+			<set name="level">5</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a dried corn husk or wheat hull</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Ghastly Charge" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_GHASTLY_CHARGE">
+		<supports>Sorcerer, Warlock, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You call forth the spirits of long-dead knights, which charge forward from you in a 90-foot long, 20-foot wide Line, and then vanish. Each creature of your choice in the Line must make a Wisdom saving throw. On a failed save, a target takes 5d12 Necrotic damage, has the Frightened condition until the start of your next turn, and must immediately use its Reaction, if available, to move as far from you as it can, using the safest route. On a successful save, the creature takes half as much damage only.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d12 for each spell slot level above 6.</p>
+		</description>
+		<setters>
+			<set name="keywords">line, necrotic, damage, wisdom, save, frightened, upcasting, higher-level spell slot</set>
+			<set name="level">6</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a scrap of a banner</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Harrowing Ballad" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_HARROWING_BALLAD">
+		<supports>Bard, Sorcerer, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You inflict a mind-eroding song on a creature that you can see within range. If the creature has an Intelligence of 4 or higher, it must succeed on an Intelligence saving throw or have the Charmed condition for the duration. While Charmed in this way, the target is struck with a rapidly repeating ballad that only it can hear; it takes 1d6 Psychic damage at the start of each of its turns, and it has Disadvantage on Wisdom (Perception) checks and on Constitution saving throws made to maintain its Concentration. The target repeats the save at the end of each of its turns, ending the spell on a success.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d6 for each spell slot level above 2.</p>
+		</description>
+		<setters>
+			<set name="keywords">intelligence, save, charmed, psychic, damage, upcasting, higher-level spell slot</set>
+			<set name="level">2</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Bonus Action</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Harvest Moonglow" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_HARVEST_MOONGLOW">
+		<supports>Cleric, Druid, Ranger, Healing Spell</supports>
+		<description>
+			<p>You call upon the light of the harvest moon to illuminate a 20-foot-radius Sphere centered on a point within range. The area is bathed in silvery Dim Light. Creatures and objects with the Invisible condition in the light become visible as translucent, shimmering images. When one of your allies is within the light, it can use a Bonus Action to absorb some of the light and gain 2d6 Temporary Hit Points.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The Temporary Hit Points increase by 1d6 for each spell slot level above 3.</p>
+		</description>
+		<setters>
+			<set name="keywords">sphere, light, invisible, reveal, temporary hit points, upcasting, higher-level spell slot</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a piece of moonstone</set>
+			<set name="duration">1 hour</set>
+		</setters>
+	</element>
+
+	<element name="Hungering Blade" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_HUNGERING_BLADE">
+		<supports>Paladin, Ranger, Warlock, Damaging Spell, Melee</supports>
+		<description>
+			<p>You imbue a weapon you are holding, or your Unarmed Strikes, with ravenous negative energy. For the duration, when you hit a creature with an attack using the empowered weapon or Unarmed Strike for the first time on a turn, the target takes Necrotic damage equal to your spellcasting ability modifier, and you gain a number of Temporary Hit Points equal to the Necrotic damage dealt.</p>
+		</description>
+		<setters>
+			<set name="keywords">weapon, necrotic, damage, temporary hit points, buff</set>
+			<set name="level">1</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Bonus Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="duration">1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Intrusive Despair" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_INTRUSIVE_DESPAIR">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You curse a creature within range, filling its mind with creeping paranoia and despair. When the target takes the Attack or Magic action, it must succeed on a Wisdom saving throw or waste its action. Once the target succeeds on three saving throws against this spell, the spell ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">curse, wisdom, save, incapacitate</set>
+			<set name="level">4</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action</set>
+			<set name="range">90 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a devil's trumpet blossom</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Isolation" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_ISOLATION">
+		<supports>Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>One creature that you can see within range must succeed on a Wisdom saving throw or have its mind shrouded in the dread of total isolation. For the duration, all other creatures have the Invisible condition toward the target, which the target can't see through—even with Blindsight, Truesight, or magic such as the See Invisibility spell—and the target can't perceive other creatures with any of its other senses. The target moves around other creatures, or otherwise rationalizes not moving through spaces occupied by them (such as perceiving a door as closed or as a wall if another creature is standing in the way). The target still feels pain but can't identify the source of any injury caused by another creature. The target repeats the saving throw at the end of each of its turns, ending the spell on itself on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords">wisdom, save, isolation, invisible, control</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action</set>
+			<set name="range">120 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a small metal cube</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Lucky Charm" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_LUCKY_CHARM">
+		<supports>Bard, Paladin, Ranger, Warlock</supports>
+		<description>
+			<p>You touch a Tiny, nonmagical object, infusing it with a portion of your own luck for the duration. While another creature carries the object, that creature has Advantage on D20 Tests, and you have Disadvantage on D20 Tests.</p>
+		</description>
+		<setters>
+			<set name="keywords">luck, advantage, disadvantage, buff</set>
+			<set name="level">5</set>
+			<set name="school">Transmutation</set>
+			<set name="time">Action</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a four-leaf clover and a shard of broken mirror</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 hour</set>
+		</setters>
+	</element>
+
+	<element name="Martyr" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_MARTYR">
+		<supports>Cleric, Paladin, Wizard, Healing Spell</supports>
+		<description>
+			<p>You touch a dead creature that died within the last minute and transfer your life essence into it. The target returns to life with Hit Points equal to your current Hit Point total. You immediately drop to 0 Hit Points (which nothing can prevent) with two failed Death Saving Throws, and you must immediately make a Death Save. You can't regain Hit Points or become Stable until after you make this save.</p>
+		</description>
+		<setters>
+			<set name="keywords">resurrection, revive, self-sacrifice, healing</set>
+			<set name="level">3</set>
+			<set name="school">Necromancy</set>
+			<set name="time">Action</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a Dagger worth at least 1 CP</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Mirrored Agony" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_MIRRORED_AGONY">
+		<supports>Bard, Sorcerer, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>The triggering creature makes a Wisdom saving throw. On a failed save, it takes an amount of Psychic damage equal to the damage it dealt to your ally. On a successful save, it takes half as much damage.</p>
+		</description>
+		<setters>
+			<set name="keywords">reaction, wisdom, save, psychic, damage, retribution</set>
+			<set name="level">5</set>
+			<set name="school">Abjuration</set>
+			<set name="time">Reaction, which you take when a creature you can see within 60 feet of you damages your ally</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a pin or needle</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Mist of Mourning" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_MIST_OF_MOURNING">
+		<supports>Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You summon a thin mist that saps joy and vigor in a 20-foot-radius Sphere centered on a point within range. Each creature in the mist when it appears, or when it moves into the mist for the first time on a turn or ends its turn there, must succeed on a Charisma saving throw or be filled with deep melancholy until the end of its next turn. An affected creature's Speed is halved, it has Disadvantage on attack rolls, and it subtracts 1d8 from all its damage rolls.</p>
+		</description>
+		<setters>
+			<set name="keywords">sphere, charisma, save, debuff, speed reduction</set>
+			<set name="level">3</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a vial of tears</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 10 minutes</set>
+		</setters>
+	</element>
+
+	<element name="Murder of Crows" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_MURDER_OF_CROWS">
+		<supports>Druid, Ranger, Sorcerer, Warlock, Wizard, Damaging Spell, Spell Saving Throw</supports>
+		<description>
+			<p>You summon and unleash a murder of deadly crows. Each creature of your choice in a 30-foot Cone originating from you makes a Dexterity saving throw. On a failed save, the target takes 5d6 Force damage and has the Blinded condition. On a successful save, it takes half as much damage only. A Blinded creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The effect also ends if the creature regains any Hit Points. The crows disperse and vanish after they strike.</p>
+			<p class="indent"><b><i>Using a Higher-Level Spell Slot.</i></b> The damage increases by 1d6 for each spell slot level above 4.</p>
+		</description>
+		<setters>
+			<set name="keywords">cone, force, damage, dexterity, save, blinded, upcasting, higher-level spell slot</set>
+			<set name="level">4</set>
+			<set name="school">Conjuration</set>
+			<set name="time">Action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a crow feather</set>
+			<set name="duration">Instantaneous</set>
+		</setters>
+	</element>
+
+	<element name="Puppet Master" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_PUPPET_MASTER">
+		<supports>Bard, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration.</p>
+			<p class="indent">Magical marionette strings attach to the Charmed creature's limbs or body, and it must use its action on its turn to make a melee attack against a creature other than itself that you mentally choose, moving to reach the target if necessary. The target can act normally on its turn if you don't choose another creature, or if the creature isn't within the target's reach after it moves. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.</p>
+			<p class="indent">On your later turns, you must take a Bonus Action to maintain control of the target, or the spell ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">wisdom, save, charmed, control, dominate</set>
+			<set name="level">4</set>
+			<set name="school">Enchantment</set>
+			<set name="time">Action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a marionette string</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+
+	<element name="Mysterious Presence" type="Spell" source="The Crooked Moon: Player Options" id="ID_TCM_SPELL_MYSTERIOUS_PRESENCE">
+		<supports>Bard, Druid, Sorcerer</supports>
+		<description>
+			<p>You touch a willing creature and shroud its presence. Until the spell ends, other creatures must subtract 1d4 from any Wisdom (Insight or Perception) checks made against the target.</p>
+		</description>
+		<setters>
+			<set name="keywords">stealth, debuff, insight, perception</set>
+			<set name="level">0</set>
+			<set name="school">Illusion</set>
+			<set name="time">Action</set>
+			<set name="range">Touch</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="isConcentration">true</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+		</setters>
+	</element>
+</elements>
