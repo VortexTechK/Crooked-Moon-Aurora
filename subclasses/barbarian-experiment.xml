@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="barbarian-experiment.xml" url="" />
 		</update>
 	</info>
@@ -43,10 +43,12 @@
 			<p class="indent">The chosen serum lasts for the duration of your Rage, or until you choose a new serum as a Bonus Action. You have the following serum options.</p>
 			<p class="indent"><strong><em>Ferocity.</em></strong> This serum throws you into an energized frenzy. You ignore Difficult Terrain, and when you hit with a Melee weapon or Unarmed Strike, you can activate the Cleave mastery property in addition to a different mastery property you're using.</p>
 			<p class="indent"><strong><em>Monstrosity.</em></strong> The serum expands your body to monstrous proportions and can change your appearance in cosmetic ways, such as by altering facial features, skin tone, and hair length or color. Your reach increases by 5 feet, and once per turn when you miss with an attack roll that relies on Strength, you can add your Rage Damage bonus to the total, potentially causing the attack to hit. If you are smaller than Large, you become Large, along with anything you are wearing or carrying. If there isn't enough room to accommodate the size change, your size doesn't change.</p>
-			<p class="indent"><strong><em>Reconstruction.</em></strong> The serum dulls pain and forces wounds to rapidly knit. Upon activation and at the start of each of your turns, you can expend and roll a Hit Point Die. You regain a number of Hit Points equal to the number rolled plus your Constitution modifier (minimum of 1 Hit Point). You gain any excess beyond your Hit Point maximum as Temporary Hit Points. If you take Acid or Fire damage, this serum doesn't function at the start of your next turn.</p>
+			<p class="indent"><strong><em>Reconstruction.</em></strong> The serum dulls pain and forces wounds to rapidly knit. Upon activation and at the start of each of your turns, you may expend and roll a Hit Point Die. You regain a number of Hit Points equal to the number rolled plus your Constitution modifier (minimum of 1 Hit Point). You gain any excess beyond your Hit Point maximum as Temporary Hit Points. If you take Acid or Fire damage, this serum doesn't function at the start of your next turn.</p>
+			<p class="indent" level="14"><strong><em>Biochemical Admixture (Level 14).</em></strong> Your body focuses and combines the strength of your serums. When you activate an option of your Volatile Serum, you activate two options instead of one.</p>
 		</description>
 		<sheet alt="Volatile Serum">
-			<description>When you enter your Rage, choose a serum: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add your Rage Damage bonus to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, expend a Hit Point Die and regain that many HP + Constitution modifier, excess as Temp HP).</description>
+			<description>When you enter your Rage, choose a serum: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add {{barbarian rage:damage}} to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, you may expend a Hit Point Die and regain that many HP + {{constitution:modifier}}, minimum 1, excess as Temp HP).</description>
+			<description level="14">At level 14, when you enter your Rage, choose a serum: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add {{barbarian rage:damage}} to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, you may expend a Hit Point Die and regain that many HP + {{constitution:modifier}}, minimum 1, excess as Temp HP). You activate two of these options instead of one.</description>
 		</sheet>
 	</element>
 
@@ -55,10 +57,10 @@
 			<p>Through continued experimentation or your natural adaptation to your implants, you can now activate one of the compound options below, in addition to a serum, when you enter your Rage or change your chosen serum. The chosen compound lasts for the duration of your Rage, or until you choose a new compound.</p>
 			<p class="indent"><strong><em>Stimulated Senses.</em></strong> You gain Blindsight out to a range of 30 feet. If you already have Blindsight, its range increases by 30 feet.</p>
 			<p class="indent"><strong><em>Maddening Fumes.</em></strong> Your skin emits aggression-spiking fumes in a 30-foot Emanation. While in the Emanation, an enemy's Speed is halved, and if it starts its turn there it must succeed on a Wisdom saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus) or have Disadvantage on attack rolls against targets other than you until the start of its next turn.</p>
-			<p class="indent"><strong><em>Corrosive Expulsion.</em></strong> When you take the Attack action on your turn, you can replace one of your attacks with a spray of caustic chemicals from your implants in a 15-foot Cone, or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). Roll a number of d8s equal to your Rage Damage bonus. On a failed save, a target takes Acid damage equal to the total rolled, or half as much damage on a successful one.</p>
+			<p class="indent"><strong><em>Corrosive Expulsion.</em></strong> When you take the Attack action on your turn, you may replace one of your attacks with a spray of caustic chemicals from your implants, choosing either a 15-foot Cone or a 30-foot Line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). Roll a number of d8s equal to your Rage Damage bonus. On a failed save, a target takes Acid damage equal to the total rolled, or half as much damage on a successful one.</p>
 		</description>
 		<sheet alt="Augmentation Compounds">
-			<description>When you enter your Rage or change your serum, also choose a compound: Stimulated Senses (Blindsight 30 ft.), Maddening Fumes (30-ft. Emanation halves enemy Speed; DC {{experiment:dc}} Wisdom save or Disadvantage on attacks against others), or Corrosive Expulsion (replace an attack with a Cone/Line spray; DC {{experiment:dc}} Dexterity save vs. Acid damage equal to your Rage Damage bonus in d8s).</description>
+			<description>When you enter your Rage or change your serum, also choose a compound: Stimulated Senses (Blindsight 30 ft., or +30 ft. if you already have it), Maddening Fumes (30-ft. Emanation halves enemy Speed; DC {{experiment:dc}} Wisdom save or Disadvantage on attacks against others), or Corrosive Expulsion (once per Attack action, replace an attack with a 15-ft. Cone or 30-ft. by 5-ft. Line of acid; DC {{experiment:dc}} Dexterity save or take {{barbarian rage:damage}}d8 Acid damage, half on a success).</description>
 		</sheet>
 		<rules>
 			<stat name="experiment:dc" value="8" />
@@ -96,7 +98,8 @@
 			</table>
 		</description>
 		<sheet alt="Biochemical Admixture">
-			<description>When you activate a Volatile Serum option, you activate two options instead of one. When a creature within 5 feet of you damages you with a melee attack while your Rage is active, it takes 1d12 Acid damage (once per turn per creature).</description>
+			<description>When a creature within 5 feet of you damages you with a melee attack while your Rage is active, it takes 1d12 Acid damage (once per turn per creature).</description>
 		</sheet>
 	</element>
 </elements>
+
