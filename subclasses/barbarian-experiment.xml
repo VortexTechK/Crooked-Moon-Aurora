@@ -48,7 +48,7 @@
 		</description>
 		<sheet alt="Volatile Serum">
 			<description>When you enter your Rage, choose a serum: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add {{barbarian rage:damage}} to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, you may expend a Hit Point Die and regain that many HP + {{constitution:modifier}}, minimum 1, excess as Temp HP).</description>
-			<description level="14">At level 14, when you enter your Rage, choose a serum: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add {{barbarian rage:damage}} to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, you may expend a Hit Point Die and regain that many HP + {{constitution:modifier}}, minimum 1, excess as Temp HP). You activate two of these options instead of one.</description>
+			<description level="14">When you enter your Rage, choose two serums: Ferocity (ignore Difficult Terrain; add Cleave mastery to your melee/Unarmed hits), Monstrosity (reach +5 ft.; once/turn, add {{barbarian rage:damage}} to a missed Strength attack roll; become Large), or Reconstruction (on activation and at the start of each turn, you may expend a Hit Point Die and regain that many HP + {{constitution:modifier}}, minimum 1, excess as Temp HP).</description>
 		</sheet>
 	</element>
 
