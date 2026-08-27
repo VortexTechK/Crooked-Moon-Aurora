@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="cleric-harvest.xml" url="" />
 		</update>
 	</info>
@@ -20,6 +20,7 @@
 		</description>
 		<sheet display="false" />
 		<rules>
+			<select type="Archetype Feature" name="Harvest Cycle Aspect (Harvest Domain)" supports="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING|ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING|ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" level="3" />
 			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_COMMUNITY_ALMANAC" level="3" />
 			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_DOMAIN_SPELLS" level="3" />
 			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_CORNUCOPIA" level="3" />
@@ -27,6 +28,28 @@
 			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_OF_THE_SEASONS" level="6" />
 			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ETERNAL_WHEEL" level="17" />
 		</rules>
+	</element>
+
+	<element name="Sowing" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING">
+		<compendium display="false" />
+		<description>
+			<p>You draw from the Sowing aspect of the harvest cycle, representing creation and new growth.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+	<element name="Growing" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING">
+		<compendium display="false" />
+		<description>
+			<p>You draw from the Growing aspect of the harvest cycle, representing abundance and vitality.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+	<element name="Reaping" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING">
+		<compendium display="false" />
+		<description>
+			<p>You draw from the Reaping aspect of the harvest cycle, representing culling and decay.</p>
+		</description>
+		<sheet display="false" />
 	</element>
 
 	<element name="Level 3: Community Almanac" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_COMMUNITY_ALMANAC">
@@ -55,6 +78,26 @@
 			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
 		</description>
 		<sheet alt="Harvest Domain Spells" display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUIDANCE" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ENTANGLE" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_TCM_SPELL_SUMMER_WINDS" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PLANT_GROWTH" level="5" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" level="7" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AWAKEN" level="9" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DRUIDCRAFT" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_GOODBERRY" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_TCM_SPELL_HARVEST_MOONGLOW" level="5" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_TCM_SPELL_SANCTUM_OF_THE_SHEPHERD" level="7" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_CURE_WOUNDS" level="9" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CHILL_TOUCH" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INFLICT_WOUNDS" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_PERSON" level="3" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+			<grant type="Spell" id="ID_TCM_SPELL_CONSUMING_PYRE" level="7" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+			<grant type="Spell" id="ID_TCM_SPELL_CULLING_SICKLE" level="9" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+			<grant type="Spell" id="ID_TCM_SPELL_FIELD_OF_REAPING" level="9" spellcasting="Cleric" prepared="true" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Cornucopia" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_CORNUCOPIA">
@@ -75,39 +118,93 @@
 		<description>
 			<p>As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to invoke the spirit of the harvest. Up to six creatures of your choice within 60 feet of you gain Heroic Inspiration. A creature must finish a Long Rest before it can gain Heroic Inspiration from this feature again.</p>
 			<p class="indent">Additionally, you grant all targets one of the following benefits. If your current harvest aspect is a different one, it changes to match the choice.</p>
-			<p class="indent"><strong><em>Sowing.</em></strong> A target gains a number of Temporary Hit Points equal to your Proficiency Bonus plus your Wisdom modifier.</p>
-			<p class="indent"><strong><em>Growing.</em></strong> Until the end of your next turn, when a target makes an attack roll or ability check, it adds 1d4 to the total.</p>
-			<p class="indent"><strong><em>Reaping.</em></strong> A target deals extra Necrotic damage equal to your Proficiency Bonus the first time it damages a creature before the end of your next turn.</p>
 		</description>
-		<sheet alt="Bountiful Harvest" action="Magic action" usage="Channel Divinity">
-			<description>Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each) and one benefit matching your current harvest aspect: Sowing (Temp HP), Growing (+1d4 to attacks/checks until your next turn), or Reaping (extra Necrotic damage on their next hit).</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_SOWING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_GROWING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_REAPING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
+		</rules>
+	</element>
+
+	<element name="Bountiful Harvest (Sowing)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_SOWING">
+		<compendium display="false" />
+		<description>
+			<p>A target gains a number of Temporary Hit Points equal to your Proficiency Bonus plus your Wisdom modifier.</p>
+		</description>
+		<sheet alt="Bountiful Harvest" action="Action" usage="Channel Divinity">
+			<description>Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each) and Temporary Hit Points equal to {{proficiency}} + {{wisdom:modifier}}.</description>
+			<description level="14">Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each) and Temporary Hit Points equal to {{proficiency}} + {{wisdom:modifier}} (14: The effects of the Regenerate spell for 1 minute, or until you lose Concentration).</description>
+		</sheet>
+	</element>
+	<element name="Bountiful Harvest (Growing)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_GROWING">
+		<compendium display="false" />
+		<description>
+			<p>Until the end of your next turn, when a target makes an attack roll or ability check, it adds 1d4 to the total.</p>
+		</description>
+		<sheet alt="Bountiful Harvest" action="Action" usage="Channel Divinity">
+			<description>Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each); until the end of your next turn, they add 1d4 to attack rolls and ability checks.</description>
+			<description level="14">Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each); until the end of your next turn, they add 1d4 to attack rolls and ability checks (14: Advantage on saving throws and ability checks for up to 1 hour, or until you lose Concentration).</description>
+		</sheet>
+	</element>
+	<element name="Bountiful Harvest (Reaping)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BOUNTIFUL_HARVEST_REAPING">
+		<compendium display="false" />
+		<description>
+			<p>A target deals extra Necrotic damage equal to your Proficiency Bonus the first time it damages a creature before the end of your next turn.</p>
+		</description>
+		<sheet alt="Bountiful Harvest" action="Action" usage="Channel Divinity">
+			<description>Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each); the first time each deals damage before the end of your next turn, it deals an extra {{proficiency}} Necrotic damage.</description>
+			<description level="14">Present your Holy Symbol and expend a use of Channel Divinity. Up to six creatures within 60 feet gain Heroic Inspiration (once per Long Rest each); the first time each deals damage before the end of your next turn, it deals an extra {{proficiency}} Necrotic damage (14: Resistance to Necrotic, Psychic, and Poison damage for 1 hour).</description>
 		</sheet>
 	</element>
 
 	<element name="Level 6: Blessing of the Seasons" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_OF_THE_SEASONS">
 		<description>
-			<p>You can draw upon the powers of the harvest cycle to potentially avert disaster. When a creature you can see within 30 feet of you fails a saving throw of a particular type determined by your current aspect, you can take a Reaction to allow it to reroll the d20 and use the new roll. The type of saving throws you can affect are as follows.</p>
-			<p class="indent"><strong>Sowing.</strong> Dexterity and Charisma</p>
-			<p class="indent"><strong>Growing.</strong> Constitution and Intelligence</p>
-			<p class="indent"><strong>Reaping.</strong> Wisdom and Strength</p>
+			<p>You can draw upon the powers of the harvest cycle to potentially avert disaster. When a creature you can see within 30 feet of you fails a saving throw of a particular type determined by your current aspect, you can take a Reaction to allow it to reroll the d20 and use the new roll.</p>
 			<p class="indent">Additionally, after the saving throw succeeds or fails, roll a number of d4s equal to your Proficiency Bonus. The target regains Hit Points equal to the total rolled.</p>
 			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
 		</description>
-		<sheet alt="Blessing of the Seasons" action="Reaction" usage="{{blessing-of-seasons:uses}}/Long Rest">
-			<description>When a creature within 30 feet fails a saving throw of the type matching your current aspect (Sowing: Dex/Cha, Growing: Con/Int, Reaping: Wis/Str), it can reroll and use the new result. Either way, it then regains HP equal to {{proficiency}}d4.</description>
-		</sheet>
+		<sheet display="false" />
 		<rules>
 			<stat name="blessing-of-seasons:uses" value="wisdom:modifier" bonus="base" />
 			<stat name="blessing-of-seasons:uses" value="1" bonus="base" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_SOWING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_SOWING" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_GROWING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_GROWING" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_REAPING" requirements="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ASPECT_REAPING" />
 		</rules>
+	</element>
+
+	<element name="Blessing of the Seasons (Sowing)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_SOWING">
+		<compendium display="false" />
+		<description>
+			<p>You can affect Dexterity and Charisma saving throws.</p>
+		</description>
+		<sheet alt="Blessing of the Seasons" action="Reaction" usage="{{blessing-of-seasons:uses}}/Long Rest">
+			<description>When a creature within 30 feet fails a Dexterity or Charisma saving throw, it can reroll and use the new result. Either way, it then regains HP equal to {{proficiency}}d4.</description>
+		</sheet>
+	</element>
+	<element name="Blessing of the Seasons (Growing)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_GROWING">
+		<compendium display="false" />
+		<description>
+			<p>You can affect Constitution and Intelligence saving throws.</p>
+		</description>
+		<sheet alt="Blessing of the Seasons" action="Reaction" usage="{{blessing-of-seasons:uses}}/Long Rest">
+			<description>When a creature within 30 feet fails a Constitution or Intelligence saving throw, it can reroll and use the new result. Either way, it then regains HP equal to {{proficiency}}d4.</description>
+		</sheet>
+	</element>
+	<element name="Blessing of the Seasons (Reaping)" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_REAPING">
+		<compendium display="false" />
+		<description>
+			<p>You can affect Wisdom and Strength saving throws.</p>
+		</description>
+		<sheet alt="Blessing of the Seasons" action="Reaction" usage="{{blessing-of-seasons:uses}}/Long Rest">
+			<description>When a creature within 30 feet fails a Wisdom or Strength saving throw, it can reroll and use the new result. Either way, it then regains HP equal to {{proficiency}}d4.</description>
+		</sheet>
 	</element>
 
 	<element name="Level 17: Eternal Wheel" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ETERNAL_WHEEL">
 		<description>
-			<p>When you use your Bountiful Harvest, you can invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your Channel Divinity an additional benefit based on your current aspect:</p>
-			<p class="indent"><strong>Sowing.</strong> Targets gain the effects of the Regenerate spell for 1 minute, or until you lose concentration.</p>
-			<p class="indent"><strong>Growing.</strong> Targets gain Advantage on saving throws and ability checks for up to 1 hour, or until you lose Concentration (as if concentrating on a spell).</p>
-			<p class="indent"><strong>Reaping.</strong> Targets gain Resistance to Necrotic, Psychic, and Poison damage for 1 hour.</p>
+			<p>When you use your Bountiful Harvest, you can invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your Channel Divinity an additional benefit based on your current aspect, as described on your Bountiful Harvest feature.</p>
 			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest unless you expend a spell slot of level 7+ (no action required) to restore your use of it.</p>
 			<h5>RITES OF THE HARVEST</h5>
 			<p>Use the Harvest Rites table for inspiration on observances based on each aspect of the harvest cycle.</p>
@@ -130,8 +227,8 @@
 				<li>Slaughter adult livestock or reap ripe crops for a feast to celebrate nature's bounty</li>
 			</ul>
 		</description>
-		<sheet alt="Eternal Wheel" usage="1/Long Rest">
-			<description>When you use Bountiful Harvest, grant an additional benefit based on your current aspect: Sowing (Regenerate for 1 minute), Growing (Advantage on saves/checks for 1 hour), or Reaping (Resistance to Necrotic, Psychic, and Poison for 1 hour).</description>
+		<sheet alt="Eternal Wheel" usage="1/Long Rest (or expend a level 7+ spell slot)">
+			<description>When you use Bountiful Harvest, it also grants the level 14 benefit. You can use this again before a Long Rest by expending a spell slot of level 7 or higher.</description>
 		</sheet>
 	</element>
 </elements>
