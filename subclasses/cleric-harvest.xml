@@ -118,6 +118,9 @@
 		<description>
 			<p>As a Magic action, you present your Holy Symbol and expend a use of your Channel Divinity to invoke the spirit of the harvest. Up to six creatures of your choice within 60 feet of you gain Heroic Inspiration. A creature must finish a Long Rest before it can gain Heroic Inspiration from this feature again.</p>
 			<p class="indent">Additionally, you grant all targets one of the following benefits. If your current harvest aspect is a different one, it changes to match the choice.</p>
+			<p class="indent"><strong><em>Sowing.</em></strong> A target gains a number of Temporary Hit Points equal to your Proficiency Bonus plus your Wisdom modifier.</p>
+			<p class="indent"><strong><em>Growing.</em></strong> Until the end of your next turn, when a target makes an attack roll or ability check, it adds 1d4 to the total.</p>
+			<p class="indent"><strong><em>Reaping.</em></strong> A target deals extra Necrotic damage equal to your Proficiency Bonus the first time it damages a creature before the end of your next turn.</p>
 		</description>
 		<sheet display="false" />
 		<rules>
@@ -160,7 +163,10 @@
 
 	<element name="Level 6: Blessing of the Seasons" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_BLESSING_OF_THE_SEASONS">
 		<description>
-			<p>You can draw upon the powers of the harvest cycle to potentially avert disaster. When a creature you can see within 30 feet of you fails a saving throw of a particular type determined by your current aspect, you can take a Reaction to allow it to reroll the d20 and use the new roll.</p>
+			<p>You can draw upon the powers of the harvest cycle to potentially avert disaster. When a creature you can see within 30 feet of you fails a saving throw of a particular type determined by your current aspect, you can take a Reaction to allow it to reroll the d20 and use the new roll. The type of saving throws you can affect are as follows.</p>
+			<p class="indent"><strong>Sowing.</strong> Dexterity and Charisma</p>
+			<p class="indent"><strong>Growing.</strong> Constitution and Intelligence</p>
+			<p class="indent"><strong>Reaping.</strong> Wisdom and Strength</p>
 			<p class="indent">Additionally, after the saving throw succeeds or fails, roll a number of d4s equal to your Proficiency Bonus. The target regains Hit Points equal to the total rolled.</p>
 			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
 		</description>
@@ -204,7 +210,10 @@
 
 	<element name="Level 17: Eternal Wheel" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HARVEST_ETERNAL_WHEEL">
 		<description>
-			<p>When you use your Bountiful Harvest, you can invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your Channel Divinity an additional benefit based on your current aspect, as described on your Bountiful Harvest feature.</p>
+			<p>When you use your Bountiful Harvest, you can invoke the endless cycle of life, death, and rebirth to grant yourself and the creatures affected by your Channel Divinity an additional benefit based on your current aspect:</p>
+			<p class="indent"><strong>Sowing.</strong> Targets gain the effects of the Regenerate spell for 1 minute, or until you lose concentration.</p>
+			<p class="indent"><strong>Growing.</strong> Targets gain Advantage on saving throws and ability checks for up to 1 hour, or until you lose Concentration (as if concentrating on a spell).</p>
+			<p class="indent"><strong>Reaping.</strong> Targets gain Resistance to Necrotic, Psychic, and Poison damage for 1 hour.</p>
 			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest unless you expend a spell slot of level 7+ (no action required) to restore your use of it.</p>
 			<h5>RITES OF THE HARVEST</h5>
 			<p>Use the Harvest Rites table for inspiration on observances based on each aspect of the harvest cycle.</p>
