@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="druid-wicker.xml" url="" />
 		</update>
 	</info>
@@ -37,8 +37,14 @@
 			<p class="indent"><strong><em>Ward.</em></strong> You and your allies within the aura gain a +1 bonus to AC.</p>
 		</description>
 		<sheet alt="Bewitched Effigy" action="Bonus Action" usage="Wild Shape">
-			<description>Create a Small wicker effigy (AC 15; HP {{level:druid}} x 5) within 30 feet, radiating a 30-ft. aura with one of: Sacrifice (Reaction Fire damage to creatures the aura damages), Soothe (heal 1d6 HP as a Bonus Action), or Ward (+1 AC to you and allies in the aura).</description>
+			<description>Create a Small wicker effigy (AC 15; HP {{level:druid}} x 5; Vulnerability to Fire; Immunity to Poison and Psychic) within 30 feet. It lasts 1 minute, until reduced to 0 HP, or until you make a new one, and radiates a 30-ft. Dim Light aura with one of: Sacrifice (Reaction: deal 1d8 + {{wisdom:modifier}} Fire damage to a creature that takes damage in the aura), Soothe (Bonus Action and on creation: heal a creature in the aura 1d6 HP, usable {{soothe:uses}} times total), or Ward (+1 AC to you and allies in the aura).</description>
+			<description level="6">Create a Small wicker effigy (AC 15; HP {{level:druid}} x 5; Vulnerability to Fire; Immunity to Poison and Psychic) within 30 feet. It lasts 1 minute, until reduced to 0 HP, or until you make a new one, and radiates a 30-ft. Dim Light aura with one of: Sacrifice (Reaction: deal 2d8 + {{wisdom:modifier}} Fire damage to a creature that takes damage in the aura), Soothe (Bonus Action and on creation: heal a creature in the aura 1d8 HP, usable {{soothe:uses}} times total; you can also spend 5 of the effigy's HP to remove Charmed, Frightened, Paralyzed, Poisoned, or Stunned from a creature you heal), or Ward (+1 AC to you and allies in the aura and Resistance to one damage type other than Force, chosen when you create the effigy).</description>
+			<description level="14">Create a Small wicker effigy (AC 15; HP {{level:druid}} x 5; Vulnerability to Fire; Immunity to Poison and Psychic) within 30 feet. It lasts 1 minute, until reduced to 0 HP, or until you make a new one, and radiates a 30-ft. Dim Light aura with one of: Sacrifice (Reaction: deal 3d8 + {{wisdom:modifier}} Fire damage to a creature that takes damage in the aura), Soothe (Bonus Action and on creation: heal a creature in the aura 1d8 HP, usable {{soothe:uses}} times total; spend 5 of the effigy's HP to remove Charmed, Frightened, Paralyzed, Poisoned, or Stunned from a creature you heal; also ends Charmed or Frightened, target's choice, on creatures who start their turn in the aura), or Ward (+1 AC, Resistance to one chosen damage type other than Force, and Advantage on saves with one chosen ability, to you and allies in the aura). At the start of your turn, you can change the effigy's aura to a different one of these three.</description>
 		</sheet>
+		<rules>
+			<stat name="soothe:uses" value="wisdom:modifier" />
+			<stat name="soothe:uses" value="wisdom:modifier" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Circle of Wicker Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SPELLS">
@@ -56,6 +62,18 @@
 			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANE" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLESS" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_SUMMER_WINDS" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ZONE_OF_TRUTH" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BESTOW_CURSE" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEOMUNDS_TINY_HUT" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_SANCTUM_OF_THE_SHEPHERD" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_MONSTER" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_LUCKY_CHARM" level="9" spellcasting="Druid" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Wicker Token" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_TOKEN">
@@ -63,8 +81,8 @@
 			<p>You can weave wicker tokens that carry a touch of your magic. When you finish a Long Rest, you can create a number of tokens equal to your Proficiency Bonus. The tokens are Tiny objects (AC 5; HP 1; Immunity to Poison and Psychic damage). The tokens vanish when you finish your next Long Rest.</p>
 			<p class="indent">You can cast spells with a range of touch on a creature carrying one of your tokens while the two of you are on the same plane of existence.</p>
 		</description>
-		<sheet alt="Wicker Token" usage="{{proficiency}}/Long Rest">
-			<description>You can create {{proficiency}} wicker tokens when you finish a Long Rest. You can cast touch-range spells on a creature carrying one of your tokens from anywhere on the same plane of existence.</description>
+		<sheet alt="Wicker Token">
+			<description>When you finish a Long Rest, you can create {{proficiency}} wicker tokens (AC 5; HP 1; Immunity to Poison and Psychic damage) that last until your next Long Rest. You can cast touch-range spells on a creature carrying one of your tokens from anywhere on the same plane of existence.</description>
 		</sheet>
 	</element>
 
@@ -73,19 +91,17 @@
 			<p>The energy you channel through your wicker effigy grows stronger, empowering its benefits.</p>
 			<p class="indent"><strong><em>Sacrifice.</em></strong> The Fire damage increases to 2d8 plus your Wisdom modifier.</p>
 			<p class="indent"><strong><em>Soothe.</em></strong> The healing of your effigy increases to 1d8, and when you target a creature with the effigy, you can expend 5 Hit Points from the effigy to remove one of the following conditions on the target: Charmed, Frightened, Paralyzed, Poisoned, Stunned.</p>
-			<p class="indent"><strong><em>Ward.</em></strong> Choose a damage type other than Force. You and your allies in the aura have Resistance to the chosen type.</p>
+			<p class="indent"><strong><em>Ward.</em></strong> Choose a damage type other than Force. You and your allies in the aura have Resistance to the chosen type.</p>	
 		</description>
-		<sheet alt="Wicker Rising">
-			<description>Your effigy auras grow stronger: Sacrifice deals 2d8 + Wisdom modifier; Soothe heals 1d8 and can spend 5 HP to remove a condition; Ward grants Resistance to a chosen damage type (not Force).</description>
-		</sheet>
+		<sheet display="false" />
 	</element>
 
 	<element name="Level 10: Soulbound Poppet" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WICKER_SOULBOUND_POPPET">
 		<description>
 			<p>As a Magic action, you can expend a use of your Wild Shape and choose a creature you can see within 60 feet of yourself to create a wicker doll that vaguely resembles the target. The doll is a Tiny object (AC 10; HP 10; Vulnerability to Fire damage; Immunity to Poison and Psychic damage). The doll vanishes after 1 minute or when it is reduced to 0 Hit Points. While the doll exists, the target has Disadvantage on attack rolls against a creature carrying the doll, and when a creature carrying the doll damages the target for the first time on a turn, the target takes an extra 2d10 Necrotic damage.</p>
 		</description>
-		<sheet alt="Soulbound Poppet" action="Magic action" usage="Wild Shape">
-			<description>Create a Tiny wicker doll resembling a creature within 60 feet (AC 10; HP 10) for 1 minute. The target has Disadvantage on attacks against whoever carries the doll, and takes an extra 2d10 Necrotic damage the first time that carrier damages it each turn.</description>
+		<sheet alt="Soulbound Poppet" action="Action" usage="Wild Shape">
+			<description>Create a Tiny wicker doll (AC 10; HP 10; Vulnerability to Fire; Immunity to Poison and Psychic) resembling a creature within 60 feet. It lasts 1 minute or until reduced to 0 HP. While it exists, the target has Disadvantage on attacks against whoever carries the doll, and takes an extra 2d10 Necrotic damage the first time that carrier damages it each turn.</description>
 		</sheet>
 	</element>
 
@@ -94,7 +110,7 @@
 			<p>Your wicker effigies reach the pinnacle of their power. At the start of your turn, you can change your effigy's aura to a different one. Additionally, all the auras grow stronger in the following ways.</p>
 			<p class="indent"><strong><em>Sacrifice.</em></strong> The Fire damage increases to 3d8 plus your Wisdom modifier.</p>
 			<p class="indent"><strong><em>Soothe.</em></strong> When you or your allies start a turn in the aura, the Charmed or Frightened condition (target's choice) ends on it.</p>
-			<p class="indent"><strong><em>Ward.</em></strong> Choose an ability. You and each of your allies within the aura have Advantage on saving throws made with the chosen ability.</p>
+			<p class="indent"><strong><em>Ward.</em></strong> Choose an ability. You and each of your allies within the aura have Advantage on saving throws made with the chosen ability.</p>			
 			<h5>WICKER EFFIGIES</h5>
 			<p>The effigies, charms, and tokens you weave can take a variety of shapes, each intending a ritualistic effect. Use the Wicker Effigies table for inspiration when determining your wicker token's appearance.</p>
 			<table>
@@ -115,8 +131,6 @@
 				<tr><td style="text-align:center">12</td><td>Intricate ring that represents the cycle of the year to guarantee life, death, and rebirth</td></tr>
 			</table>
 		</description>
-		<sheet alt="Wicker Zenith">
-			<description>At the start of your turn you can change your effigy's aura. Auras grow stronger: Sacrifice deals 3d8 + Wisdom modifier; Soothe ends Charmed or Frightened on those who start a turn in the aura; Ward grants Advantage on a chosen ability's saves.</description>
-		</sheet>
+		<sheet display="false" />
 	</element>
 </elements>
