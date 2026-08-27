@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="bard-whistles.xml" url="" />
 		</update>
 	</info>
@@ -31,12 +31,42 @@
 		<description>
 			<p>You can call forth haints—vagabond spirits. When you inspire a creature with Bardic Inspiration, you can summon a ghostly apparition that drifts around the inspired target.</p>
 			<p class="indent">The haint creates an aura in a 15-foot Emanation from the target. The haint vanishes after 1 minute, when you summon a new haint, when you use the Reaction it grants you, or if you have the Incapacitated condition or die. When you summon a haint, choose its form: Grump, Sad Sack, or Scamp.</p>
-			<p class="indent"><strong><em>Grump.</em></strong> This red-tinged, elderly spirit dressed in threadbare rags threatens your foes and harangues your allies to do better. The inspired creature and its allies within the aura have Advantage on Charisma (Intimidation) checks and Strength saving throws. In addition, when a creature inside the aura deals damage, you can take a Reaction to increase the damage dealt to one target by a roll of your Bardic Inspiration die plus your Charisma modifier.</p>
-			<p class="indent"><strong><em>Sad Sack.</em></strong> The blueish, melancholic spirit saps the fervor from your foes. The inspired creature and its allies within the aura have Half Cover against ranged attacks. In addition, when a creature inside the aura takes damage, you can take a Reaction to reduce the damage taken by an amount equal to a roll of your Bardic Inspiration die plus your Charisma modifier.</p>
-			<p class="indent"><strong><em>Scamp.</em></strong> The gold-hued, childlike spirit delights and invigorates your allies. When the inspired creature or its allies starts a turn in the aura, that creature's Speed increases by 10 feet until the end of its next turn. In addition, when a creature inside the aura fails a saving throw, you can take a Reaction to let the creature reroll the d20.</p>
 		</description>
 		<sheet alt="Handy Haints">
-			<description>When you inspire a creature with Bardic Inspiration, you can summon a haint (Grump, Sad Sack, or Scamp) that creates a 15-ft. Emanation aura around the target for 1 minute, granting benefits and a Reaction option based on its form.</description>
+			<description>When you inspire a creature with Bardic Inspiration, you can summon a haint (Grump, Sad Sack, or Scamp) that creates a 15-ft. Emanation aura around the target for 1 minute, or until you summon a new haint, use its Reaction, or you're Incapacitated or die.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_GRUMP" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_SAD_SACK" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_SCAMP" />
+		</rules>
+	</element>
+
+	<element name="Grump" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_GRUMP">
+		<description>
+			<p>This red-tinged, elderly spirit dressed in threadbare rags threatens your foes and harangues your allies to do better. The inspired creature and its allies within the aura have Advantage on Charisma (Intimidation) checks and Strength saving throws. In addition, when a creature inside the aura deals damage, you can take a Reaction to increase the damage dealt to one target by a roll of your Bardic Inspiration die plus your Charisma modifier.</p>
+			<p class="indent">Using this Reaction causes the haint to vanish.</p>
+		</description>
+		<sheet alt="Handy Haints (Grump)" action="Reaction">
+			<description>The inspired creature and its allies in the aura have Advantage on Charisma (Intimidation) checks and Strength saves. When a creature in the aura deals damage, you can use this haint's Reaction to add your Bardic Inspiration die plus {{charisma:modifier}} to the damage dealt to one target; doing so causes the haint to vanish.</description>
+		</sheet>
+	</element>
+	<element name="Sad Sack" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_SAD_SACK">
+		<description>
+			<p>The blueish, melancholic spirit saps the fervor from your foes. The inspired creature and its allies within the aura have Half Cover against ranged attacks. In addition, when a creature inside the aura takes damage, you can take a Reaction to reduce the damage taken by an amount equal to a roll of your Bardic Inspiration die plus your Charisma modifier.</p>
+			<p class="indent">Using this Reaction causes the haint to vanish.</p>
+		</description>
+		<sheet alt="Handy Haints (Sad Sack)" action="Reaction">
+			<description>The inspired creature and its allies in the aura have Half Cover against ranged attacks. When a creature in the aura takes damage, you can use this haint's Reaction to reduce that damage by your Bardic Inspiration die plus {{charisma:modifier}}; doing so causes the haint to vanish.</description>
+		</sheet>
+	</element>
+	<element name="Scamp" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_HAINT_SCAMP">
+		<description>
+			<p>The gold-hued, childlike spirit delights and invigorates your allies. When the inspired creature or its allies starts a turn in the aura, that creature's Speed increases by 10 feet until the end of its next turn. In addition, when a creature inside the aura fails a saving throw, you can take a Reaction to let the creature reroll the d20.</p>
+			<p class="indent">Using this Reaction causes the haint to vanish.</p>
+		</description>
+		<sheet alt="Handy Haints (Scamp)" action="Reaction">
+			<description>When the inspired creature or an ally starts a turn in the aura, its Speed increases by 10 feet until the end of its next turn. When a creature in the aura fails a saving throw, you can use this haint's Reaction to let it reroll the d20; doing so causes the haint to vanish.</description>
 		</sheet>
 	</element>
 
@@ -46,8 +76,27 @@
 			<p class="indent"><strong><em>Wanderer's Bindle.</em></strong> When you finish a Long Rest, you can touch a nonmagical bag, sack, or similar container and turn it into a magical container called a bindle. This container functions as a Handy Haversack. If you create a second bindle, if your bindle is more than 1 mile away from you, or when you die, the bindle loses its magic, and anything inside appears in unoccupied spaces closest to the container.</p>
 			<p class="indent"><strong><em>Whistled Spells.</em></strong> You can whistle in place of Verbal components for your Bard spells. Observers unfamiliar with this tradition must succeed on a DC 15 Intelligence (Arcana) check to recognize your spellcasting for what it is by whistled Verbal components alone.</p>
 		</description>
-		<sheet alt="Whistling Wanderer">
-			<description>Once per Long Rest, you can turn a nonmagical bag into a bindle that functions as a Handy Haversack. You can also whistle in place of Verbal components for your Bard spells.</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_WANDERERS_BINDLE" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_WHISTLED_SPELLS" />
+		</rules>
+	</element>
+
+	<element name="Wanderer's Bindle" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_WANDERERS_BINDLE">
+		<description>
+			<p>When you finish a Long Rest, you can touch a nonmagical bag, sack, or similar container and turn it into a magical container called a bindle. This container functions as a Handy Haversack. If you create a second bindle, if your bindle is more than 1 mile away from you, or when you die, the bindle loses its magic, and anything inside appears in unoccupied spaces closest to the container.</p>
+		</description>
+		<sheet alt="Wanderer's Bindle" usage="1/Long Rest">
+			<description>Once per Long Rest, you can touch a nonmagical bag to turn it into a bindle that functions as a Handy Haversack. It loses its magic (spilling its contents nearby) if you make a second bindle, if it ends up more than 1 mile from you, or if you die.</description>
+		</sheet>
+	</element>
+	<element name="Whistled Spells" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_WHISTLED_SPELLS">
+		<description>
+			<p>You can whistle in place of Verbal components for your Bard spells. Observers unfamiliar with this tradition must succeed on a DC 15 Intelligence (Arcana) check to recognize your spellcasting for what it is by whistled Verbal components alone.</p>
+		</description>
+		<sheet alt="Whistled Spells">
+			<description>You can whistle in place of Verbal components for your Bard spells. Onlookers unfamiliar with this tradition need a DC 15 Intelligence (Arcana) check to recognize the whistling as spellcasting.</description>
 		</sheet>
 	</element>
 
@@ -58,8 +107,11 @@
 			<p class="indent">When you reach level 9 in this class, you always have Teleportation Circle prepared and can use any of your marked locations as the destination when you cast it.</p>
 		</description>
 		<sheet alt="Homeward Bound" usage="1/Long Rest">
-			<description>You can mark a location when you finish a Long Rest (up to {{charisma:modifier}} marks at once) and cast Teleportation Circle using a mark as the destination, once per Long Rest.</description>
+			<description>When you finish a Long Rest, you can mark a location (up to {{charisma:modifier}} marks at once, minimum 1). You can cast Teleportation Circle using a mark as the destination once per Long Rest; a phantom train whisks away creatures entering the circle. At level 9, you always have Teleportation Circle prepared and can target any of your marks with it.</description>
 		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE" level="9" spellcasting="Bard" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 6: Ride the Rails" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_WHISTLES_RIDE_THE_RAILS">
@@ -69,8 +121,8 @@
 			<p class="indent">Each other creature in the Line must succeed on a Wisdom saving throw against your spell save DC or have the Deafened condition until the start of your next turn, be pushed up to 10 feet straight away from the Line's point of origin, and takes an amount of Psychic damage equal to three rolls of your Bardic Inspiration die.</p>
 			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest unless you expend a spell slot of level 3+ (no action required) to restore your use of it.</p>
 		</description>
-		<sheet alt="Ride the Rails" action="Magic action" usage="1/Long Rest">
-			<description>Summon a spectral locomotive in a 120-by-10-ft. Line. You and up to six willing creatures within 30 feet can hitch a ride, teleporting into the Line. Others in the Line make a Wisdom save against your spell save DC or take Psychic damage (three rolls of your Bardic Inspiration die), are Deafened until the start of your next turn, and are pushed 10 feet away.</description>
+		<sheet alt="Ride the Rails" action="Action" usage="1/Long Rest (or expend a level 3+ spell slot)">
+			<description>Summon a spectral locomotive in a 120-ft. by 10-ft. Line that passes through objects and creatures. You teleport to a space you choose in the Line, and up to six willing creatures within 30 feet who join you appear in the nearest unoccupied spaces to you. Every other creature in the Line makes a Wisdom save against your spell save DC or is pushed 10 feet away from the Line's origin, is Deafened until the start of your next turn, and takes Psychic damage equal to three rolls of your Bardic Inspiration die. You can use this again before a Long Rest by expending a spell slot of level 3 or higher.</description>
 		</sheet>
 	</element>
 
@@ -92,8 +144,8 @@
 				<tr><td style="text-align:center">6</td><td>A misty roadside meadow was once the site of a terrible battle. The spirit of a soldier who died there vented its fury against con artists and bandits who preyed upon the roadway.</td></tr>
 			</table>
 		</description>
-		<sheet alt="Last Stop" action="Magic action" usage="1/Long Rest">
-			<description>Up to six creatures within 300 feet make a Charisma save against your spell save DC or be cursed: cursed targets are Frightened of Psychic damage sources that hit them and gain Vulnerability to Psychic damage the first time they're hit by it.</description>
+		<sheet alt="Last Stop" action="Action" usage="1/Long Rest (or expend a level 7+ spell slot)">
+			<description>Up to six creatures within 300 feet make a Charisma save against your spell save DC or be cursed for 1 minute: cursed targets are Frightened of whatever damages them with Psychic damage, and gain Vulnerability to Psychic damage the first time they take it. You can use this again before a Long Rest by expending a spell slot of level 7 or higher.</description>
 		</sheet>
 	</element>
 </elements>
