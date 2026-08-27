@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="druid-oldways.xml" url="" />
 		</update>
 	</info>
@@ -39,12 +39,25 @@
 				</thead>
 				<tr><td style="text-align:center">3</td><td><i>Ancestral Guidance*, Barkskin, Shield of Faith, Shillelagh, Spike Growth</i></td></tr>
 				<tr><td style="text-align:center">5</td><td><i>Magic Circle, Plant Growth</i></td></tr>
-				<tr><td style="text-align:center">7</td><td><i>Freedom of Movement, Private Sanctum</i></td></tr>
+				<tr><td style="text-align:center">7</td><td><i>Freedom of Movement, Mordenkainen's Private Sanctum</i></td></tr>
 				<tr><td style="text-align:center">9</td><td><i>Awaken, Tree Stride</i></td></tr>
 			</table>
 			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_TCM_SPELL_ANCESTRAL_GUIDANCE" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BARKSKIN" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHILLELAGH" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIKE_GROWTH" level="3" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_CIRCLE" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PLANT_GROWTH" level="5" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FREEDOM_OF_MOVEMENT" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" level="7" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AWAKEN" level="9" spellcasting="Druid" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TREE_STRIDE" level="9" spellcasting="Druid" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Bough and Branch" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_BOUGH_AND_BRANCH">
@@ -53,7 +66,7 @@
 			<p class="indent">Additionally, for the duration of the spell, you ignore Somatic components of your Druid spells, and the weapon enhanced by the spell becomes a Druidic Focus for you.</p>
 		</description>
 		<sheet alt="Bough and Branch">
-			<description>When you cast Shillelagh, a Shield of gnarled wood grows into your free hand and vanishes when the spell ends. For the duration, you ignore Somatic components of your Druid spells, and the enhanced weapon becomes a Druidic Focus.</description>
+			<description>When you cast Shillelagh, a Shield of gnarled wood grows into your free hand and vanishes when the spell ends. You can't be forced to drop the enhanced weapon or the Shield unless you're Incapacitated. For the duration, you ignore Somatic components of your Druid spells, and the enhanced weapon becomes a Druidic Focus.</description>
 		</sheet>
 	</element>
 
@@ -66,8 +79,13 @@
 			<p class="indent">This effect lasts for 10 minutes. It ends early if you dismiss it (no action required), have the Incapacitated condition, or die.</p>
 		</description>
 		<sheet alt="Wood Wose" action="Bonus Action" usage="Wild Shape">
-			<description>You gain Bark Bulwark (AC 10 + Dex + Wis while unarmored), Elderwood Sap (targets you hit with your Shillelagh weapon are coated, giving them Disadvantage on attacks against others), and Oaken Resolve (Advantage on Str/Con saves) for 10 minutes.</description>
+			<description>For 10 minutes, your base AC (while unarmored) is {{ac:wood wose}}, you have Advantage on Strength and Constitution saves, and creatures you hit with your Shillelagh weapon are coated in Elderwood Sap until the start of your next turn, giving them Disadvantage on attacks against others.</description>
 		</sheet>
+		<rules>
+			<stat name="ac:wood wose" value="10" bonus="base" />
+			<stat name="ac:wood wose" value="dexterity:modifier" bonus="primary ability" />
+			<stat name="ac:wood wose" value="wisdom:modifier" bonus="secondary ability" />
+		</rules>
 	</element>
 
 	<element name="Level 6: Oak and Thorn" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_OAK_AND_THORN">
@@ -89,8 +107,12 @@
 			<p class="indent"><strong><em>Rampant Growth.</em></strong> When you activate Wood Wose and at the start of each of your subsequent turns, you gain a number of Temporary Hit Points equal to your Wisdom modifier plus your Proficiency Bonus.</p>
 		</description>
 		<sheet alt="Deepwood Elder">
-			<description>While your Wood Wose is active: once per turn, force a melee target to save or fall Prone; attackers within 5 feet who hit you take 1d8 Piercing damage; and you gain Temp HP equal to {{wisdom:modifier}} plus {{proficiency}} at the start of each turn.</description>
+			<description>While your Wood Wose is active: once per turn, when you hit a creature with a melee attack force it to make a Strength save against your spell save DC or fall Prone, any creature that hits you with a melee attack from within 5 feet takes 1d8 Piercing damage(once per turn per creature), and you gain Temp HP equal to {{deepwood:temp:hp}} when you activate Wood Wose and at the start of each subsequent turn.</description>
 		</sheet>
+		<rules>
+			<stat name="deepwood:temp:hp" value="wisdom:modifier" />
+			<stat name="deepwood:temp:hp" value="proficiency" />
+		</rules>
 	</element>
 
 	<element name="Level 14: Ancient Protector" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OLDWAYS_ANCIENT_PROTECTOR">
@@ -114,7 +136,7 @@
 			</table>
 		</description>
 		<sheet alt="Ancient Protector">
-			<description>While your Wood Wose is active, you grow to Large size (reach +5 ft.), gain Resistance to Bludgeoning and Piercing damage, and can make a Reaction melee attack against a creature covered in Elderwood Sap when it attacks within your reach.</description>
+			<description>While your Wood Wose is active, you grow to Large size (reach +5 ft.) if there's room, gain Resistance to Bludgeoning and Piercing damage, and can use a Reaction to make a melee attack against a creature covered in your Elderwood Sap when it makes an attack roll within your reach.</description>
 		</sheet>
 	</element>
 </elements>
