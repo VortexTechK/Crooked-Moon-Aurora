@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="warlock-greatfool.xml" url="" />
 		</update>
 	</info>
@@ -37,11 +37,24 @@
 				<tr><td style="text-align:center">3</td><td><i>Disguise Self, Hideous Laughter, Rope Trick, Spiritual Weapon, Vicious Mockery</i></td></tr>
 				<tr><td style="text-align:center">5</td><td><i>Blink, Stinking Cloud</i></td></tr>
 				<tr><td style="text-align:center">7</td><td><i>Phantasmal Killer, Puppet Master*</i></td></tr>
-				<tr><td style="text-align:center">9</td><td><i>Arcane Hand, Mislead</i></td></tr>
+				<tr><td style="text-align:center">9</td><td><i>Bigby's Hand, Mislead</i></td></tr>
 			</table>
 			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DISGUISE_SELF" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_TASHAS_HIDEOUS_LAUGHTER" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ROPE_TRICK" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIRITUAL_WEAPON" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_VICIOUS_MOCKERY" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLINK" level="5" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_STINKING_CLOUD" level="5" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PHANTASMAL_KILLER" level="7" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_PUPPET_MASTER" level="7" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BIGBYS_HAND" level="9" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISLEAD" level="9" spellcasting="Warlock" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Killing Joke" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GREATFOOL_KILLING_JOKE">
@@ -63,8 +76,8 @@
 			<p class="indent">The curse lasts for 1 minute. The creature repeats the saving throw at the end of each of its turns, ending the curse on a success.</p>
 			<p class="indent">Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p>
 		</description>
-		<sheet alt="Jester's Japes" action="Magic action" usage="1/Short or Long Rest">
-			<description>Target a creature within 60 feet; Charisma save against your spell save DC or suffer a curse of your choice (Blinded, halved Speed with Disadvantage on Dexterity, can't be Invisible, or half damage with weapons) for 1 minute.</description>
+		<sheet alt="Jester's Japes" action="Action" usage="1/Short or Long Rest">
+			<description>Target a creature within 60 feet; Charisma save against your spell save DC or suffer a curse of your choice (Blinded, halved Speed with Disadvantage on Dexterity, can't be Invisible, or half damage with weapons) for 1 minute. The creature repeats the saving throw at the end of each of its turns, ending the curse on a success.</description>
 		</sheet>
 	</element>
 
@@ -96,8 +109,8 @@
 				<tr><td style="text-align:center">6</td><td>The Tramp. A patch-covered coat, tattered scarf, scuffed shoes, and cigar—leverages sardonic wit, insults, and mocking observations</td></tr>
 			</table>
 		</description>
-		<sheet alt="Send in the Clowns" action="Magic action" usage="1/Long Rest">
-			<description>Summon three ghostly fools for 1 minute. Make up to three melee spell attacks against creatures within 60 feet; on a hit, deal 2d10 Psychic damage and impose Frightened or Prone (your choice).</description>
+		<sheet alt="Send in the Clowns" action="Action" usage="1/Long Rest">
+			<description>Summon three ghostly fools for 1 minute. Make up to three melee spell attacks against creatures within 60 feet; on a hit, deal 2d10 Psychic damage and impose Frightened until the end of its next turn or Prone (your choice). You can use your action on subsequent turns to repeat the attacks.</description>
 		</sheet>
 	</element>
 </elements>
