@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="ranger-grimharbinger.xml" url="" />
 		</update>
 	</info>
@@ -13,6 +13,9 @@
 			<p>Grim harbingers wander places touched by death, serving as both a watcher of the dead and the herald of doom for those whose lives are running out. At their side is a guardian spirit and omen of death known as a grim, a constant companion that aids in performing their shared, grave duty.</p>
 			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SPELLS" />
 			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_OMEN_OF_DOOM" />
+			<div class="reference">
+				<div element="ID_TCM_INFORMATION_GRIM" />
+			</div>
 			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_HARBINGER_OF_DOOM" />
 			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_GRAVE_BOND" />
 			<div element="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_SEALED_FATE" />
