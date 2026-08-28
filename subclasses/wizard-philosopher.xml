@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="wizard-philosopher.xml" url="" />
 		</update>
 	</info>
@@ -9,76 +9,110 @@
 	<element name="Philosopher" type="Archetype" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_PHILOSOPHER">
 		<supports>Wizard Subclass</supports>
 		<description>
-			<p class="flavor">Reshape Reality Through Pure Thought</p>
-			<p>To some Wizards, magic is more than a tool—it is a lens through which to view and question existence itself. Philosophers pursue arcane study as a means of interrogating the nature of reality, truth, causality, and the self. Through rigorous meditation and academic rigor, these Wizards learn to bend the fundamental logic of the world to match their own understanding of it.</p>
-			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET" />
-			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE" />
-			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT" />
-			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY" />
-			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH" />
+			<p class="flavor">Distill the Essence of Creation</p>
+			<p>Philosophers have focused their study of wizardry on the fundamental nature of existence and reality. They seek the most quintessential truths of creation and manipulate those forces and substances through alchemical practice. Through understanding, deconstruction, and reconstruction, they master the natural energies of the world around them and alter it to their will.</p>
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALCHEMICAL_KNOWLEDGE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_QUINTESSENCE" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALBEDO" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_CITRINITAS" />
+			<div element="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RUBEDO" />
 		</description>
 		<sheet display="false" />
 		<rules>
-			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET" level="3" />
-			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE" level="3" />
-			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT" level="6" />
-			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY" level="10" />
-			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH" level="14" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALCHEMICAL_KNOWLEDGE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_QUINTESSENCE" level="3" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALBEDO" level="6" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_CITRINITAS" level="10" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RUBEDO" level="14" />
 		</rules>
 	</element>
 
-	<element name="Level 3: Guiding Tenet" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_TENET">
+	<element name="Level 3: Alchemical Knowledge" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALCHEMICAL_KNOWLEDGE">
 		<description>
-			<p>You have adopted a school of philosophical thought that guides your understanding of magic and the world. Choose a tenet below; you gain its benefit. Whenever you finish a Long Rest, you can meditate on your studies and change your chosen tenet.</p>
-			<p class="indent"><strong><em>Determinism.</em></strong> You believe all things are inevitable, bound along a single course. When you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the d20 as a 10.</p>
-			<p class="indent"><strong><em>Empiricism.</em></strong> You believe true understanding comes only from careful observation. You gain proficiency in the Investigation or Perception skill (your choice), and you gain Expertise in it if you're already proficient.</p>
-			<p class="indent"><strong><em>Skepticism.</em></strong> You believe certainty is an illusion and that everything should be questioned. You have Advantage on saving throws against being Charmed or Frightened, and against spells and effects that would read your thoughts or alter your memory.</p>
+			<p>You gain a set of Alchemist's Supplies. You have proficiency with it and can use it as an Arcane Focus. Additionally, you can use Alchemist's Supplies instead of the normal tool to craft a magic item.</p>
 		</description>
-		<sheet alt="Guiding Tenet" display="false" />
+		<sheet alt="Alchemical Knowledge">
+			<description>You have Alchemist's Supplies which you can use as an Arcane Focus or in place of the normal tool needed to craft a magic item.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
+		</rules>
 	</element>
 
-	<element name="Level 3: Rationalize" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RATIONALIZE">
+	<element name="Level 3: Quintessence" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_QUINTESSENCE">
 		<description>
-			<p>You can use logic and reason to argue with reality itself, forcing it to conform, if only for a moment, to your own understanding. When you fail a saving throw, you can take a Reaction to expend a spell slot and add a number equal to the slot's level to the saving throw, potentially causing it to succeed.</p>
-			<p class="indent">Alternatively, when you miss with an attack roll or a spell that requires a saving throw and the target is at least partially successful (such as by taking half damage), you can expend a spell slot to gain the same benefit as if the attack roll hit or the target failed the save.</p>
-			<p class="indent">You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+			<p>You have learned the fundamental process of dissolution. You know the Dissolution* cantrip. A creature or object you reduce to 0 Hit Points with the cantrip is destroyed. If the target was Small or larger, it dissolves into a measure (1 ounce) of crystalline powder called Quintessence. You can have a maximum amount of Quintessence equal to twice your Intelligence modifier at one time (minimum of 2 measures). If you create more, the oldest measure vanishes. You can use Quintessence you are touching in the following ways.</p>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+			<p class="indent"><strong><em>Material Component.</em></strong> When you cast a spell, you can expend Quintessence to serve as the spell's Material components up to a value of 100 GP per Quintessence expended.</p>
+			<p class="indent"><strong><em>Reagent.</em></strong> When you scribe a spell into your spellbook, or when you use Alchemist's Supplies to craft a magic item, you can expend Quintessence to serve as 50 GP worth of material for the task per Quintessence expended.</p>
+			<p class="indent"><strong><em>Vitriolic Enhancement.</em></strong> When you cast a spell that deals damage, you can expend 1 Quintessence as an additional Material component to change one damage type the spell deals to Force.</p>
 		</description>
-		<sheet alt="Rationalize" action="Reaction" usage="{{proficiency}}/Long Rest">
-			<description>When you fail a saving throw, expend a spell slot to add the slot's level to the total, potentially succeeding. Alternatively, when you miss an attack or a target partially succeeds against your spell, expend a spell slot to make it a hit or full failure instead.</description>
+		<sheet alt="Quintessence">
+			<description>You know the Dissolution cantrip; a creature or object it reduces to 0 HP is destroyed, and Small+ targets leave behind a measure of Quintessence. You can have up to {{quintessence:max:total}} at a time(oldest vanishes past). You can spend Quintessence you're touching as a spell's Material component (up to 100 GP value each), as 50 GP of crafting material when scribing a spell or using Alchemist's Supplies, or (1 Quintessence) to change one damage type a spell deals to Force.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_TCM_SPELL_DISSOLUTION" prepared="true" />
+			<stat name="quintessence:max" value="intelligence:modifier" />
+			<stat name="quintessence:max" value="intelligence:modifier" />
+			<stat name="quintessence:max:total" value="quintessence:max" bonus="base" />
+			<stat name="quintessence:max:total" value="2" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Level 6: Albedo" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ALBEDO">
+		<description>
+			<p>You can purify your Quintessence to amplify your spells. When you cast a spell using a spell slot, you can expend 1 Quintessence as a Material component to increase the level of the spell slot by 1, up to level 9. The maximum Quintessence you can expend in this way on a given spell is half of your Proficiency Bonus (rounded up).</p>
+		</description>
+		<sheet alt="Albedo">
+			<description>When you cast a spell using a spell slot, you can expend 1 Quintessence as a Material component to increase the slot's level by 1 (up to level 9), up to {{proficiency:half:up}} times per spell.</description>
 		</sheet>
 	</element>
 
-	<element name="Level 6: Sound Argument" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_SOUND_ARGUMENT">
+	<element name="Level 10: Citrinitas" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_CITRINITAS">
 		<description>
-			<p>Your mastery of logic sharpens the edge of your convictions. The benefit of your chosen tenet improves.</p>
-			<p class="indent"><strong><em>Determinism.</em></strong> You can now treat a roll of 12 or lower on the d20 as a 13.</p>
-			<p class="indent"><strong><em>Empiricism.</em></strong> You gain proficiency in the Investigation or Perception skill (whichever you didn't choose before), and you gain Expertise in one skill of your choice with which you're already proficient.</p>
-			<p class="indent"><strong><em>Skepticism.</em></strong> When you succeed on a saving throw against being Charmed or Frightened, or against an effect that would read your thoughts or alter your memory, the effect's source (if you're aware of it) has Disadvantage on the next attack roll or ability check it makes against you before the end of its next turn.</p>
+			<p>You can now manipulate Quintessence to create, not merely to purify. You always have the Creation and Fabricate spells prepared, and you can cast each spell once without expending a spell slot, regaining the ability to do so when you finish a Long Rest. When you cast a spell using this feature, you can cast the spell as an action rather than its normal casting time. You can also cast the spells normally using spell slots of the appropriate level.</p>
+			<p class="indent">Additionally, when you cast Creation, you can expend a number of Quintessence up to your Intelligence modifier (minimum of 1) to multiply the spell's duration by 1 plus the amount expended.</p>
 		</description>
-		<sheet alt="Sound Argument">
-			<description>Your chosen tenet's benefit improves: Determinism treats rolls of 12 or lower as 13; Empiricism grants proficiency in your other option and Expertise in a skill you know; Skepticism imposes Disadvantage on a foe whose effect you resisted.</description>
+		<sheet alt="Citrinitas" usage="1/Long Rest (each spell)">
+			<description>You always have Creation and Fabricate prepared, and can cast each once per Long Rest without a spell slot, as an action instead of its normal casting time. When you cast Creation, you can expend up to {{citrinitas:max}} Quintessence to multiply its duration by 1 plus the amount expended.</description>
 		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATION" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FABRICATE" prepared="true" />
+			<stat name="citrinitas:max" value="intelligence:modifier" bonus="base" />
+			<stat name="citrinitas:max" value="1" bonus="base" />
+		</rules>
 	</element>
 
-	<element name="Level 10: Unified Theory" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_UNIFIED_THEORY">
+	<element name="Level 14: Rubedo" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_RUBEDO">
 		<description>
-			<p>You have unlocked a piece of the underlying structure of reality. You always have the Contingency spell prepared, and you can cast it without expending a spell slot once. You regain the ability to cast it in that way when you finish a Long Rest.</p>
-			<p class="indent">Additionally, whenever you cast a spell of level 1 or higher using your Rationalize feature to guarantee a hit or a failed save, you can choose to make the spell's effect last until the end of your next turn longer than it normally would, with no additional cost.</p>
+			<p>The culmination of your great work, you can now distill your perfected knowledge of existence into a physical form. When you finish a Short or Long Rest, you can expend 10 Quintessence to create a philosopher's stone—a translucent red crystal. The stone is a Tiny magical object with AC 19, HP 20, and Immunity to all damage except Force. If you create a second philosopher's stone, the first one vanishes. While you carry the stone, it grants you the following benefits.</p>
+			<p class="indent"><strong><em>Amplification.</em></strong> When you cast a spell, you can expend up to 2 Quintessence as an additional Material component to increase your spell save DC for that spell by the same amount.</p>
+			<p class="indent"><strong><em>Equivalent Exchange.</em></strong> When you fail a saving throw, you can take a Reaction to expend 5 Quintessence to succeed on the save instead.</p>
+			<p class="indent"><strong><em>Longevity.</em></strong> You stop aging and don't suffer any effects from old age, including dying from it.</p>
+			<p class="indent"><strong><em>Sympathy.</em></strong> The stone counts as part of your body for the purpose of the Scrying spell and for spells that restore you to life if you die. The stone itself serves as the Material component for the spell (if any) and is destroyed when the spell is cast.</p>
+			<h5>PHILOSOPHICAL PURSUITS</h5>
+			<p>Every Wizard who walks the steps of the Philosopher does so to solve some specific problem, even if only at first. The Philosophical Pursuits table offers challenges or goals that set you onto your study of alchemical magic.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d12</td><td>Guiding Goal</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>Someone close to you is lost in time, the planes, or some other esoteric state of being. Unraveling the nature of reality is your path to finding them.</td></tr>
+				<tr><td style="text-align:center">2</td><td>You suffered a debilitating ailment or injury and turned to the study of magic to deconstruct the impairment's nature and transmute it.</td></tr>
+				<tr><td style="text-align:center">3</td><td>Your teacher was killed by a rival Philosopher, and you must learn all you can of that discipline to protect yourself and bring them to justice.</td></tr>
+				<tr><td style="text-align:center">4</td><td>The rediscovered research of a missing mage unlocked the first secrets of your understanding but contains many more you can't yet decipher.</td></tr>
+				<tr><td style="text-align:center">5</td><td>Wizardry provides a path to immense power, but you know an even greater state of being awaits your ascension.</td></tr>
+				<tr><td style="text-align:center">6</td><td>You encountered a material with miraculous properties, and you can't rest until you discover the secret of its creation.</td></tr>
+				<tr><td style="text-align:center">7</td><td>Your sibling's soul was separated from their body in a spell gone wrong, and you cannot forgive yourself until you make them whole.</td></tr>
+				<tr><td style="text-align:center">8</td><td>You were a stage performer who wowed audiences with magical acts, and you seek the ultimate magic trick to become a legend.</td></tr>
+				<tr><td style="text-align:center">9</td><td>You come from an impoverished hometown and wish to utilize the transmutation of metals to bring prosperity to your community.</td></tr>
+				<tr><td style="text-align:center">10</td><td>In your pursuit to be closer to the gods, you have sought the secrets of creating new life forms in your own image.</td></tr>
+				<tr><td style="text-align:center">11</td><td>You were raised to revere the four elements, and you hypothesized that mastering the stuff of existence will bring harmony to them all.</td></tr>
+				<tr><td style="text-align:center">12</td><td>You had aspirations of joining the military and rising through the ranks, believing that the magic of reality can be used as a weapon of war.</td></tr>
+			</table>
 		</description>
-		<sheet alt="Unified Theory" usage="1/Long Rest">
-			<description>You always have Contingency prepared and can cast it without a spell slot once per Long Rest. When you use Rationalize to guarantee a hit or failed save, you can extend the spell's effect until the end of your next turn.</description>
-		</sheet>
-	</element>
-
-	<element name="Level 14: Absolute Truth" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PHILOSOPHER_ABSOLUTE_TRUTH">
-		<description>
-			<p>You have grasped a truth so fundamental that reality itself yields to your will. The benefit of your chosen tenet reaches its pinnacle.</p>
-			<p class="indent"><strong><em>Determinism.</em></strong> You can now treat a roll of 15 or lower on the d20 as a 16. Additionally, once per turn when you or a creature you can see within 60 feet of you rolls a d20, you can take a Reaction to force a reroll, and the new roll must be used.</p>
-			<p class="indent"><strong><em>Empiricism.</em></strong> You gain Expertise in a second skill of your choice with which you're proficient. Additionally, once per turn when you make an ability check, you can treat a roll of 9 or lower on the d20 as a 10.</p>
-			<p class="indent"><strong><em>Skepticism.</em></strong> You have Immunity to being Charmed or Frightened, and to effects that would read your thoughts or alter your memory without your consent.</p>
-		</description>
-		<sheet alt="Absolute Truth">
-			<description>Your chosen tenet's benefit reaches its peak: Determinism treats rolls of 15 or lower as 16 and can force a reroll once per turn; Empiricism grants a second Expertise and treats low ability check rolls as 10; Skepticism grants Immunity to Charmed, Frightened, and unwanted mind-reading or memory alteration.</description>
+		<sheet alt="Rubedo" usage="1/Short or Long Rest">
+			<description>Expend 10 Quintessence to create a philosopher's stone (Tiny object; AC 19; HP 20; Immunity to all but Force). Creating a second stone destroys the first. While you carry it: Amplification (expend up to 2 Quintessence as an extra Material component to raise a spell's save DC by that amount), Equivalent Exchange (Reaction: expend 5 Quintessence to succeed a failed save instead), Longevity (you don't age or die of old age), and Sympathy (the stone counts as part of your body for Scrying and revivification spells, serving as their Material component and being destroyed when used this way).</description>
 		</sheet>
 	</element>
 </elements>
