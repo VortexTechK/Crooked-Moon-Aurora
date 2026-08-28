@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="monk-pestilenthaze.xml" url="" />
 		</update>
 	</info>
@@ -37,15 +37,19 @@
 			<p class="indent">If you forego the extra damage granted by Claws of Pestilence, you can use Miasmic Plague without paying its Focus Point cost.</p>
 		</description>
 		<sheet alt="Contagious Discipline" display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CLAWS_OF_PESTILENCE" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_MIASMIC_PLAGUE" />
+		</rules>
 	</element>
 
 	<element name="Claws of Pestilence" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_PESTILENTHAZE_CLAWS_OF_PESTILENCE">
 		<compendium display="false" />
 		<description>
-			<p>Your Unarmed Strikes deal Slashing damage, and Flurry of Blows attacks deal extra Necrotic damage.</p>
+			<p>Your Unarmed Strikes can deal Slashing damage, and Flurry of Blows attacks deal extra Necrotic damage.</p>
 		</description>
 		<sheet alt="Claws of Pestilence">
-			<description>Your Unarmed Strikes deal Slashing damage. Attacks granted by Flurry of Blows deal extra Necrotic damage equal to one roll of your Martial Arts die.</description>
+			<description>Your Unarmed Strikes can deal Slashing damage. Attacks granted by Flurry of Blows deal extra Necrotic damage equal to 1d{{martial arts:dice}}.</description>
 		</sheet>
 	</element>
 
@@ -55,7 +59,7 @@
 			<p>When you hit with an Unarmed Strike, you can expend a Focus Point to curse the target.</p>
 		</description>
 		<sheet alt="Miasmic Plague" usage="1 Focus Point">
-			<description>When you hit a creature with an Unarmed Strike, expend 1 Focus Point (or forego your Claws of Pestilence extra damage) to force a Constitution save or curse the target for 1 minute with the Poisoned condition and extra Necrotic damage from your Unarmed Strikes.</description>
+			<description>When you hit a creature with an Unarmed Strike, expend 1 Focus Point (or forego your Claws of Pestilence extra damage) to force a Constitution save or curse the target for 1 minute with the Poisoned condition and extra Necrotic damage (1d{{martial arts:dice}}) from your Unarmed Strikes. The target repeats the save at the end of each of its turns, ending the curse on itself on a success.</description>
 		</sheet>
 	</element>
 
@@ -66,8 +70,8 @@
 			<p class="indent"><strong><em>Vermin Kinship.</em></strong> Through chittering sounds and hand gestures, you can communicate simple concepts to vermin, such as rats, pigeons, and insects, and you gain the ability to decipher their noises and motions. Vermin lack the intelligence to convey or understand sophisticated concepts, but Friendly vermin could relay what they have seen or heard in the recent past.</p>
 			<p class="indent">Additionally, you can cast Animal Messenger using Wisdom as the spellcasting ability targeting a Tiny Beast that is considered vermin and thought to spread plague and disease. Once you cast the spell in this way, you can't do so again until you finish a Long Rest.</p>
 		</description>
-		<sheet alt="Gift of Pestilence" usage="1/Long Rest">
-			<description>You have Advantage on saves against the Poisoned condition or magical contagions, and Resistance to Poison and Necrotic damage. You can communicate with vermin, and you can cast Animal Messenger targeting a vermin once per Long Rest.</description>
+		<sheet alt="Gift of Pestilence">
+			<description>You have Advantage on saves against the Poisoned condition or magical contagions and Resistance to Poison and Necrotic damage. You can communicate with vermin, and you can cast Animal Messenger targeting a vermin once per Long Rest.</description>
 		</sheet>
 		<rules>
 			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
@@ -89,8 +93,8 @@
 		<description>
 			<p>You can unleash a cloud of miasma upon your enemies. As a Magic action, you can expend 2 Focus Points to unleash a cloud of miasma in a 20-foot Emanation originating from you. Each creature of your choice in that area must make a Constitution saving throw. On a failed save, a creature takes Necrotic damage equal to two rolls of your Martial Arts die and is cursed by your Miasmic Plague. On a successful save, it takes half as much damage only.</p>
 		</description>
-		<sheet alt="Tolling Censer" action="Magic action" usage="2 Focus Points">
-			<description>Unleash a cloud of miasma in a 20-foot Emanation. Each creature you choose makes a Constitution save, taking Necrotic damage (two rolls of your Martial Arts die) and being cursed by Miasmic Plague on a failure, or half damage on a success.</description>
+		<sheet alt="Tolling Censer" action="Action" usage="2 Focus Points">
+			<description>Unleash a cloud of miasma in a 20-foot Emanation. Each creature you choose makes a Constitution save, taking Necrotic damage (2d{{martial arts:dice}}) and being cursed by Miasmic Plague on a failure, or half damage on a success.</description>
 		</sheet>
 	</element>
 
@@ -127,7 +131,7 @@
 			</table>
 		</description>
 		<sheet alt="Epidemic">
-			<description>Your Miasmic Plague ignores Immunity to the Poisoned condition. When you deal Necrotic damage to a target cursed by your Miasmic Plague, it takes extra Necrotic damage equal to one roll of your Martial Arts die.</description>
+			<description>Your Miasmic Plague ignores Immunity to the Poisoned condition. When you deal Necrotic damage to a target cursed by your Miasmic Plague, it takes extra Necrotic damage equal to 1d{{martial arts:dice}}.</description>
 		</sheet>
 	</element>
 </elements>
