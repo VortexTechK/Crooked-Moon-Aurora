@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="rogue-sinner.xml" url="" />
 		</update>
 	</info>
@@ -70,7 +70,49 @@
 		</description>
 		<sheet display="false" />
 		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_CARDS_AND_BONES" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_JINX_WEAPON" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_PARLOR_TRICK" />
+		</rules>
+	</element>
+
+	<element name="Cards and Bones" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_CARDS_AND_BONES">
+		<description>
+			<p>You gain proficiency with two Gaming Sets of your choice (playing cards and dice recommended).</p>
+		</description>
+		<sheet alt="Cards and Bones" display="false" />
+		<rules>
 			<select type="Proficiency" name="Gaming Set Proficiency (Get Jinxed)" supports="ID_PROFICIENCY_GAMING_SET_PROFICIENCY_PLAYING_CARD_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_DICE_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_DRAGONCHESS_SET|ID_PROFICIENCY_GAMING_SET_PROFICIENCY_THREE_DRAGON_ANTE_SET" number="2" />
+		</rules>
+	</element>
+
+	<element name="Jinx Weapon" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_JINX_WEAPON">
+		<description>
+			<p>As a 1-hour ritual using a Gaming Set, you magically create a jinx weapon that channels your Jinxcraft. This weapon takes the form of a Pistol or a Gaming Set (which uses Pistol game statistics). For you, the jinx weapon ignores the Loading property and creates its own ammunition that deals Force damage. In Gaming Set form, you throw cards, dice, or other Gaming Set pieces, or you use them to unleash bolts of hex magic. Alternatively, you can imbue Jinxcraft into a Simple or Martial weapon you have proficiency with, turning it into your jinx weapon. The infused jinx weapon deals Force damage instead of its normal type. If you create a second jinx weapon, the first vanishes or its Jinxcraft ends.</p>
+			<h5>JINX WEAPON FORMS</h5>
+			<p>Sinners wield their Jinxcraft through a wide variety of jinxed items that serve as magical weapons. The Jinx Weapon Forms table offers suggestions for how your jinx weapon might appear.</p>
+			<table>
+				<thead>
+					<tr><td class="col-15" style="text-align:center">1d4</td><td>Weapon Form</td></tr>
+				</thead>
+				<tr><td style="text-align:center">1</td><td>A wooden, glyph-covered talisman carved into the shape of a pistol that fires magenta blasts</td></tr>
+				<tr><td style="text-align:center">2</td><td>A pair of bone dice that shoot ghastly green bursts of jinxcraft from their pips</td></tr>
+				<tr><td style="text-align:center">3</td><td>Enchanted playing cards that can be thrown with explosive magical power</td></tr>
+				<tr><td style="text-align:center">4</td><td>A lucky coin that launches toward foes when flipped and always returns</td></tr>
+			</table>
+		</description>
+		<sheet alt="Jinx Weapon">
+			<description>As a 1-hour ritual using a Gaming Set, create a jinx weapon: a Pistol, a Gaming Set (using Pistol statistics), or a Simple or Martial weapon you have proficiency with. It deals Force damage instead of its normal type, and a Pistol or Gaming Set form ignores the Loading property and creates its own ammunition. Creating a new jinx weapon ends the Jinxcraft on any previous one.</description>
+		</sheet>
+	</element>
+
+	<element name="Parlor Trick" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_SINNER_PARLOR_TRICK">
+		<description>
+			<p>You learn one of the following cantrips of your choice: Dancing Lights, Mage Hand, Minor Illusion, Mysterious Presence*, or Prestidigitation. Charisma is your spellcasting ability for it.</p>
+			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
+		</description>
+		<sheet alt="Parlor Trick" display="false" />
+		<rules>
 			<select type="Spell" name="Cantrip (Parlor Trick)" supports="ID_WOTC_PHB24_SPELL_DANCING_LIGHTS|ID_WOTC_PHB24_SPELL_MAGE_HAND|ID_WOTC_PHB24_SPELL_MINOR_ILLUSION|ID_WOTC_PHB24_SPELL_PRESTIDIGITATION" />
 		</rules>
 	</element>
