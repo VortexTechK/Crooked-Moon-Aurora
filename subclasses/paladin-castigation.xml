@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="paladin-castigation.xml" url="" />
 		</update>
 	</info>
@@ -39,8 +39,8 @@
 		<description>
 			<p>As a Magic action, you can expend one use of your Channel Divinity to clap those you would bring to justice in fiery shackles. Choose a number of creatures up to your Charisma modifier (minimum of 1 creature) you can see within 30 feet of yourself. Each creature must succeed on a Strength saving throw or be wrapped in fiery shackles and have its Speed reduced to 0. As a Bonus Action, you can cause the shackles to flare. Each creature bound by the shackles takes 2d6 Fire damage. A shackled creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.</p>
 		</description>
-		<sheet alt="Castigate" action="Magic action" usage="Channel Divinity">
-			<description>Choose up to {{charisma:modifier}} (min. 1) creatures within 30 feet. Strength save or they're bound in fiery shackles with Speed 0 for 1 minute. As a Bonus Action, cause the shackles to flare for 2d6 Fire damage to each bound creature.</description>
+		<sheet alt="Castigate" action="Action" usage="Channel Divinity">
+			<description>Choose up to {{charisma:modifier}} (min. 1) creatures within 30 feet.They make a Strength save or they're bound in fiery shackles with Speed 0 for 1 minute. They can repeat the saving throw at the end of their turns. As a Bonus Action, cause the shackles to flare for 2d6 Fire damage to each bound creature.</description>
 		</sheet>
 	</element>
 
@@ -49,8 +49,8 @@
 			<p>As a Magic action, you can expend one use of your Channel Divinity to better seek out wickedness and corruption. For the next 10 minutes, you have Advantage on Intelligence (Investigation) and Wisdom (Insight) checks.</p>
 			<p class="indent">During that time, you can take a Bonus Action to choose a creature you can see within 10 feet of you. The target must succeed on a Charisma saving throw or have the Frightened condition for 1 minute. While the target is Frightened in this way, it can't speak a deliberate lie. The condition ends early if the target takes damage or if you use this Bonus Action again.</p>
 		</description>
-		<sheet alt="Incite" action="Magic action" usage="Channel Divinity">
-			<description>For 10 minutes, you have Advantage on Intelligence (Investigation) and Wisdom (Insight) checks. As a Bonus Action, target a creature within 10 feet; Charisma save or it's Frightened for 1 minute and can't speak a deliberate lie.</description>
+		<sheet alt="Incite" action="Action" usage="Channel Divinity">
+			<description>For 10 minutes, you have Advantage on Intelligence (Investigation) and Wisdom (Insight) checks during which as a Bonus Action, target a creature within 10 feet; Charisma save or it's Frightened for 1 minute and can't speak a deliberate lie. This ends early if the target takes damage or if you use this Bonus Action again.</description>
 		</sheet>
 	</element>
 
@@ -89,6 +89,18 @@
 			</table>
 		</description>
 		<sheet alt="Oath of Castigation Spells" display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINE_FAVOR" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INFLICT_WOUNDS" level="3" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_CHAIN_OF_CONVICTION" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_PERSON" level="5" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_COUNTERSPELL" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_DEAD" level="9" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_CONSUMING_PYRE" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_CREATURE" level="13" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FLAME_STRIKE" level="17" spellcasting="Paladin" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_MONSTER" level="17" spellcasting="Paladin" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 7: Kindling Aura" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CASTIGATION_KINDLING_AURA">
@@ -106,8 +118,8 @@
 			<p>Whenever a creature damages you or one of your allies within 30 feet of you that you can see, you can take a Reaction to gain Advantage on your next attack roll against the creature that dealt the damage.</p>
 			<p class="indent">Additionally, whenever you deal Fire or Radiant damage to a Bloodied creature, you become aware of any lies the creature has willingly and knowingly spoken to you in the past 24 hours.</p>
 		</description>
-		<sheet alt="Fervent Inquisitor" action="Reaction">
-			<description>When a creature damages you or a visible ally within 30 feet, gain Advantage on your next attack roll against it. When you deal Fire or Radiant damage to a Bloodied creature, you learn of lies it has knowingly told you in the past 24 hours.</description>
+		<sheet alt="Fervent Inquisitor">
+			<description>As a reaction when a creature damages you or a visible ally within 30 feet, gain Advantage on your next attack roll against it. When you deal Fire or Radiant damage to a Bloodied creature, you learn of lies it has knowingly told you in the past 24 hours.</description>
 		</sheet>
 	</element>
 
@@ -119,7 +131,7 @@
 			<p class="indent"><strong><em>Punish the Wicked.</em></strong> When you hit a creature with an Opportunity Attack, or when a Hostile creature ends its turn within your reach, it must succeed on a Charisma saving throw or have the Prone condition and its Speed is reduced to 0 until the start of its next turn.</p>
 		</description>
 		<sheet alt="Fire and Brimstone" action="Bonus Action" usage="1/Long Rest">
-			<description>For 10 minutes, you gain Immunity to Fire damage, your reach increases by 10 feet and melee attacks ignore Half/Three-Quarters Cover, and Hostile creatures you hit with an Opportunity Attack (or that end their turn in your reach) must save or fall Prone with Speed 0.</description>
+			<description>For 10 minutes, you gain Immunity to Fire damage, your reach increases by 10 feet and melee attacks ignore Half/Three-Quarters Cover, and Hostile creatures you hit with an Opportunity Attack (or that end their turn in your reach) must suceed on a Charisma save or fall Prone with Speed 0 until the start of its next turn. You can use this again before a Long Rest by expending a level 5 spell slot.</description>
 		</sheet>
 	</element>
 </elements>
