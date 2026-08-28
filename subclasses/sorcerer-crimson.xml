@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="sorcerer-crimson.xml" url="" />
 		</update>
 	</info>
@@ -68,6 +68,19 @@
 			</table>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_AID" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_BLOOD_BOLT" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_INFLICT_WOUNDS" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_BLOOD_SACRIFICE" level="3" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_CRIMSON_HARVEST" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_VAMPIRIC_TOUCH" level="5" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_SACRIFICIAL_SIPHON" level="7" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_FIELD_OF_REAPING" level="9" spellcasting="Sorcerer" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_CURE_WOUNDS" level="9" spellcasting="Sorcerer" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 6: Pool of Blood" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_CRIMSON_POOL_OF_BLOOD">
@@ -118,7 +131,7 @@
 			<p class="indent">Once you use this feature, you can't do so again until you finish a Long Rest, unless you spend 5 Sorcery Points to use it again.</p>
 			<p class="indent"><i>Variant: Bloodless Crimson Sorcerers.</i> If you're playing a character from a species that lacks blood in the traditional sense, you can still take the Crimson Sorcery subclass. The essence of Crimson Sorcery is lifeforce, or animating energy that approximates life.</p>
 		</description>
-		<sheet alt="Sanguine Feast" action="Magic action" usage="1/Long Rest (5 Sorcery Points)">
+		<sheet alt="Sanguine Feast" action="Action" usage="1/Long Rest (5 Sorcery Points)">
 			<description>Creatures of your choice within 30 feet make a Constitution save (Disadvantage if your Blood Well is expended), taking 5d8 Necrotic damage on a failure or half on a success. You regain HP equal to the damage dealt if at least one creature is hit.</description>
 		</sheet>
 	</element>
