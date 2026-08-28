@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="fighter-barrowguard.xml" url="" />
 		</update>
 	</info>
@@ -49,7 +49,10 @@
 			<p class="indent"><strong><em>Grave Guard.</em></strong> When you take damage, you can take a Reaction to expend and roll a Draugr Die. Reduce the damage you take by the number rolled plus your Constitution modifier.</p>
 			<p class="indent"><strong><em>Soul Reaper.</em></strong> When you take the Attack action, you can forego one of your attacks to magically call forth ghostly hands around a creature within 60 feet of yourself. Expend and roll a Draugr Die. The target must make a Strength saving throw. On a failed save, it takes Necrotic damage equal to the number rolled on the Draugr Die plus your Constitution modifier, and it has the Grappled condition (escape DC = your Death Knight power save DC) for 1 minute. On a successful save, it takes half as much damage only.</p>
 		</description>
-		<sheet alt="Death Knight" display="false" />
+		<sheet alt="Death Knight" >
+			<description>You have {{draugr dice:count}}d{{draugr dice:size}} Draugr Dice; save DC {{death-knight:dc}}. You regain one expended Draugr Die when you finish a Short Rest, and you regain all of them when you finish a Long Rest.</description>
+		</sheet>
+		</sheet>
 		<rules>
 			<stat name="draugr dice:size" value="6" bonus="base" />
 			<stat name="draugr dice:size" value="8" level="5" bonus="base" />
@@ -63,6 +66,9 @@
 			<stat name="death-knight:dc" value="8" />
 			<stat name="death-knight:dc" value="constitution:modifier" />
 			<stat name="death-knight:dc" value="proficiency" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_DARK_RIDER" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_GRAVE_GUARD" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_SOUL_REAPER" />
 		</rules>
 	</element>
 
@@ -72,7 +78,7 @@
 			<p>As a Bonus Action, you manifest a ghostly steed that only you can mount.</p>
 		</description>
 		<sheet alt="Dark Rider" action="Bonus Action" usage="1/Short or Long Rest">
-			<description>You manifest a ghostly Undead steed (Warhorse stat block; Resistance to Bludgeoning, Piercing, Slashing; only Dash, Disengage, Dodge) that only you can mount. Expend a Draugr Die on its Dash to add 5 ft. per point rolled to its Speed for that movement.</description>
+			<description>You manifest a ghostly Undead steed (Warhorse stat block; Resistance to Bludgeoning, Piercing, Slashing; only Dash, Disengage, Dodge) that only you can mount. Expend a Draugr Die on its Dash to add 5 ft. per point rolled to its Speed for that movement. You can use this again before a rest by expending a Draugr Die.</description>
 		</sheet>
 	</element>
 
@@ -92,7 +98,7 @@
 			<p>When you take the Attack action, you can forego an attack to call forth ghostly hands.</p>
 		</description>
 		<sheet alt="Soul Reaper">
-			<description>Forego one attack when you take the Attack action to call ghostly hands around a creature within 60 feet. Expend and roll a Draugr Die; DC {{death-knight:dc}} Strength save or the target takes Necrotic damage (die + Constitution modifier) and is Grappled for 1 minute, or half damage on a success.</description>
+			<description>Forego one attack when you take the Attack action to call ghostly hands around a creature within 60 feet. Expend and roll a Draugr Die; DC {{death-knight:dc}} Strength save or the target takes Necrotic damage (die + {{constitution:modifier}}) and is Grappled for 1 minute (escape DC {{death-knight:dc}}), or half damage and no Grapple on a success.</description>
 		</sheet>
 	</element>
 
@@ -102,8 +108,29 @@
 			<p class="indent"><strong><em>Mortal Coil.</em></strong> When an enemy that isn't a Construct or Undead within 30 feet of you dies, you can take a Reaction to regain one expended Draugr Die.</p>
 			<p class="indent"><strong><em>Whisper of the Departed.</em></strong> When you make an ability check, you can expend and roll a Draugr Die and add the number rolled to the total.</p>
 		</description>
-		<sheet alt="Siphoning Souls" action="Reaction">
-			<description>When an enemy that isn't a Construct or Undead within 30 feet of you dies, you can regain one expended Draugr Die. You can also expend and roll a Draugr Die to add to an ability check.</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_MORTAL_COIL" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_WHISPER_OF_THE_DEPARTED" />
+		</rules>
+	</element>
+
+	<element name="Mortal Coil" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_MORTAL_COIL">
+		<compendium display="false" />
+		<description>
+			<p>When an enemy that isn't a Construct or Undead within 30 feet of you dies, you can take a Reaction to regain one expended Draugr Die.</p>
+		</description>
+		<sheet alt="Mortal Coil" action="Reaction">
+			<description>When an enemy that isn't a Construct or Undead within 30 feet of you dies, you can regain one expended Draugr Die.</description>
+		</sheet>
+	</element>
+	<element name="Whisper of the Departed" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_WHISPER_OF_THE_DEPARTED">
+		<compendium display="false" />
+		<description>
+			<p>When you make an ability check, you can expend and roll a Draugr Die and add the number rolled to the total.</p>
+		</description>
+		<sheet alt="Whisper of the Departed">
+			<description>When you make an ability check, you can expend and roll a Draugr Die and add the number rolled to the total.</description>
 		</sheet>
 	</element>
 
@@ -114,8 +141,39 @@
 			<p class="indent"><strong><em>Death Knell.</em></strong> When you use your Grave Guard power in response to a creature damaging you, the creature takes Psychic damage equal to half the amount of damage the power reduced.</p>
 			<p class="indent"><strong><em>Spectral Shrieking.</em></strong> When a creature Grappled by your Soul Reaper power starts its turn, it takes Psychic damage equal to your Proficiency Bonus. When it does, you can take a Reaction to expend and roll a Draugr Die, adding the number rolled to the damage.</p>
 		</description>
-		<sheet alt="Tomb Castellan">
-			<description>Your Dark Rider steed ignores Difficult Terrain and can teleport (with expend/roll a Draugr Die) dealing Necrotic damage nearby. Grave Guard now also deals Psychic damage to the attacker. Creatures Grappled by Soul Reaper take Psychic damage equal to {{proficiency}} at the start of their turn.</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_PHANTOM_CHARGER" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_DEATH_KNELL" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_SPECTRAL_SHRIEKING" />
+		</rules>
+	</element>
+
+	<element name="Phantom Charger" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_PHANTOM_CHARGER">
+		<compendium display="false" />
+		<description>
+			<p>The ghostly steed of your Dark Rider power now ignores Difficult Terrain. Additionally, when your steed takes the Dash, Disengage, or Dodge action, you can expend and roll a Draugr Die. Your steed magically teleports (with you if you're riding it) to an unoccupied space you can see within 60 feet of the steed. Each creature of your choice within 10 feet of the steed when it appears must succeed on a Constitution saving throw, taking Necrotic damage equal to the number rolled on the Draugr Die plus your Constitution modifier on a failed save or half as much damage on a successful one.</p>
+		</description>
+		<sheet alt="Phantom Charger">
+			<description>Your Dark Rider steed ignores Difficult Terrain. Whenever it takes the Dash, Disengage, or Dodge action, you can expend and roll a Draugr Die to teleport it (and you, if riding) to a space you can see within 60 feet. Creatures of your choice within 10 feet of where it appears make a Constitution save, taking Necrotic damage equal to the die rolled plus {{constitution:modifier}} on a failure, or half on a success.</description>
+		</sheet>
+	</element>
+	<element name="Death Knell" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_DEATH_KNELL">
+		<compendium display="false" />
+		<description>
+			<p>When you use your Grave Guard power in response to a creature damaging you, the creature takes Psychic damage equal to half the amount of damage the power reduced.</p>
+		</description>
+		<sheet alt="Death Knell">
+			<description>When you use Grave Guard in response to a creature damaging you, that creature takes Psychic damage equal to half the damage Grave Guard reduced.</description>
+		</sheet>
+	</element>
+	<element name="Spectral Shrieking" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_SPECTRAL_SHRIEKING">
+		<compendium display="false" />
+		<description>
+			<p>When a creature Grappled by your Soul Reaper power starts its turn, it takes Psychic damage equal to your Proficiency Bonus. When it does, you can take a Reaction to expend and roll a Draugr Die, adding the number rolled to the damage.</p>
+		</description>
+		<sheet alt="Spectral Shrieking" action="Reaction">
+			<description>A creature Grappled by your Soul Reaper takes {{proficiency}} Psychic damage at the start of its turn. When it does, you can expend and roll a Draugr Die to add the number rolled to that damage.</description>
 		</sheet>
 	</element>
 
@@ -127,8 +185,40 @@
 			<p class="indent"><strong><em>Sepulchral Shield.</em></strong> When you use your Grave Guard power, choose one of the triggering damage types. You have Resistance to that damage type (including the triggering damage) until the start of your next turn.</p>
 			<p class="indent"><strong><em>Death Grip.</em></strong> A creature Grappled by your Soul Reaper power has the Restrained condition until the grapple ends.</p>
 		</description>
-		<sheet alt="Grave Lord">
-			<description>Dark Rider can carry a second rider and pass through solid objects/creatures when you expend a Draugr Die on Dash. Grave Guard now also grants Resistance to the triggering damage type until your next turn. Soul Reaper's Grapple also Restrains the target.</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_ON_A_PALE_HORSE" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_SEPULCHRAL_SHIELD" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_DEATH_GRIP" />
+		</rules>
+	</element>
+
+	<element name="On A Pale Horse" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_ON_A_PALE_HORSE">
+		<compendium display="false" />
+		<description>
+			<p>When you use your Dark Rider power, you can allow one creature of your choice to mount the steed in addition to you.</p>
+			<p class="indent">Additionally, when you expend a Draugr Die during the steed's Dash action, it can move through solid objects and creatures as if they were Difficult Terrain (along with any riders). If the steed ends its turn inside a solid object, it and any riders take 1d10 Force damage and are shunted to the nearest unoccupied space.</p>
+		</description>
+		<sheet alt="On A Pale Horse">
+			<description>Your Dark Rider steed can carry one additional rider of your choice. When you expend a Draugr Die on its Dash, it (and any riders) can move through solid objects and creatures as Difficult Terrain; if it ends its turn inside a solid object, it and its riders take 1d10 Force damage and are shunted to the nearest unoccupied space.</description>
+		</sheet>
+	</element>
+	<element name="Sepulchral Shield" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_SEPULCHRAL_SHIELD">
+		<compendium display="false" />
+		<description>
+			<p>When you use your Grave Guard power, choose one of the triggering damage types. You have Resistance to that damage type (including the triggering damage) until the start of your next turn.</p>
+		</description>
+		<sheet alt="Sepulchral Shield">
+			<description>When you use Grave Guard, choose one of the triggering damage types; you have Resistance to that type (including the triggering hit) until the start of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Death Grip" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_BARROWGUARD_DEATH_GRIP">
+		<compendium display="false" />
+		<description>
+			<p>A creature Grappled by your Soul Reaper power has the Restrained condition until the grapple ends.</p>
+		</description>
+		<sheet alt="Death Grip">
+			<description>A creature Grappled by your Soul Reaper also has the Restrained condition until the grapple ends.</description>
 		</sheet>
 	</element>
 
