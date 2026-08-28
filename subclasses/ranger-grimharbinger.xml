@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="ranger-grimharbinger.xml" url="" />
 		</update>
 	</info>
@@ -43,6 +43,13 @@
 			<p class="indent"><i>* Denotes a new spell introduced in this book.</i></p>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANE" level="3" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_HOLD_PERSON" level="5" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FEAR" level="9" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_TCM_SPELL_INTRUSIVE_DESPAIR" level="13" spellcasting="Ranger" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DREAM" level="17" spellcasting="Ranger" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Omen of Doom" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_GRIMHARBINGER_OMEN_OF_DOOM">
@@ -65,7 +72,8 @@
 				<tr><td><b>INT</b></td><td>14</td><td>+2</td><td>+2</td><td><b>WIS</b></td><td>10</td><td>+0</td><td>+0</td><td><b>CHA</b></td><td>10</td><td>+0</td><td>+0</td></tr>
 			</table>
 			<ul class="unstyled">
-				<li><strong>Immunities</strong> Necrotic; Frightened, Grappled, Petrified, Poisoned, Prone, Restrained</li>
+				<li><strong>Resistances</strong> Necrotic (Bludgeoning, Piercing, and Slashing as well, once you gain the Grave Bond feature)</li>
+				<li><strong>Immunities</strong> Frightened, Grappled, Petrified, Poisoned, Prone, Restrained</li>
 				<li><strong>Senses</strong> Darkvision 60 ft., Passive Perception 10</li>
 				<li><strong>Languages</strong> Understands the languages you know</li>
 				<li><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</li>
@@ -85,12 +93,12 @@
 			</ul>
 		</description>
 		<sheet alt="Omen of Doom" action="Bonus Action" usage="{{omen-of-doom:uses}}/Short or Long Rest">
-			<description>Target a creature within 90 feet; it's doomed for 1 hour (once per turn, your hits on it deal extra 1d6 Necrotic damage). A Grim (Medium Undead companion) appears within 30 feet of the target and fights alongside you.</description>
+			<description>Target a creature within 90 feet; it's doomed for 1 hour (once per turn, your hits on it deal extra 1d6 Necrotic damage). A Grim (Medium Undead companion) appears within 30 feet of the target and fights alongside you. You can also expend a spell slot (no action required) to restore an expended use of this feature.</description>
 		</sheet>
 		<rules>
 			<stat name="omen-of-doom:uses" value="wisdom:modifier" bonus="base" />
 			<stat name="omen-of-doom:uses" value="1" bonus="base" />
-			<grant type="Companion" id="ID_TCM_COMPANION_GRIM" />
+			<select type="Companion" name="Omen of Doom" supports="ID_TCM_COMPANION_GRIM" />
 		</rules>
 	</element>
 
@@ -226,7 +234,7 @@
 			<p class="indent"><strong><em>Marked for Death.</em></strong> When you use Omen of Doom, you can force the target to make a Charisma saving throw against your spell save DC. On a failed save, until the current Omen of Doom ends, the target has Vulnerability to damage dealt by the grim and to the extra damage you deal with Omen of Doom. Once you use this benefit, you can't use it again until you finish a Long Rest. You can also restore your use of it by expending a level 4+ spell slot (no action required).</p>
 		</description>
 		<sheet alt="Sealed Fate" usage="1/Long Rest">
-			<description>While Omen of Doom is active, the Grim's Ominous Rend deals a total of 2d6 extra Necrotic damage. When you use Omen of Doom, you can force a Charisma save (once per Long Rest); on a failure, the target has Vulnerability to damage from the grim and your Omen of Doom bonus damage.</description>
+			<description>While Omen of Doom is active, the Grim's Ominous Rend deals a total of 2d6 extra Necrotic damage. When you use Omen of Doom, you can force a Charisma save; on a failure, the target has Vulnerability to damage from the grim and your Omen of Doom bonus damage. You can use this again before a Long Rest by expending a spell slot of level 4 or higher.</description>
 		</sheet>
 	</element>
 </elements>
