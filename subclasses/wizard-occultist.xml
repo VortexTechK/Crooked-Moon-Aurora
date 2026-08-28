@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="wizard-occultist.xml" url="" />
 		</update>
 	</info>
@@ -32,9 +32,12 @@
 			<p>In your study of proscribed power, you learn Deep Speech or another language of your choice.</p>
 			<p class="indent">In addition, choose a level 1 spell from the Warlock spell list. You always have it prepared. You can change your chosen spell when you finish a Long Rest.</p>
 		</description>
-		<sheet alt="Forbidden Knowledge" display="false" />
+		<sheet alt="Forbidden Knowledge">
+			<description>You know a language of your choice, and you choose a level 1 Warlock spell, which you always have prepared. You can change which spell you know whenever you finish a Long Rest.</description>
+		</sheet>
 		<rules>
 			<select type="Language" name="Language (Forbidden Knowledge)" supports="Standard||Exotic" />
+			<select type="Spell" name="Level 1 Spell (Forbidden Knowledge)" supports="1,Warlock" allowReplace="true" />
 		</rules>
 	</element>
 
@@ -67,7 +70,9 @@
 				<tr><td style="text-align:center">12</td><td>An Aberration or a Fiend with a CR equal to your Wizard level or lower (GM's choice) appears in an unoccupied space within 30 feet of you. The GM decides the creature's attitude (Hostile/Indifferent/Friendly) and actions.</td></tr>
 			</table>
 		</description>
-		<sheet alt="Intrusion" display="false" />
+		<sheet alt="Intrusion">
+			<description>Your Intrusion Die is a {{intrusion:die}} (starting size), stepping along d2-d3-d4-d6-d8-d10-d12. Whenever a feature says you "risk Intrusion," roll your current Intrusion Die: on a 2+, nothing bad happens and the die shrinks one step; on a 1, the die grows one step and you roll 1d12 on the Intrusion table (DC = your spell save DC where a save is needed). The die grows one step (up to your starting size) on a Short Rest and resets to your starting size on a Long Rest. When you cast a spell using a spell slot, you can risk Intrusion for Overwhelming Mind (Disadvantage on the first save against it) or Seeking Eye (Advantage on your first attack roll for it).</description>
+		</sheet>
 		<rules>
 			<stat name="intrusion:die" value="6" bonus="base" />
 			<stat name="intrusion:die" value="8" level="5" bonus="base" />
@@ -81,9 +86,12 @@
 			<p>Choose a spell of level 3 or lower from the Warlock spell list. You always have the spell prepared. You can change your chosen spell when you finish a Long Rest. When you cast the spell, you can risk Intrusion to remove the need to Concentrate on it, and the spell ends after 1 minute or its normal duration, whichever is shorter.</p>
 			<p class="indent">Additionally, you can cause an automatic Intrusion (and increase the die's size one step, up to its starting size) to cast the spell once without a spell slot, and you regain the ability to do so when you finish a Long Rest.</p>
 		</description>
-		<sheet alt="Reality Tear" usage="1/Long Rest">
-			<description>Choose a level 3 or lower Warlock spell; you always have it prepared and can risk Intrusion to cast it without needing Concentration. You can also cast it once per Long Rest without a spell slot by causing an automatic Intrusion.</description>
+		<sheet>
+			<description>Choose a level 3 or lower Warlock spell; you always have it prepared, and you can change which spell whenever you finish a Long Rest. When you cast it, you can risk Intrusion (see your Intrusion feature) to remove its need for Concentration, capping its duration at 1 minute or its normal duration, whichever is shorter. Once per Long Rest, you can also cast it without a spell slot by causing an automatic Intrusion — this guarantees an entry on the Intrusion table (no die roll) and grows your Intrusion Die one step, up to its starting size.</description>
 		</sheet>
+		<rules>
+			<select type="Spell" name="Level 3 or Lower Spell (Reality Tear)" supports="1,Warlock||2,Warlock||3,Warlock" allowReplace="true" />
+		</rules>
 	</element>
 
 	<element name="Level 10: Occult Presence" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_OCCULT_PRESENCE">
@@ -94,9 +102,49 @@
 			<p class="indent"><strong><em>Cosmic Resistance.</em></strong> You gain Resistance to Necrotic and Psychic damage.</p>
 			<p class="indent"><strong><em>Spatial Domination.</em></strong> You gain a Fly Speed equal to your Speed and can hover.</p>
 		</description>
-		<sheet alt="Occult Presence">
-			<description>When you cause an Intrusion, roll twice and choose the result, or negate it by gaining 1 Exhaustion. You also gain one benefit of your choice: Alien Consciousness (Immunity to Charmed/Frightened, can't be possessed), Cosmic Resistance (Resistance to Necrotic and Psychic), or Spatial Domination (Fly Speed equal to your Speed).</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Archetype Feature" name="Occult Presence Benefit" supports="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_ALIEN_CONSCIOUSNESS|ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_COSMIC_RESISTANCE|ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SPATIAL_DOMINATION" />
+		</rules>
+	</element>
+
+	<element name="Alien Consciousness" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_ALIEN_CONSCIOUSNESS">
+		<compendium display="false" />
+		<description>
+			<p>You gain Immunity to the Charmed and Frightened conditions, and you can't be possessed.</p>
+		</description>
+		<sheet alt="Occult Presence (Alien Consciousness)" action="Bonus Action">
+			<description>When you cause an Intrusion, you can roll twice on the Intrusion table and choose the result, or negate it entirely by gaining 1 Exhaustion level. You have Immunity to the Charmed and Frightened conditions, and you can't be possessed. As a Bonus Action, you can swap to a different Occult Presence benefit by causing an automatic Intrusion (guaranteed table entry, no die roll; your Intrusion Die grows one step, up to its starting size).</description>
 		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_IMMUNITY_CHARMED" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_IMMUNITY_FRIGHTENED" />
+		</rules>
+	</element>
+	<element name="Cosmic Resistance" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_COSMIC_RESISTANCE">
+		<compendium display="false" />
+		<description>
+			<p>You gain Resistance to Necrotic and Psychic damage.</p>
+		</description>
+		<sheet alt="Occult Presence (Cosmic Resistance)" action="Bonus Action">
+			<description>When you cause an Intrusion, you can roll twice on the Intrusion table and choose the result, or negate it entirely by gaining 1 Exhaustion level. You have Resistance to Necrotic and Psychic damage. As a Bonus Action, you can swap to a different Occult Presence benefit by causing an automatic Intrusion (guaranteed table entry, no die roll; your Intrusion Die grows one step, up to its starting size).</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+		</rules>
+	</element>
+	<element name="Spatial Domination" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SPATIAL_DOMINATION">
+		<compendium display="false" />
+		<description>
+			<p>You gain a Fly Speed equal to your Speed and can hover.</p>
+		</description>
+		<sheet alt="Occult Presence (Spatial Domination)" action="Bonus Action">
+			<description>When you cause an Intrusion, you can roll twice on the Intrusion table and choose the result, or negate it entirely by gaining 1 Exhaustion level. You gain a Fly Speed equal to {{speed}} and can hover. As a Bonus Action, you can swap to a different Occult Presence benefit by causing an automatic Intrusion (guaranteed table entry, no die roll; your Intrusion Die grows one step, up to its starting size).</description>
+		</sheet>
+		<rules>
+			<stat name="speed:fly" value="speed" bonus="base" />
+		</rules>
 	</element>
 
 	<element name="Level 14: Beyond Space" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_BEYOND_SPACE">
@@ -107,11 +155,30 @@
 			<p class="indent"><strong><em>All Seeing.</em></strong> Cast the spell as an action instead of its normal casting time.</p>
 			<p class="indent">When you cast Scrying, during the spell's duration, you can cause an automatic Intrusion (and increase the die's size one step, up to its starting size) to teleport yourself, and any willing creatures within 10 feet of you, to unoccupied spaces you can see through the scrying sensor. Once you teleport in this way, you can't do so again until you finish a Long Rest.</p>
 		</description>
-		<sheet alt="Beyond Space" usage="1/Long Rest">
-			<description>You always have Scrying prepared. When you cast it, you can risk Intrusion for All Knowing (treat your connection as a body part) or All Seeing (cast as an action). During the spell's duration, you can cause an automatic Intrusion once per Long Rest to teleport yourself and willing creatures within 10 feet to a space seen through the sensor.</description>
-		</sheet>
+		<sheet display="false" />
 		<rules>
-			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SCRYING" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SCRYING" prepared="true" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SCRYING_OPTIONS" />
+			<grant type="Archetype Feature" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SCRYING_TELEPORT" />
 		</rules>
+	</element>
+
+	<element name="Scrying Options" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SCRYING_OPTIONS">
+		<compendium display="false" />
+		<description>
+			<p>When you cast Scrying, you can risk Intrusion to choose All Knowing or All Seeing.</p>
+		</description>
+		<sheet alt="Beyond Space (Scrying Options)">
+			<description>You always have Scrying prepared. When you cast it, you can risk Intrusion for All Knowing (treat your connection to the target as if you had part of its body) or All Seeing (cast it as an action instead of its normal 10 minutes).</description>
+		</sheet>
+	</element>
+	<element name="Scrying Teleport" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_OCCULTIST_SCRYING_TELEPORT">
+		<compendium display="false" />
+		<description>
+			<p>During Scrying's duration, you can cause an automatic Intrusion to teleport yourself and willing creatures within 10 feet to a space seen through the sensor.</p>
+		</description>
+		<sheet alt="Beyond Space (Scrying Teleport)" usage="1/Long Rest">
+			<description>While your Scrying is active, you can cause an automatic Intrusion (your Intrusion Die grows one step, up to its starting size) to teleport yourself and any willing creatures within 10 feet to an unoccupied space you can see through the scrying sensor. </description>
+		</sheet>
 	</element>
 </elements>
