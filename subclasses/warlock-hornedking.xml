@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="warlock-hornedking.xml" url="" />
 		</update>
 	</info>
@@ -43,6 +43,18 @@
 			</table>
 		</description>
 		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANE" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIKE_GROWTH" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SUGGESTION" level="3" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_BESTOW_CURSE" level="5" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_FLY" level="5" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_PHANTASMAL_KILLER" level="7" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_POLYMORPH" level="7" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_DOMINATE_PERSON" level="9" spellcasting="Warlock" prepared="true" />
+			<grant type="Spell" id="ID_WOTC_PHB24_SPELL_SCRYING" level="9" spellcasting="Warlock" prepared="true" />
+		</rules>
 	</element>
 
 	<element name="Level 3: Witch Mark" type="Archetype Feature" source="The Crooked Moon: Player Options" id="ID_TCM_ARCHETYPE_FEATURE_HORNEDKING_WITCH_MARK">
@@ -50,7 +62,7 @@
 			<p>When you finish a Long Rest, you can imbue magic into a nonmagical Tiny object you're holding. Choose one of your prepared Warlock spells that has a casting time of an action. A creature holding the marked object can take a Magic action to cast the spell (using your Charisma modifier, spell attack bonus, or spell save DC). The mark fades when the spell is cast from it or when you finish a Long Rest.</p>
 		</description>
 		<sheet alt="Witch Mark">
-			<description>When you finish a Long Rest, you can imbue a Tiny object with one of your prepared Warlock spells (casting time of an action). Any creature holding it can cast that spell as a Magic action, using your stats.</description>
+			<description>When you finish a Long Rest, you can imbue a Tiny object with one of your prepared Warlock spells (casting time of an action). Any creature holding it can cast that spell as an action, using your stats. The spell fades when it is cast or when you finish a Long Rest</description>
 		</sheet>
 	</element>
 
@@ -62,7 +74,7 @@
 			<p class="indent"><strong><em>Rot.</em></strong> The next time the target takes damage, it takes an extra 1d10 Necrotic damage, and it can't regain Hit Points until the end of its next turn.</p>
 		</description>
 		<sheet alt="Malediction" usage="{{charisma:modifier}}/Long Rest">
-			<description>Curse a creature within 60 feet with your choice of Agony (Disadvantage on its next attack or Concentration save), Hate (Disadvantage on its next mental save), or Rot (extra 1d10 Necrotic damage and no HP regain until the end of its next turn).</description>
+			<description>As an Action, or as a Reaction when a creature within 60 feet targets you with an attack roll or a spell, curse a creature with your choice of Agony (Disadvantage on its next attack or Concentration save), Hate (Disadvantage on its next Intelligence, Wisdom, or Charisma saving throw ), or Rot (extra 1d10 Necrotic damage and no HP regain until the end of its next turn the next time it takes damage).</description>
 		</sheet>
 	</element>
 
@@ -72,7 +84,7 @@
 			<p class="indent">When you cast the spell in this way, its range becomes 60 feet, and it lasts 1 minute with no Concentration required. If the target succeeds on its saving throw against the spell, choose one of the Malediction curses, and the target suffers that curse instead.</p>
 		</description>
 		<sheet alt="Spiteful Curse" usage="1/Long Rest">
-			<description>When you use Malediction, you can cast Bestow Curse without a spell slot (range 60 feet, 1 minute, no Concentration). If the target saves successfully, it instead suffers a Malediction curse and your use isn't expended.</description>
+			<description>When you use Malediction, you can cast Bestow Curse as the action or reaction without a spell slot (range 60 feet, 1 minute, no Concentration). If the target saves successfully, it instead suffers a Malediction curse and your use isn't expended.</description>
 		</sheet>
 	</element>
 
@@ -86,7 +98,7 @@
 			<p class="indent"><strong>Terror.</strong> The target has the Frightened condition and must move away from you by the safest route during its turn unless there is nowhere to move.</p>
 		</description>
 		<sheet alt="Crown of Horns" action="Bonus Action" usage="1/Long Rest">
-			<description>For 1 minute: once per turn, your damage against a creature deals an extra 1d8 Necrotic damage. Additionally, at the start of each turn, choose a creature in a 20-ft. Emanation; Charisma save or it suffers Enticement, Wickedness, or Terror (your choice) until the start of your next turn.</description>
+			<description>For 1 minute, once on each of your turns,a creature you damage takes an extra 1d8 Necrotic damage and you have a 20-ft. aura; when you activate this feature, and again at the start of each of your turns, choose a creature you can see in the aura which must suceed a Charisma save against your spell save DC or it suffers your choice of charmed, disadvantage on attack rolls and ability checks, or the frightened condition which forces them to move away from you by the safest route during its turn unless there is nowhere to move until the start of your next turn. You can use this again before a Long Rest by expending a Pact Magic spell slot.</description>
 		</sheet>
 	</element>
 
@@ -110,8 +122,8 @@
 				<tr><td style="text-align:center">6</td><td>Curved blade for offering animal sacrifices</td></tr>
 			</table>
 		</description>
-		<sheet alt="Gather the Coven" usage="1/Short or Long Rest">
-			<description>A 1-hour ritual bonds up to six willing creatures to you: each can use a chosen Malediction curse once per Long Rest, you can teleport to a bonded creature's side once per rest, and while Crown of Horns is active, a bonded creature's first hit each turn deals extra Necrotic damage.</description>
+		<sheet alt="Gather the Coven">
+			<description>A 1-hour ritual bonds up to six willing creatures to you: each can use a chosen Malediction curse as a reaction once per Long Rest, you can teleport to a bonded creature's side once per Short or Long Rest as a bouns action(free if your Crown of Horns is active), and while Crown of Horns is active, a bonded creature's first hit each turn deals an extra 1d10 Necrotic damage.</description>
 		</sheet>
 	</element>
 </elements>
