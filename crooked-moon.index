@@ -3,7 +3,7 @@
 	<info>
 		<name>The Crooked Moon: Player Options</name>
 		<author>Author unknown</author>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="crooked-moon.index" url="https://raw.githubusercontent.com/VortexTechK/Crooked-Moon-Aurora/refs/heads/main/crooked-moon.index" />
 		</update>
 	</info>
