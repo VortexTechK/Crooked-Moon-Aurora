@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="ranger-grimharbinger.xml" url="" />
 		</update>
 	</info>
@@ -60,49 +60,22 @@
 			<p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Short or Long Rest. You can also expend a spell slot to restore an expended use (no action required).</p>
 			<p class="indent"><strong><em>The Grim in Combat.</em></strong> In combat, the grim acts during your turn. It can move and use its Reaction on its own, but the only action it takes is the Dodge action unless you take a Bonus Action to command it to take an action in its stat block or some other action. You can also command it as part of the Bonus Action you take to use Omen of Doom, or you can sacrifice one of your attacks when you take the Attack action to command the grim to take the Ominous Rend action. If you have the Incapacitated condition, the grim acts on its own and is not limited to the Dodge action.</p>
 			<h5>GRIM</h5>
-			<p style="margin-bottom:5px"><em>Medium Undead, Neutral</em></p>
-			<ul class="unstyled">
-				<li><strong>AC</strong> 13 plus your Wisdom modifier</li>
-				<li><strong>HP</strong> 5 plus five times your Ranger level (the grim has a number of Hit Dice [d8s] equal to your Ranger level)</li>
-				<li><strong>Speed</strong> 40 ft.</li>
-			</ul>
-			<table style="text-align:center;margin-top:2px;margin-bottom:10px">
-				<tr style="font-size:8px"><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td></tr>
-				<tr><td><b>STR</b></td><td>16</td><td>+3</td><td>+3</td><td><b>DEX</b></td><td>16</td><td>+3</td><td>+3</td><td><b>CON</b></td><td>14</td><td>+2</td><td>+2</td></tr>
-				<tr><td><b>INT</b></td><td>14</td><td>+2</td><td>+2</td><td><b>WIS</b></td><td>10</td><td>+0</td><td>+0</td><td><b>CHA</b></td><td>10</td><td>+0</td><td>+0</td></tr>
-			</table>
-			<ul class="unstyled">
-				<li><strong>Resistances</strong> Necrotic (Bludgeoning, Piercing, and Slashing as well, once you gain the Grave Bond feature)</li>
-				<li><strong>Immunities</strong> Frightened, Grappled, Petrified, Poisoned, Prone, Restrained</li>
-				<li><strong>Senses</strong> Darkvision 60 ft., Passive Perception 10</li>
-				<li><strong>Languages</strong> Understands the languages you know</li>
-				<li><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</li>
-			</ul>
-			<h4 style="margin-top:5px">Traits</h4>
-			<ul class="unstyled">
-				<li><strong><em>Incorporeal Movement.</em></strong> The grim can move through other creatures and objects as if they were Difficult Terrain. The grim takes 1d10 Force damage if it ends its turn inside an object.</li>
-				<li><strong><em>Shared Fate.</em></strong> Add your Proficiency Bonus to any ability check or saving throw the grim makes.</li>
-			</ul>
-			<h4 style="margin-top:5px">Actions</h4>
-			<ul class="unstyled">
-				<li><em><strong>Ominous Rend.</strong> Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d6 + 3 plus your Wisdom modifier Necrotic damage, and if the target is a creature, it has the Frightened condition until the start of your next turn.</li>
-			</ul>
-			<h4 style="margin-top:5px">Reactions</h4>
-			<ul class="unstyled">
-				<li><em><strong>Baleful Howl.</strong> Trigger:</em> A creature moves out of the grim's reach. <em>Response—Wisdom Saving Throw:</em> Your spell save DC, the triggering creature. <em>Failure:</em> The target's Speed is 0 until the end of the turn.</li>
-			</ul>
+			<div class="reference">
+				<div element="ID_TCM_INFORMATION_GRIM" />
+			</div>
 		</description>
 		<sheet alt="Omen of Doom" action="Bonus Action" usage="{{omen-of-doom:uses}}/Short or Long Rest">
-			<description>Target a creature within 90 feet; it's doomed for 1 hour (once per turn, your hits on it deal extra 1d6 Necrotic damage). A Grim (Medium Undead companion) appears within 30 feet of the target and fights alongside you. You can also expend a spell slot (no action required) to restore an expended use of this feature.</description>
+			<description>Target a creature within 90 feet; it's doomed for 1 hour (once per turn, your hits on it deal extra 1d6 Necrotic damage). A friendly Grim appears within 30 feet of the target vanishing if you die, when the doomed creature dies, when it is reduced to 0 hit points, or when you use this feature again. It acts on your turn able to move and use reactions but only uses Dodge unless you take a bonus action to command it. You can also command it as part of the Bonus Action you take to use Omen of Doom, or you can sacrifice one of your attacks when you take the Attack action to command the grim to take the Ominous Rend action. If you have the Incapacitated condition, the grim acts on its own and is not limited to the Dodge action. You can also expend a spell slot (no action required) to restore an expended use of this feature.</description>
 		</sheet>
 		<rules>
 			<stat name="omen-of-doom:uses" value="wisdom:modifier" bonus="base" />
 			<stat name="omen-of-doom:uses" value="1" bonus="base" />
-			<select type="Companion" name="Omen of Doom" supports="ID_TCM_COMPANION_GRIM" />
+			<select type="Companion" name="Omen of Doom" supports="Grim Harbinger" />
 		</rules>
 	</element>
 
 	<element name="Grim" type="Companion" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_GRIM">
+		<supports>Grim Harbinger</supports>
 		<compendium display="false" />
 		<setters>
 			<set name="size">Medium</set>
@@ -141,6 +114,41 @@
 		</rules>
 	</element>
 
+	<element name="Grim" type="Information" source="The Crooked Moon: Player Options" id="ID_TCM_INFORMATION_GRIM">
+		<description>
+			<p style="margin-bottom:5px"><em>Medium Undead, Neutral</em></p>
+			<ul class="unstyled">
+				<li><strong>AC</strong> 13 plus your Wisdom modifier</li>
+				<li><strong>HP</strong> 5 plus five times your Ranger level (the grim has a number of Hit Dice [d8s] equal to your Ranger level)</li>
+				<li><strong>Speed</strong> 40 ft.</li>
+			</ul>
+			<table style="text-align:center;margin-top:2px;margin-bottom:10px">
+				<tr style="font-size:8px"><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td><td colspan="2" /><td>MOD</td><td>SAVE</td></tr>
+				<tr><td><b>STR</b></td><td>16</td><td>+3</td><td>+3</td><td><b>DEX</b></td><td>16</td><td>+3</td><td>+3</td><td><b>CON</b></td><td>14</td><td>+2</td><td>+2</td></tr>
+				<tr><td><b>INT</b></td><td>14</td><td>+2</td><td>+2</td><td><b>WIS</b></td><td>10</td><td>+0</td><td>+0</td><td><b>CHA</b></td><td>10</td><td>+0</td><td>+0</td></tr>
+			</table>
+			<ul class="unstyled">
+				<li><strong>Resistances</strong> Necrotic (Bludgeoning, Piercing, and Slashing as well, once you gain the Grave Bond feature)</li>
+				<li><strong>Immunities</strong> Frightened, Grappled, Petrified, Poisoned, Prone, Restrained</li>
+				<li><strong>Senses</strong> Darkvision 60 ft., Passive Perception 10</li>
+				<li><strong>Languages</strong> Understands the languages you know</li>
+				<li><strong>CR</strong> None (XP 0; PB equals your Proficiency Bonus)</li>
+			</ul>
+			<h4 style="margin-top:5px">Traits</h4>
+			<ul class="unstyled">
+				<li><strong><em>Incorporeal Movement.</em></strong> The grim can move through other creatures and objects as if they were Difficult Terrain. The grim takes 1d10 Force damage if it ends its turn inside an object.</li>
+				<li><strong><em>Shared Fate.</em></strong> Add your Proficiency Bonus to any ability check or saving throw the grim makes.</li>
+			</ul>
+			<h4 style="margin-top:5px">Actions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Ominous Rend.</strong> Melee Attack Roll:</em> Bonus equals your spell attack modifier, reach 5 ft. <em>Hit:</em> 1d6 + 3 plus your Wisdom modifier Necrotic damage, and if the target is a creature, it has the Frightened condition until the start of your next turn.</li>
+			</ul>
+			<h4 style="margin-top:5px">Reactions</h4>
+			<ul class="unstyled">
+				<li><em><strong>Baleful Howl.</strong> Trigger:</em> A creature moves out of the grim's reach. <em>Response—Wisdom Saving Throw:</em> Your spell save DC, the triggering creature. <em>Failure:</em> The target's Speed is 0 until the end of the turn.</li>
+			</ul>
+		</description>
+	</element>
 	<element name="Incorporeal Movement" type="Companion Trait" source="The Crooked Moon: Player Options" id="ID_TCM_COMPANION_TRAIT_GRIM_INCORPOREAL_MOVEMENT">
 		<description>
 			<p>The grim can move through other creatures and objects as if they were Difficult Terrain. The grim takes 1d10 Force damage if it ends its turn inside an object.</p>
