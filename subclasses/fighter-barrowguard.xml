@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="fighter-barrowguard.xml" url="" />
 		</update>
 	</info>
@@ -51,7 +51,6 @@
 		</description>
 		<sheet alt="Death Knight" >
 			<description>You have {{draugr dice:count}}d{{draugr dice:size}} Draugr Dice; save DC {{death-knight:dc}}. You regain one expended Draugr Die when you finish a Short Rest, and you regain all of them when you finish a Long Rest.</description>
-		</sheet>
 		</sheet>
 		<rules>
 			<stat name="draugr dice:size" value="6" bonus="base" />
